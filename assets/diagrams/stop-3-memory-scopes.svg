@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="diagram-title">
+  <title id="diagram-title">Memory scopes: System contains Project contains Chat — Project is the recommended scope</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .scope-label { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #222; }
+    .scope-label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+  </style>
+
+  <!-- Outer box: System (largest) -->
+  <path class="ink" d="M 24 30 Q 26 28 30 29 L 692 31 Q 698 31 697 35 L 696 308 Q 697 313 693 312 L 29 310 Q 24 310 25 305 Z" />
+  <text class="scope-label" x="40" y="50">System</text>
+  <text class="caption" x="40" y="66">everything, all chats</text>
+
+  <!-- Middle box: Project (accent) -->
+  <path class="ink accent" d="M 92 92 Q 94 90 98 91 L 624 93 Q 630 93 629 97 L 628 248 Q 629 253 625 252 L 97 250 Q 92 250 93 245 Z" />
+  <text class="scope-label scope-label-accent" x="108" y="112">Project</text>
+  <text class="caption" x="108" y="128" fill="#a84b2b">recommended scope</text>
+
+  <!-- Inner box: Chat (smallest) -->
+  <path class="ink" d="M 194 162 Q 196 160 200 161 L 524 163 Q 530 163 529 167 L 528 218 Q 529 223 525 222 L 199 220 Q 194 220 195 215 Z" />
+  <text class="scope-label" x="210" y="182">Chat</text>
+  <text class="caption" x="210" y="198">just this one</text>
+  <text class="caption" x="210" y="212">conversation</text>
+</svg>

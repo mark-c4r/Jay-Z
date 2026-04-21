@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="diagram-title">
+  <title id="diagram-title">Project anatomy: a project contains Instructions, Files, and Memory — Files is the new piece</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+    .outer-label { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #222; }
+  </style>
+
+  <!-- Outer box: Project -->
+  <path class="ink" d="M 24 40 Q 26 38 30 39 L 692 41 Q 698 41 697 45 L 696 228 Q 697 233 693 232 L 29 230 Q 24 230 25 225 Z" />
+  <text class="outer-label" x="40" y="60">Project</text>
+
+  <!-- Inner box 1: Instructions -->
+  <path class="ink" d="M 62 92 Q 64 90 68 91 L 238 90 Q 242 91 241 94 L 240 192 Q 241 196 237 195 L 67 194 Q 62 194 63 190 Z" />
+  <text class="label" x="151" y="130" text-anchor="middle">Instructions</text>
+  <text class="caption" x="151" y="150" text-anchor="middle">how it should</text>
+  <text class="caption" x="151" y="166" text-anchor="middle">behave</text>
+
+  <!-- Inner box 2: Files (accent) -->
+  <path class="ink accent" d="M 264 91 Q 266 89 270 90 L 440 92 Q 444 92 443 95 L 442 195 Q 443 199 439 197 L 269 196 Q 264 196 265 192 Z" />
+  <text class="label label-accent" x="353" y="130" text-anchor="middle">Files</text>
+  <text class="caption" x="353" y="150" text-anchor="middle">docs + notes</text>
+  <text class="caption" x="353" y="166" text-anchor="middle">it can read</text>
+  <text class="annotation" x="353" y="184" text-anchor="middle" fill="#a84b2b">new piece</text>
+
+  <!-- Inner box 3: Memory -->
+  <path class="ink" d="M 466 90 Q 468 88 472 89 L 654 91 Q 658 91 657 94 L 656 195 Q 657 199 653 197 L 471 196 Q 466 196 467 192 Z" />
+  <text class="label" x="561" y="130" text-anchor="middle">Memory</text>
+  <text class="caption" x="561" y="150" text-anchor="middle">what it</text>
+  <text class="caption" x="561" y="166" text-anchor="middle">remembers</text>
+</svg>
