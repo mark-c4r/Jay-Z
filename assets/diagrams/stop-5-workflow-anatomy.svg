@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="diagram-title">
+  <title id="diagram-title">Workflow anatomy: Input, Transform, Check, Output — Check is the step beginners skip</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+  </style>
+
+  <!-- Box 1: Input -->
+  <path class="ink" d="M 22 62 Q 24 60 28 61 L 158 60 Q 162 61 161 64 L 160 162 Q 161 166 157 165 L 27 164 Q 22 164 23 160 Z" />
+  <text class="label" x="90" y="100" text-anchor="middle">Input</text>
+  <text class="caption" x="90" y="122" text-anchor="middle">notes, email,</text>
+  <text class="caption" x="90" y="138" text-anchor="middle">a rough draft</text>
+
+  <!-- Arrow 1 -->
+  <path class="ink" d="M 166 112 Q 172 111 178 112" />
+  <path class="ink" d="M 178 112 l -4 -4 M 178 112 l -4 4" />
+
+  <!-- Box 2: Transform -->
+  <path class="ink" d="M 182 60 Q 184 58 188 59 L 342 61 Q 346 61 345 64 L 344 164 Q 345 168 341 166 L 187 165 Q 182 165 183 161 Z" />
+  <text class="label" x="262" y="100" text-anchor="middle">Transform</text>
+  <text class="caption" x="262" y="122" text-anchor="middle">the model does</text>
+  <text class="caption" x="262" y="138" text-anchor="middle">its work</text>
+
+  <!-- Arrow 2 -->
+  <path class="ink" d="M 350 112 Q 356 111 362 112" />
+  <path class="ink" d="M 362 112 l -4 -4 M 362 112 l -4 4" />
+
+  <!-- Box 3: Check (accent) -->
+  <path class="ink accent" d="M 366 61 Q 368 59 372 60 L 522 60 Q 526 60 525 64 L 524 163 Q 525 167 521 166 L 371 164 Q 366 165 367 160 Z" />
+  <text class="label label-accent" x="446" y="100" text-anchor="middle">Check</text>
+  <text class="caption" x="446" y="122" text-anchor="middle">read before</text>
+  <text class="caption" x="446" y="138" text-anchor="middle">you save</text>
+  <text class="annotation" x="446" y="156" text-anchor="middle" fill="#a84b2b">often skipped</text>
+
+  <!-- Arrow 3 -->
+  <path class="ink" d="M 530 112 Q 536 111 542 112" />
+  <path class="ink" d="M 542 112 l -4 -4 M 542 112 l -4 4" />
+
+  <!-- Box 4: Output -->
+  <path class="ink" d="M 546 60 Q 548 58 552 59 L 698 61 Q 702 61 701 64 L 700 164 Q 701 168 697 166 L 551 164 Q 546 164 547 160 Z" />
+  <text class="label" x="622" y="100" text-anchor="middle">Output</text>
+  <text class="caption" x="622" y="122" text-anchor="middle">sent, saved,</text>
+  <text class="caption" x="622" y="138" text-anchor="middle">or shared</text>
+
+  <!-- Axis below -->
+  <path class="ink" d="M 40 210 Q 200 212 400 210 Q 600 208 680 211" />
+  <path class="ink" d="M 40 210 l -4 -4 M 40 210 l -4 4" />
+  <path class="ink" d="M 680 211 l 4 -4 M 680 211 l 4 4" />
+  <text class="annotation" x="40" y="228" text-anchor="start">raw material</text>
+  <text class="annotation" x="680" y="228" text-anchor="end">trustworthy result</text>
+</svg>

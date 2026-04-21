@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="diagram-title">
+  <title id="diagram-title">Habit loop: Trigger, Action, Reflect, Refine — Reflect is the anti-inertia node</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+  </style>
+
+  <!-- Top-left: Trigger -->
+  <path class="ink" d="M 82 42 Q 84 40 88 41 L 282 43 Q 288 43 287 47 L 286 126 Q 287 131 283 130 L 87 128 Q 82 128 83 123 Z" />
+  <text class="label" x="184" y="78" text-anchor="middle">Trigger</text>
+  <text class="caption" x="184" y="98" text-anchor="middle">new meeting,</text>
+  <text class="caption" x="184" y="114" text-anchor="middle">inbox ping</text>
+
+  <!-- Arrow: Trigger → Action -->
+  <path class="ink" d="M 296 82 Q 344 80 392 82" />
+  <path class="ink" d="M 392 82 l -4 -4 M 392 82 l -4 4" />
+
+  <!-- Top-right: Action -->
+  <path class="ink" d="M 402 42 Q 404 40 408 41 L 632 43 Q 638 43 637 47 L 636 126 Q 637 131 633 130 L 407 128 Q 402 128 403 123 Z" />
+  <text class="label" x="518" y="78" text-anchor="middle">Action</text>
+  <text class="caption" x="518" y="98" text-anchor="middle">you run the</text>
+  <text class="caption" x="518" y="114" text-anchor="middle">workflow</text>
+
+  <!-- Arrow: Action → Reflect (down right side) -->
+  <path class="ink" d="M 518 138 Q 520 176 518 214" />
+  <path class="ink" d="M 518 214 l -4 -4 M 518 214 l 4 -4" />
+
+  <!-- Bottom-right: Reflect (accent) -->
+  <path class="ink accent" d="M 402 222 Q 404 220 408 221 L 632 223 Q 638 223 637 227 L 636 304 Q 637 309 633 308 L 407 306 Q 402 306 403 301 Z" />
+  <text class="label label-accent" x="518" y="256" text-anchor="middle">Reflect</text>
+  <text class="caption" x="518" y="276" text-anchor="middle">what worked?</text>
+  <text class="annotation" x="518" y="292" text-anchor="middle" fill="#a84b2b">anti-inertia</text>
+
+  <!-- Arrow: Reflect → Refine -->
+  <path class="ink" d="M 392 262 Q 344 264 296 262" />
+  <path class="ink" d="M 296 262 l 4 -4 M 296 262 l 4 4" />
+
+  <!-- Bottom-left: Refine -->
+  <path class="ink" d="M 82 222 Q 84 220 88 221 L 282 223 Q 288 223 287 227 L 286 304 Q 287 309 283 308 L 87 306 Q 82 306 83 301 Z" />
+  <text class="label" x="184" y="256" text-anchor="middle">Refine</text>
+  <text class="caption" x="184" y="276" text-anchor="middle">tweak the</text>
+  <text class="caption" x="184" y="292" text-anchor="middle">instructions</text>
+
+  <!-- Arrow: Refine → Trigger (up left side, closing the loop) -->
+  <path class="ink" d="M 184 214 Q 182 176 184 138" />
+  <path class="ink" d="M 184 138 l -4 4 M 184 138 l 4 4" />
+</svg>
