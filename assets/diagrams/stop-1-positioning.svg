@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="diagram-title">
+  <title id="diagram-title">Positioning: ChatGPT, Cowork, Code, and Codex — where each fits</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+  </style>
+
+  <!-- Box 1: ChatGPT -->
+  <path class="ink" d="M 22 62 Q 24 60 28 61 L 158 60 Q 162 61 161 64 L 160 162 Q 161 166 157 165 L 27 164 Q 22 164 23 160 Z" />
+  <text class="label" x="90" y="100" text-anchor="middle">ChatGPT</text>
+  <text class="caption" x="90" y="122" text-anchor="middle">single-turn</text>
+  <text class="caption" x="90" y="138" text-anchor="middle">chat</text>
+
+  <!-- Box 2: Cowork (accent) -->
+  <path class="ink accent" d="M 182 60 Q 184 58 188 59 L 342 61 Q 346 61 345 64 L 344 164 Q 345 168 341 166 L 187 165 Q 182 165 183 161 Z" />
+  <text class="label label-accent" x="262" y="100" text-anchor="middle">Cowork</text>
+  <text class="caption" x="262" y="122" text-anchor="middle">with memory + files</text>
+  <text class="caption" x="262" y="138" text-anchor="middle">+ connectors</text>
+  <text class="annotation" x="262" y="156" text-anchor="middle" fill="#a84b2b">recommended</text>
+
+  <!-- Box 3: Code -->
+  <path class="ink" d="M 366 61 Q 368 59 372 60 L 522 60 Q 526 60 525 64 L 524 163 Q 525 167 521 166 L 371 164 Q 366 165 367 160 Z" />
+  <text class="label" x="446" y="100" text-anchor="middle">Code</text>
+  <text class="caption" x="446" y="122" text-anchor="middle">developer-grade</text>
+  <text class="caption" x="446" y="138" text-anchor="middle">CLI + IDE</text>
+
+  <!-- Box 4: Codex -->
+  <path class="ink" d="M 546 60 Q 548 58 552 59 L 698 61 Q 702 61 701 64 L 700 164 Q 701 168 697 166 L 551 164 Q 546 164 547 160 Z" />
+  <text class="label" x="622" y="100" text-anchor="middle">Codex</text>
+  <text class="caption" x="622" y="122" text-anchor="middle">autonomous agent</text>
+  <text class="caption" x="622" y="138" text-anchor="middle">CLI-based</text>
+
+  <!-- Axis below: "simpler / more autonomous" -->
+  <path class="ink" d="M 40 210 Q 200 212 400 210 Q 600 208 680 211" />
+  <path class="ink" d="M 40 210 l -4 -4 M 40 210 l -4 4" />
+  <path class="ink" d="M 680 211 l 4 -4 M 680 211 l 4 4" />
+  <text class="annotation" x="40" y="228" text-anchor="start">simpler, conversational</text>
+  <text class="annotation" x="680" y="228" text-anchor="end">more autonomous, technical</text>
+</svg>
