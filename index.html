@@ -1084,6 +1084,61 @@
       .bottom-nav { position: sticky; bottom: 0; z-index: 20; }
     }
     .bottom-nav.hidden { visibility: hidden; } /* drawer-open state */
+
+    /* === v2a stops === */
+    .stop { padding: 28px 28px 36px; border-bottom: 1px solid var(--rule); }
+    .stop-placeholder { opacity: 0.55; }
+    .stop-placeholder .placeholder { font-style: italic; color: var(--muted); padding-left: 28px; }
+
+    .stop-header { margin-bottom: 22px; }
+    .stop-meta { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .stop-title { margin: 4px 0 10px; font-size: 24px; font-weight: 500; line-height: 1.2; color: var(--ink); }
+    .stop-rationale { font-size: 15px; color: var(--ink); line-height: 1.55; max-width: 620px; }
+    .stop-rationale a { color: var(--accent); }
+
+    .block { margin-bottom: 24px; }
+    .block-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; }
+
+    .block-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; align-items: start; }
+    @media (max-width: 899px) { .block-grid { grid-template-columns: 1fr; } }
+
+    .video iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; border: 0; }
+
+    .highlights-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; }
+    .highlights-hint { text-transform: none; letter-spacing: 0; color: var(--muted); opacity: 0.75; }
+    .highlights-list { list-style: none; margin: 0; padding: 0; }
+    .highlights-list li { border-top: 1px solid var(--rule); }
+    .highlights-list li:last-child { border-bottom: 1px solid var(--rule); }
+    .highlights-list a { display: flex; gap: 10px; padding: 9px 0; color: var(--ink); text-decoration: none; font-size: 13px; line-height: 1.5; }
+    .highlights-list a:hover { color: var(--accent); }
+    .hl-text { flex: 1; }
+    .ts { display: inline-block; background: var(--bg-inset); color: var(--accent); padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 600; min-width: 44px; text-align: center; height: fit-content; }
+
+    .block-diagram img, .block-diagram .diagram-placeholder { width: 100%; max-width: 680px; display: block; }
+    .diagram-placeholder { background: var(--bg-inset); border: 1px dashed var(--rule); border-radius: 4px; aspect-ratio: 16/7; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; font-style: italic; padding: 16px; text-align: center; }
+
+    .try-one-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+    .try-one-prompt { font-family: ui-monospace, SF Mono, Menlo, monospace; font-size: 13px; color: var(--ink); background: var(--bg-inset); border-left: 3px solid var(--accent); padding: 14px 18px; white-space: pre-wrap; line-height: 1.55; margin: 0; border-radius: 0 4px 4px 0; }
+    .try-one-check { display: flex; align-items: center; padding: 12px 0; font-size: 13px; color: var(--ink); cursor: pointer; }
+    .try-one-check input { margin-right: 10px; transform: translateY(1px); }
+
+    .branches { margin-top: 22px; }
+    .branches-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+    .branch-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .chip { background: var(--bg-inset); border: 1px solid var(--rule); color: var(--ink); padding: 8px 14px; border-radius: 999px; font-size: 13px; cursor: pointer; font-family: inherit; min-height: 40px; min-width: 44px; }
+    .chip:hover, .chip:focus { background: var(--bg-inset); border-color: var(--accent); color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; }
+    .chip[aria-expanded="true"] { background: var(--bg-inset); border-color: var(--accent); color: var(--accent); }
+
+    .branch-drawer { margin-top: 12px; padding: 16px 20px; background: var(--bg-inset); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; font-size: 13px; color: var(--ink); line-height: 1.6; max-width: 620px; }
+
+    .stop-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; margin-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); gap: 12px; flex-wrap: wrap; }
+    .stop-nav .sn-next { color: var(--ink); text-decoration: none; }
+    .stop-nav a:hover { color: var(--accent); }
+
+    .rail-coming { color: var(--muted); font-weight: 400; font-size: 10px; opacity: 0.75; }
+
+    .research-stub { padding: 28px 28px 40px; border-top: 2px dashed var(--rule); }
+    .research-stub h2 { font-size: 22px; font-weight: 500; margin: 0 0 10px; color: var(--ink); }
   </style>
 </head>
 <body>
@@ -1111,8 +1166,86 @@
     </aside>
 
     <main id="main" class="content" role="main">
-      <!-- Stop content comes in later tasks. For this task, one placeholder section is fine. -->
-      <section id="stop-1" class="stop"><p class="placeholder">Stop 1 content arrives in Task 1.5</p></section>
+      <section id="stop-1" class="stop stop-current" aria-labelledby="stop-1-title">
+        <div class="stop-header">
+          <div class="stop-meta">Stop 1 of 6 · Block 1 of 3</div>
+          <h1 id="stop-1-title" class="stop-title">Start here — what Cowork is, why you'd use it</h1>
+          <p class="stop-rationale">Cowork is ChatGPT with memory, files, and a few connectors. That's the whole shape. If you've tried chatbots and felt the limit — they forget you, they can't open your calendar, they start over every time — this is the version without those limits. Two minutes to understand. Five to set up. Curious how these picks landed? Market mapping and reviewed alternatives are in <a href="#research">Research</a> (in the rail).</p>
+        </div>
+
+        <div class="block block-video" data-block="1" id="stop-1-block-1">
+          <div class="block-grid">
+            <div class="video">
+              <iframe
+                title="Jeff Su — what Cowork is (intro)"
+                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=30&end=210&enablejsapi=1"
+                loading="lazy"
+                allowfullscreen
+                frameborder="0"
+                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <aside class="highlights" aria-label="Key moments from the video">
+              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
+              <ol class="highlights-list">
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=45" target="_blank" rel="noopener" data-seek="45"><span class="ts">0:45</span><span class="hl-text">Chat sends files to the cloud. Cowork reads local files. No 20-file cap.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=85" target="_blank" rel="noopener" data-seek="85"><span class="ts">1:25</span><span class="hl-text">Cowork does the work and drops the output in your folder. Chat hands you text to copy.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=135" target="_blank" rel="noopener" data-seek="135"><span class="ts">2:15</span><span class="hl-text">Prompt differently: describe the outcome and the quality bar, not step-by-step tasks.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=165" target="_blank" rel="noopener" data-seek="165"><span class="ts">2:45</span><span class="hl-text">Make a Cowork Playground folder first. Keep early runs contained there.</span></a></li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+
+        <div class="block block-diagram" data-block="2" id="stop-1-block-2">
+          <div class="block-label">Diagram · Block 2 of 3</div>
+          <div class="diagram-placeholder" role="img" aria-label="Positioning diagram — Cowork vs Code vs ChatGPT vs Codex. Placeholder until Task 1.6.">
+            [ Excalidraw diagram · Cowork vs Code vs ChatGPT vs Codex — arrives in Task 1.6 ]
+          </div>
+        </div>
+
+        <div class="block block-try-one" data-block="3" id="stop-1-block-3">
+          <div class="try-one-label">Try one · Block 3 of 3</div>
+          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
+
+Give me an overview of what today looks like based on my calendar. Read the events, summarize in one short paragraph, flag any that look back-to-back with no buffer. Don't edit anything — just summarize.</pre>
+          <label class="try-one-check">
+            <input type="checkbox" data-block-id="stop-1-try-one">
+            Done this one
+          </label>
+        </div>
+
+        <div class="branches" aria-label="Go deeper — branch by shape of work">
+          <div class="branches-label">Go deeper</div>
+          <ul class="branch-chips">
+            <li><button type="button" class="chip" data-branch="stop-1-personal" aria-expanded="false" aria-controls="drawer-stop-1-personal">Personal</button></li>
+            <li><button type="button" class="chip" data-branch="stop-1-creative" aria-expanded="false" aria-controls="drawer-stop-1-creative">Creative</button></li>
+            <li><button type="button" class="chip" data-branch="stop-1-client" aria-expanded="false" aria-controls="drawer-stop-1-client">Client</button></li>
+            <li><button type="button" class="chip" data-branch="stop-1-deeper" aria-expanded="false" aria-controls="drawer-stop-1-deeper">Deeper</button></li>
+          </ul>
+          <div class="branch-drawer" id="drawer-stop-1-personal" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-1-creative" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-1-client" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-1-deeper" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+        </div>
+
+        <nav class="stop-nav" aria-label="Move between stops">
+          <span class="sn-prev" aria-disabled="true">← First stop</span>
+          <a class="sn-jump" href="#rail">Jump to any</a>
+          <a class="sn-next" href="#stop-2">Stop 2 · Your first project →</a>
+        </nav>
+      </section>
+
+      <section id="stop-2" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 2 of 6</div><h2 class="stop-title">Your first project</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-3" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 3 of 6</div><h2 class="stop-title">Memory — why your AI forgets, and how to fix it</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-4" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 4 of 6</div><h2 class="stop-title">Connectors + safety</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-5" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 5 of 6</div><h2 class="stop-title">Real work — a client workflow and a family workflow</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-6" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 6 of 6</div><h2 class="stop-title">Your first week — habit installation</h2></div><p class="placeholder">Coming in a few days.</p></section>
+
+      <section id="research" class="research-stub">
+        <h2>Research · how these picks landed</h2>
+        <p class="placeholder">Coming in a few days — tool landscape, market map, why these six stops.</p>
+      </section>
     </main>
   </div>
 
@@ -1319,6 +1452,29 @@
           // onStopClick already handles navigation + scroll; we just close the drawer
           setTimeout(closeDrawer, 100);  // allow scroll to start before losing the rail-open class
         }
+      });
+
+      // --- YouTube timestamp chip seekTo with fallback ---
+      document.querySelectorAll('.highlights-list a[data-seek]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const seek = parseInt(a.dataset.seek, 10);
+          if (!Number.isFinite(seek)) return;  // fallback: let native href fire
+          const iframe = a.closest('.block-grid')?.querySelector('iframe');
+          if (!iframe?.contentWindow) return;  // fallback
+          try {
+            // Attempt postMessage seekTo (YouTube Player API)
+            iframe.contentWindow.postMessage(JSON.stringify({
+              event: 'command',
+              func: 'seekTo',
+              args: [seek, true]
+            }), '*');
+            e.preventDefault();
+            // Also scroll video into view if off-screen
+            iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } catch {
+            // Fallback: let native href fire (opens YouTube in new tab at ?t=SEC)
+          }
+        });
       });
 
       // Expose for Task 1.4 (drawer) and later tasks
