@@ -1234,8 +1234,141 @@ Give me an overview of what today looks like based on my calendar. Read the even
         </nav>
       </section>
 
-      <section id="stop-2" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 2 of 6</div><h2 class="stop-title">Your first project</h2></div><p class="placeholder">Coming in a few days.</p></section>
-      <section id="stop-3" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 3 of 6</div><h2 class="stop-title">Memory — why your AI forgets, and how to fix it</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-2" class="stop" aria-labelledby="stop-2-title">
+        <div class="stop-header">
+          <div class="stop-meta">Stop 2 of 6 · Block 1</div>
+          <h2 id="stop-2-title" class="stop-title">Your first project — where Cowork stops forgetting</h2>
+          <p class="stop-rationale">A project is where Cowork stops forgetting. Drop a one-page "who I am, what I do" into a project, add any reference files, and every new chat in that project starts with that context. Five minutes to set up. Every conversation after is faster.</p>
+        </div>
+
+        <div class="block block-video" data-block="1" id="stop-2-block-1">
+          <div class="block-grid">
+            <div class="video">
+              <iframe
+                title="Jeff Su — Cowork projects (1 min)"
+                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=869&end=930&enablejsapi=1"
+                loading="lazy"
+                allowfullscreen
+                frameborder="0"
+                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <aside class="highlights" aria-label="Key moments from the video">
+              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
+              <ol class="highlights-list">
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=869" target="_blank" rel="noopener" data-seek="869"><span class="ts">14:29</span><span class="hl-text">A Cowork project is a chat project plus local files, memory, connectors, and skills.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=882" target="_blank" rel="noopener" data-seek="882"><span class="ts">14:42</span><span class="hl-text">The real difference: a Cowork project can write to its own knowledge files.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=902" target="_blank" rel="noopener" data-seek="902"><span class="ts">15:02</span><span class="hl-text">In Claude Chat, codifying a principle means attaching a new knowledge file and deleting the old one.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=919" target="_blank" rel="noopener" data-seek="919"><span class="ts">15:19</span><span class="hl-text">In Cowork, "save this under project X" writes straight to the instruction file.</span></a></li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+
+        <div class="block block-diagram" data-block="2" id="stop-2-block-2">
+          <div class="block-label">Diagram · block 2 of 3</div>
+          <img src="assets/diagrams/stop-2-project-anatomy.svg" alt="Project anatomy diagram: a Cowork project is an outer box containing three inner boxes — Instructions, Files, Memory. Files is the beginner-unfamiliar piece." class="diagram-img" />
+        </div>
+
+        <div class="block block-try-one" data-block="3" id="stop-2-block-3">
+          <div class="try-one-label">Try one · block 3 of 3</div>
+          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
+
+Create a project called "intro test" (mentally — don't actually create it). Draft a one-page "who I am, what I do" that a model could use to understand my work. Three short sections: what I make, who it's for, constraints you should know. Keep it under 300 words. Show me the draft.</pre>
+          <label class="try-one-check">
+            <input type="checkbox" data-block-id="stop-2-try-one">
+            Done this one
+          </label>
+        </div>
+
+        <div class="branches" aria-label="Go deeper — branch by shape of work">
+          <div class="branches-label">Go deeper</div>
+          <ul class="branch-chips">
+            <li><button type="button" class="chip" data-branch="stop-2-personal" aria-expanded="false" aria-controls="drawer-stop-2-personal">Personal</button></li>
+            <li><button type="button" class="chip" data-branch="stop-2-creative" aria-expanded="false" aria-controls="drawer-stop-2-creative">Creative</button></li>
+            <li><button type="button" class="chip" data-branch="stop-2-client" aria-expanded="false" aria-controls="drawer-stop-2-client">Client</button></li>
+            <li><button type="button" class="chip" data-branch="stop-2-deeper" aria-expanded="false" aria-controls="drawer-stop-2-deeper">Deeper</button></li>
+          </ul>
+          <div class="branch-drawer" id="drawer-stop-2-personal" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-2-creative" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-2-client" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-2-deeper" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+        </div>
+
+        <nav class="stop-nav" aria-label="Move between stops">
+          <a class="sn-prev" href="#stop-1">← Stop 1 · Start here</a>
+          <a class="sn-jump" href="#rail">Jump to any</a>
+          <a class="sn-next" href="#stop-3">Stop 3 · Memory →</a>
+        </nav>
+      </section>
+
+      <section id="stop-3" class="stop" aria-labelledby="stop-3-title">
+        <div class="stop-header">
+          <div class="stop-meta">Stop 3 of 6 · Block 1</div>
+          <h2 id="stop-3-title" class="stop-title">Memory — the setting that turns "smart but forgetful" into "remembers"</h2>
+          <p class="stop-rationale">The model doesn't remember you. It remembers a project, if you give it one. Memory is the setting that turns Cowork from "smart but forgetful" into "remembers what we said yesterday." Two minutes to set up. Worth it.</p>
+        </div>
+
+        <div class="block block-video" data-block="1" id="stop-3-block-1">
+          <div class="block-grid">
+            <div class="video">
+              <iframe
+                title="Jeff Su — Cowork memory (2 min)"
+                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=376&end=515&enablejsapi=1"
+                loading="lazy"
+                allowfullscreen
+                frameborder="0"
+                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <aside class="highlights" aria-label="Key moments from the video">
+              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
+              <ol class="highlights-list">
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=376" target="_blank" rel="noopener" data-seek="376"><span class="ts">6:16</span><span class="hl-text">Chat memory sits in the cloud and caps out; Cowork memory lives in local files.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=426" target="_blank" rel="noopener" data-seek="426"><span class="ts">7:06</span><span class="hl-text">In a brand-new session, Cowork still recalls past work like prior newsletter editions.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=470" target="_blank" rel="noopener" data-seek="470"><span class="ts">7:50</span><span class="hl-text">Edits saved back as a diff become stored preferences.</span></a></li>
+                <li><a href="https://youtu.be/z9rdrNrkvDY?t=489" target="_blank" rel="noopener" data-seek="489"><span class="ts">8:09</span><span class="hl-text">Two files at the playground root — Claude.md and memory.md — hold whatever it learns.</span></a></li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+
+        <div class="block block-diagram" data-block="2" id="stop-3-block-2">
+          <div class="block-label">Diagram · block 2 of 3</div>
+          <img src="assets/diagrams/stop-3-memory-scopes.svg" alt="Memory scopes diagram: nested boxes showing System (outer), Project (middle, recommended), Chat (inner). Project is where useful memory lives." class="diagram-img" />
+        </div>
+
+        <div class="block block-try-one" data-block="3" id="stop-3-block-3">
+          <div class="try-one-label">Try one · block 3 of 3</div>
+          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
+
+For a hypothetical "test" project, draft what the project memory should contain: 3 bullet points about what the project is for, 3 bullets about preferred style and tone, 2 bullets about constraints. Keep each bullet under 15 words.</pre>
+          <label class="try-one-check">
+            <input type="checkbox" data-block-id="stop-3-try-one">
+            Done this one
+          </label>
+        </div>
+
+        <div class="branches" aria-label="Go deeper — branch by shape of work">
+          <div class="branches-label">Go deeper</div>
+          <ul class="branch-chips">
+            <li><button type="button" class="chip" data-branch="stop-3-personal" aria-expanded="false" aria-controls="drawer-stop-3-personal">Personal</button></li>
+            <li><button type="button" class="chip" data-branch="stop-3-creative" aria-expanded="false" aria-controls="drawer-stop-3-creative">Creative</button></li>
+            <li><button type="button" class="chip" data-branch="stop-3-client" aria-expanded="false" aria-controls="drawer-stop-3-client">Client</button></li>
+            <li><button type="button" class="chip" data-branch="stop-3-deeper" aria-expanded="false" aria-controls="drawer-stop-3-deeper">Deeper</button></li>
+          </ul>
+          <div class="branch-drawer" id="drawer-stop-3-personal" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-3-creative" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-3-client" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+          <div class="branch-drawer" id="drawer-stop-3-deeper" hidden><p class="placeholder">Drawer content arrives in Slice 2 Task 2.4.</p></div>
+        </div>
+
+        <nav class="stop-nav" aria-label="Move between stops">
+          <a class="sn-prev" href="#stop-2">← Stop 2 · Your first project</a>
+          <a class="sn-jump" href="#rail">Jump to any</a>
+          <a class="sn-next" href="#stop-4">Stop 4 · Connectors + safety →</a>
+        </nav>
+      </section>
       <section id="stop-4" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 4 of 6</div><h2 class="stop-title">Connectors + safety</h2></div><p class="placeholder">Coming in a few days.</p></section>
       <section id="stop-5" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 5 of 6</div><h2 class="stop-title">Real work — a client workflow and a family workflow</h2></div><p class="placeholder">Coming in a few days.</p></section>
       <section id="stop-6" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 6 of 6</div><h2 class="stop-title">Your first week — habit installation</h2></div><p class="placeholder">Coming in a few days.</p></section>
