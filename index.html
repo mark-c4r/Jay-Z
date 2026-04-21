@@ -1102,7 +1102,42 @@
     .block-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; align-items: start; }
     @media (max-width: 899px) { .block-grid { grid-template-columns: 1fr; } }
 
-    .video iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; border: 0; }
+    .video iframe { width: 100%; aspect-ratio: 16/9; border-radius: 6px; border: 0; display: block; }
+
+    .yt-facade {
+      position: relative; display: block; width: 100%;
+      aspect-ratio: 16/9; padding: 0; border: 0; border-radius: 6px;
+      background: var(--bg-inset); cursor: pointer; overflow: hidden;
+      font: inherit; color: var(--ink);
+      transition: transform 150ms ease-out;
+    }
+    .yt-facade:hover { transform: translateY(-1px); }
+    .yt-facade:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+
+    .yt-facade-thumb {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    .yt-facade-play {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      display: grid; place-items: center;
+      pointer-events: none; opacity: 0.92;
+      transition: opacity 150ms ease-out, transform 150ms ease-out;
+    }
+    .yt-facade:hover .yt-facade-play,
+    .yt-facade:focus-visible .yt-facade-play {
+      opacity: 1; transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .yt-facade-ts {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 8px 12px;
+      background: linear-gradient(0deg, rgba(29,29,31,0.85), rgba(29,29,31,0));
+      color: #fff; font-size: 11px; letter-spacing: 0.04em;
+      text-align: left; pointer-events: none;
+    }
 
     .highlights-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; }
     .highlights-hint { text-transform: none; letter-spacing: 0; color: var(--muted); opacity: 0.75; }
@@ -1176,14 +1211,20 @@
         <div class="block block-video" data-block="1" id="stop-1-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jeff Su — what Cowork is (intro)"
-                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=30&end=210&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="z9rdrNrkvDY" data-start="30" data-end="210"
+                data-frame="0" data-title="Jeff Su — what Cowork is (intro)"
+                aria-label="Play video: Jeff Su — what Cowork is (intro), segment 0:30 to 3:30">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/z9rdrNrkvDY/0.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 0:30–3:30 · What Cowork is</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
@@ -1244,14 +1285,20 @@ Give me an overview of what today looks like based on my calendar. Read the even
         <div class="block block-video" data-block="1" id="stop-2-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jeff Su — Cowork projects (1 min)"
-                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=869&end=930&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="z9rdrNrkvDY" data-start="869" data-end="930"
+                data-frame="3" data-title="Jeff Su — Cowork projects (1 min)"
+                aria-label="Play video: Jeff Su — Cowork projects (1 min), segment 14:29 to 15:30">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/z9rdrNrkvDY/3.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 14:29–15:30 · Projects</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
@@ -1312,14 +1359,20 @@ Create a project called "intro test" (mentally — don't actually create it). Dr
         <div class="block block-video" data-block="1" id="stop-3-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jeff Su — Cowork memory (2 min)"
-                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=376&end=515&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="z9rdrNrkvDY" data-start="376" data-end="515"
+                data-frame="1" data-title="Jeff Su — Cowork memory (2 min)"
+                aria-label="Play video: Jeff Su — Cowork memory (2 min), segment 6:16 to 8:35">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/z9rdrNrkvDY/1.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 6:16–8:35 · Memory</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
@@ -1379,14 +1432,20 @@ For a hypothetical "test" project, draft what the project memory should contain:
         <div class="block block-video" data-block="1" id="stop-4-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jeff Su — Cowork connectors (2 min)"
-                src="https://www.youtube.com/embed/z9rdrNrkvDY?start=523&end=630&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="z9rdrNrkvDY" data-start="523" data-end="630"
+                data-frame="2" data-title="Jeff Su — Cowork connectors (2 min)"
+                aria-label="Play video: Jeff Su — Cowork connectors (2 min), segment 8:43 to 10:30">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/z9rdrNrkvDY/2.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 8:43–10:30 · Connectors</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
@@ -1451,14 +1510,20 @@ Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox:
         <div class="block block-video" data-block="1" id="stop-5-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jack Roberts — Cowork in a client shop (3 min)"
-                src="https://www.youtube.com/embed/cNf7uVff11Y?start=1378&end=1559&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="cNf7uVff11Y" data-start="1378" data-end="1559"
+                data-frame="0" data-title="Jack Roberts — Cowork in a client shop (3 min)"
+                aria-label="Play video: Jack Roberts — Cowork in a client shop (3 min), segment 22:58 to 25:59">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/cNf7uVff11Y/0.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/cNf7uVff11Y/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/cNf7uVff11Y/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 22:58–25:59 · Client workflow</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Client workflow · block 1 of 4 <span class="highlights-hint">· click to jump</span></div>
@@ -1475,14 +1540,20 @@ Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox:
         <div class="block block-video" data-block="2" id="stop-5-block-2">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jesse Genet — Cowork at home (3 min)"
-                src="https://www.youtube.com/embed/yiJOTCRVWjc?start=833&end=990&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="yiJOTCRVWjc" data-start="833" data-end="990"
+                data-frame="0" data-title="Jesse Genet — Cowork at home (3 min)"
+                aria-label="Play video: Jesse Genet — Cowork at home (3 min), segment 13:53 to 16:30">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/yiJOTCRVWjc/0.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/yiJOTCRVWjc/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/yiJOTCRVWjc/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 13:53–16:30 · At home</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Family workflow · block 2 of 4 <span class="highlights-hint">· click to jump</span></div>
@@ -1542,14 +1613,20 @@ Pick a recurring task you do most weeks — anything that has Input, Transform, 
         <div class="block block-video" data-block="1" id="stop-6-block-1">
           <div class="block-grid">
             <div class="video">
-              <iframe
-                title="Jesse Genet — codify what works (4 min)"
-                src="https://www.youtube.com/embed/aFQskhdR3RQ?start=2409&end=2610&enablejsapi=1"
-                loading="lazy"
-                allowfullscreen
-                frameborder="0"
-                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              <button type="button" class="yt-facade"
+                data-video-id="aFQskhdR3RQ" data-start="2409" data-end="2610"
+                data-frame="0" data-title="Jesse Genet — codify what works (4 min)"
+                aria-label="Play video: Jesse Genet — codify what works (4 min), segment 40:09 to 43:30">
+                <img class="yt-facade-thumb"
+                  src="https://img.youtube.com/vi/aFQskhdR3RQ/0.jpg"
+                  data-fallback-1="https://img.youtube.com/vi/aFQskhdR3RQ/mqdefault.jpg"
+                  data-fallback-2="https://img.youtube.com/vi/aFQskhdR3RQ/hqdefault.jpg"
+                  alt="" loading="lazy" width="480" height="360" />
+                <span class="yt-facade-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+                </span>
+                <span class="yt-facade-ts">▶ 40:09–43:30 · Codify what works</span>
+              </button>
             </div>
             <aside class="highlights" aria-label="Key moments from the video">
               <div class="highlights-label">Codify what works · block 1 of 4 <span class="highlights-hint">· click to jump</span></div>
@@ -1817,12 +1894,48 @@ Pick one thing you'd normally type or look up that you've done more than twice i
         }
       });
 
-      // --- YouTube timestamp chip seekTo with fallback ---
+      // --- YouTube facade: thumbnail fallback chain (0.jpg may 404 → mqdefault → hqdefault) ---
+      document.querySelectorAll('.yt-facade-thumb').forEach(img => {
+        let step = 0;
+        img.addEventListener('error', () => {
+          step++;
+          if (step === 1) img.src = img.dataset.fallback1;
+          else if (step === 2) img.src = img.dataset.fallback2;
+        });
+      });
+
+      // --- YouTube facade: click to swap facade → live iframe with autoplay ---
+      document.querySelectorAll('.yt-facade').forEach(facade => {
+        facade.addEventListener('click', () => activateFacade(facade));
+      });
+
+      function activateFacade(facade) {
+        const { videoId, start, end, title } = facade.dataset;
+        const iframe = document.createElement('iframe');
+        iframe.title = title;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?start=${start}&end=${end}&autoplay=1&enablejsapi=1`;
+        iframe.loading = 'lazy';
+        iframe.allowFullscreen = true;
+        iframe.frameBorder = '0';
+        iframe.setAttribute('allow', 'accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        facade.replaceWith(iframe);
+        iframe.focus();
+      }
+
+      // --- YouTube timestamp chip seekTo with facade bootstrap + fallback ---
       document.querySelectorAll('.highlights-list a[data-seek]').forEach(a => {
         a.addEventListener('click', (e) => {
+          const grid = a.closest('.block-grid');
+          // If the block-grid still has a facade, activate it (seek lands at segment start regardless)
+          const facade = grid?.querySelector('.yt-facade');
+          if (facade) {
+            e.preventDefault();
+            activateFacade(facade);
+            return;
+          }
           const seek = parseInt(a.dataset.seek, 10);
           if (!Number.isFinite(seek)) return;  // fallback: let native href fire
-          const iframe = a.closest('.block-grid')?.querySelector('iframe');
+          const iframe = grid?.querySelector('iframe');
           if (!iframe?.contentWindow) return;  // fallback
           try {
             // Attempt postMessage seekTo (YouTube Player API)
