@@ -1,0 +1,56 @@
+# === Private customized versions (never commit the real-named HTML) ===
+index.private.html
+*.private.*
+*.private
+private/
+private-*
+customized/
+custom-*
+*.custom.*
+personal/
+*.personal.*
+
+# === Internal planning + research (real name / URLs / referral codes live here) ===
+docs/plans/
+docs/research/
+docs/verification/*.json
+contracts/
+research/
+
+# === Environment ===
+.env
+.env.local
+.env.*.local
+*.env
+*.env.*
+
+# === Potential leak files ===
+*.pdf
+*.docx
+*.doc
+*.pages
+*.key
+*.csv
+*.xlsx
+*.xls
+screenshot*.png
+screenshot*.jpg
+Screen*Shot*.png
+
+# === Lighthouse / audit outputs ===
+lighthouse-*.html
+lighthouse-*.json
+.lighthouseci/
+
+# === OS + editor ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# === Node / build artifacts (future-proofing) ===
+node_modules/
+dist/
+build/
