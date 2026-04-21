@@ -1,4 +1,4 @@
-# Excalidraw Style Guide — jarda-ai-start v2
+# Excalidraw Style Guide — AI-Start v2
 
 All 6 diagrams in v2 follow these rules for visual consistency. The aesthetic is "hand-drawn, intentionally anti-AI-slop" — Excalidraw's default rough roughness, not pixel-perfect design-tool polish.
 
