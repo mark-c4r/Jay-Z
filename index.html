@@ -1249,6 +1249,78 @@
       renderRail();
       updateTopbar();
 
+      // --- Mobile drawer ---
+      const menuToggle = document.getElementById('menu-toggle');
+      const rail = document.getElementById('rail');
+      const backdrop = document.getElementById('drawer-backdrop');
+      const bottomNav = document.querySelector('.bottom-nav');
+      let drawerOpen = false;
+      let lastFocused = null;
+
+      function getFocusable(el) {
+        return Array.from(el.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+      }
+
+      function openDrawer() {
+        if (drawerOpen) return;
+        drawerOpen = true;
+        lastFocused = document.activeElement;
+        rail.classList.add('rail-open');
+        backdrop.hidden = false;
+        menuToggle.setAttribute('aria-expanded', 'true');
+        if (bottomNav) bottomNav.classList.add('hidden');
+        // Move focus to first focusable in rail
+        const focusables = getFocusable(rail);
+        if (focusables.length) focusables[0].focus();
+        document.addEventListener('keydown', handleDrawerKeys);
+      }
+
+      function closeDrawer() {
+        if (!drawerOpen) return;
+        drawerOpen = false;
+        rail.classList.remove('rail-open');
+        backdrop.hidden = true;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (bottomNav) bottomNav.classList.remove('hidden');
+        document.removeEventListener('keydown', handleDrawerKeys);
+        // Return focus to menu toggle
+        menuToggle.focus();
+      }
+
+      function handleDrawerKeys(e) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeDrawer();
+          return;
+        }
+        if (e.key === 'Tab') {
+          // Simple focus trap within rail
+          const focusables = getFocusable(rail);
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+
+      menuToggle.addEventListener('click', () => drawerOpen ? closeDrawer() : openDrawer());
+      backdrop.addEventListener('click', closeDrawer);
+
+      // Close drawer when navigating to a stop (rail click on mobile should navigate AND close)
+      rail.addEventListener('click', (e) => {
+        const link = e.target.closest('a[data-stop]');
+        if (link && drawerOpen) {
+          // onStopClick already handles navigation + scroll; we just close the drawer
+          setTimeout(closeDrawer, 100);  // allow scroll to start before losing the rail-open class
+        }
+      });
+
       // Expose for Task 1.4 (drawer) and later tasks
       window.__aiStart = { state, saveState, STOPS, renderRail, updateTopbar, scrollToStop };
     })();
