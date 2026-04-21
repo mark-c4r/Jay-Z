@@ -1180,18 +1180,12 @@
       max-width: 720px;
       margin: 48px auto 64px;
       padding: 32px 28px 40px;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 400ms ease-out, transform 400ms ease-out;
-      pointer-events: none;
-      visibility: hidden;
       border-top: 1px solid var(--rule-soft);
+      animation: completionFadeIn 400ms ease-out;
     }
-    .completion-reveal.is-revealed {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-      visibility: visible;
+    @keyframes completionFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .completion-figure {
       margin: 0 0 24px;
@@ -1729,7 +1723,7 @@ Pick one thing you'd normally type or look up that you've done more than twice i
         </nav>
       </section>
 
-      <section class="completion-reveal" id="completion-reveal" aria-live="polite" aria-hidden="true">
+      <section class="completion-reveal" id="completion-reveal" aria-live="polite" hidden>
         <figure class="completion-figure">
           <img src="assets/hero-summit.jpg" alt="Ridgeline view near the summit of Triglav in Slovenia, a narrow rocky path leading upward against a cloudy sky." loading="lazy" />
           <figcaption class="completion-caption">Slovenia · Triglav ridgeline, near the summit</figcaption>
@@ -2060,8 +2054,7 @@ Pick one thing you'd normally type or look up that you've done more than twice i
       function syncRevealState() {
         if (!reveal) return;
         const isComplete = state.completed.blocks.includes('stop-6-try-one');
-        reveal.classList.toggle('is-revealed', isComplete);
-        reveal.setAttribute('aria-hidden', isComplete ? 'false' : 'true');
+        reveal.hidden = !isComplete;
       }
 
       // Sync on load (in case localStorage already has stop-6-try-one marked)
