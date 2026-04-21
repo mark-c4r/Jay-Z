@@ -1174,6 +1174,53 @@
 
     .research-stub { padding: 28px 28px 40px; border-top: 2px dashed var(--rule); }
     .research-stub h2 { font-size: 22px; font-weight: 500; margin: 0 0 10px; color: var(--ink); }
+
+    /* Completion reveal — fades in when Stop 6 try-one checkbox is checked */
+    .completion-reveal {
+      max-width: 720px;
+      margin: 48px auto 64px;
+      padding: 32px 28px 40px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 400ms ease-out, transform 400ms ease-out;
+      pointer-events: none;
+      visibility: hidden;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .completion-reveal.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      visibility: visible;
+    }
+    .completion-figure {
+      margin: 0 0 24px;
+    }
+    .completion-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .completion-caption {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      padding-top: 10px;
+      letter-spacing: 0.01em;
+    }
+    .completion-copy {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ink);
+      max-width: 620px;
+      margin: 16px auto 0;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -1682,6 +1729,14 @@ Pick one thing you'd normally type or look up that you've done more than twice i
         </nav>
       </section>
 
+      <section class="completion-reveal" id="completion-reveal" aria-live="polite" aria-hidden="true">
+        <figure class="completion-figure">
+          <img src="assets/hero-summit.jpg" alt="Ridgeline view near the summit of Triglav in Slovenia, a narrow rocky path leading upward against a cloudy sky." loading="lazy" />
+          <figcaption class="completion-caption">Slovenia · Triglav ridgeline, near the summit</figcaption>
+        </figure>
+        <p class="completion-copy">Primer's done. What you do next is yours. If this page is still up in a few weeks, that's a bug — copy what you want before then.</p>
+      </section>
+
       <section id="research" class="research-stub">
         <h2>Research · how these picks landed</h2>
         <p class="placeholder">Coming in a few days — tool landscape, market map, why these six stops.</p>
@@ -1970,6 +2025,54 @@ Pick one thing you'd normally type or look up that you've done more than twice i
           }
         });
       });
+
+      // --- Block completion (Slice 6) ---
+      // Wire data-block-id checkboxes to state.completed.blocks (the write-side of
+      // the state the progress bar already reads at line ~1807). Syncs on load so
+      // returning readers see previously-completed checkboxes still checked.
+      const blockCheckboxes = document.querySelectorAll('input[data-block-id]');
+
+      // Initial sync: checkbox.checked <- state.completed.blocks.includes(id)
+      blockCheckboxes.forEach(cb => {
+        const id = cb.dataset.blockId;
+        if (state.completed.blocks.includes(id)) cb.checked = true;
+      });
+
+      blockCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          const id = cb.dataset.blockId;
+          const idx = state.completed.blocks.indexOf(id);
+          if (cb.checked && idx === -1) {
+            state.completed.blocks.push(id);
+          } else if (!cb.checked && idx !== -1) {
+            state.completed.blocks.splice(idx, 1);
+          }
+          saveState(state);
+          updateTopbar();
+        });
+      });
+
+      // --- Completion reveal (Slice 6) ---
+      // Fades in the Triglav image + Option C copy when stop-6-try-one is completed.
+      const reveal = document.getElementById('completion-reveal');
+      const stop6Checkbox = document.querySelector('input[data-block-id="stop-6-try-one"]');
+
+      function syncRevealState() {
+        if (!reveal) return;
+        const isComplete = state.completed.blocks.includes('stop-6-try-one');
+        reveal.classList.toggle('is-revealed', isComplete);
+        reveal.setAttribute('aria-hidden', isComplete ? 'false' : 'true');
+      }
+
+      // Sync on load (in case localStorage already has stop-6-try-one marked)
+      syncRevealState();
+
+      // Update on checkbox change (defer to after the block-completion handler runs)
+      if (stop6Checkbox) {
+        stop6Checkbox.addEventListener('change', () => {
+          setTimeout(syncRevealState, 0);
+        });
+      }
 
       // Expose for Task 1.4 (drawer) and later tasks
       window.__aiStart = { state, saveState, STOPS, renderRail, updateTopbar, scrollToStop };
