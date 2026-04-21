@@ -1532,7 +1532,77 @@ Pick a recurring task you do most weeks — anything that has Input, Transform, 
           <a class="sn-next" href="#stop-6">Stop 6 · Your first week →</a>
         </nav>
       </section>
-      <section id="stop-6" class="stop stop-placeholder"><div class="stop-header"><div class="stop-meta">Stop 6 of 6</div><h2 class="stop-title">Your first week — habit installation</h2></div><p class="placeholder">Coming in a few days.</p></section>
+      <section id="stop-6" class="stop" aria-labelledby="stop-6-title">
+        <div class="stop-header">
+          <div class="stop-meta">Stop 6 of 6 · Block 1</div>
+          <h2 id="stop-6-title" class="stop-title">Your first week — how the primer becomes practice</h2>
+          <p class="stop-rationale">The primer is a shape, not a script. Here's what changes in the first week: the agent starts doing the same small task twice, you notice what worked, you write the principle down once, and the next task inherits it. The question is whether Cowork becomes a tool you opened once or part of how you actually work. That's settled by week two or so, and the lever is mostly one habit — codify once, then keep going.</p>
+        </div>
+
+        <div class="block block-video" data-block="1" id="stop-6-block-1">
+          <div class="block-grid">
+            <div class="video">
+              <iframe
+                title="Jesse Jana — codify what works (4 min)"
+                src="https://www.youtube.com/embed/aFQskhdR3RQ?start=2409&end=2610&enablejsapi=1"
+                loading="lazy"
+                allowfullscreen
+                frameborder="0"
+                allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <aside class="highlights" aria-label="Key moments from the video">
+              <div class="highlights-label">Codify what works · block 1 of 4 <span class="highlights-hint">· click to jump</span></div>
+              <ol class="highlights-list">
+                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2409" target="_blank" rel="noopener" data-seek="2409"><span class="ts">40:09</span><span class="hl-text">Workflows break when decisions aren't written down; codifying them is what makes agents durable.</span></a></li>
+                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2441" target="_blank" rel="noopener" data-seek="2441"><span class="ts">40:41</span><span class="hl-text">From day one, each agent is onboarded to the same shared system for organising notes.</span></a></li>
+                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2500" target="_blank" rel="noopener" data-seek="2500"><span class="ts">41:40</span><span class="hl-text">When the agent does something new, ask it to write the steps into shared files for the next run.</span></a></li>
+                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2590" target="_blank" rel="noopener" data-seek="2590"><span class="ts">43:10</span><span class="hl-text">Give each agent an operating manual — how to work with you, what you like, what you don't.</span></a></li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+
+        <div class="block block-reading" data-block="2" id="stop-6-block-2">
+          <p class="placeholder">Reading arrives in Task 5.5.</p>
+        </div>
+
+        <div class="block block-diagram" data-block="3" id="stop-6-block-3">
+          <div class="block-label">Diagram · block 3 of 4</div>
+          <img src="assets/diagrams/stop-6-habit-loop.svg" alt="Habit-loop diagram: cyclic arrow flow — Trigger to Action to Reflect to Refine back to Trigger." class="diagram-img" />
+        </div>
+
+        <div class="block block-try-one" data-block="4" id="stop-6-block-4">
+          <div class="try-one-label">Try one · block 4 of 4</div>
+          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
+
+Pick one thing you'd normally type or look up that you've done more than twice in the last month. Describe it to me in 3-4 lines: the trigger (what made you do it), the steps you took, and the output you needed. Don't tell me how Cowork could help yet. Just describe the loop. That's the primitive.</pre>
+          <label class="try-one-check">
+            <input type="checkbox" data-block-id="stop-6-try-one">
+            Done this one
+          </label>
+        </div>
+
+        <div class="branches" aria-label="Go deeper — branch by shape of work">
+          <div class="branches-label">Go deeper</div>
+          <ul class="branch-chips">
+            <li><button type="button" class="chip" data-branch="stop-6-personal" aria-expanded="false" aria-controls="drawer-stop-6-personal">Personal</button></li>
+            <li><button type="button" class="chip" data-branch="stop-6-creative" aria-expanded="false" aria-controls="drawer-stop-6-creative">Creative</button></li>
+            <li><button type="button" class="chip" data-branch="stop-6-client" aria-expanded="false" aria-controls="drawer-stop-6-client">Client</button></li>
+            <li><button type="button" class="chip" data-branch="stop-6-deeper" aria-expanded="false" aria-controls="drawer-stop-6-deeper">Deeper</button></li>
+          </ul>
+          <div class="branch-drawer" id="drawer-stop-6-personal" hidden></div>
+          <div class="branch-drawer" id="drawer-stop-6-creative" hidden></div>
+          <div class="branch-drawer" id="drawer-stop-6-client" hidden></div>
+          <div class="branch-drawer" id="drawer-stop-6-deeper" hidden></div>
+        </div>
+
+        <nav class="stop-nav" aria-label="Move between stops">
+          <a class="sn-prev" href="#stop-5">← Stop 5 · Real work</a>
+          <a class="sn-jump" href="#rail">Jump to any</a>
+          <span class="sn-next" aria-disabled="true">Last stop</span>
+        </nav>
+      </section>
 
       <section id="research" class="research-stub">
         <h2>Research · how these picks landed</h2>
@@ -1604,7 +1674,7 @@ Pick a recurring task you do most weeks — anything that has Input, Transform, 
         { n: 3, title: 'Memory',                    blocks: 3, populated: true  },
         { n: 4, title: 'Connectors + safety',       blocks: 4, populated: true  },
         { n: 5, title: 'Real work',                 blocks: 4, populated: true  },
-        { n: 6, title: 'Your first week',           blocks: 4, populated: false },
+        { n: 6, title: 'Your first week',           blocks: 4, populated: true  },
       ];
 
       function stopClass(stop) {
