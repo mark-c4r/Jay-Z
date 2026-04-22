@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="diagram-label-title">
+  <title id="diagram-label-title">C4a.3 target — Stop 1 positioning with &quot;For developers&quot; label over Code + Codex columns</title>
+  <desc>Target-state variant of assets/diagrams/stop-1-positioning.svg. Adds a small &quot;For developers&quot; label spanning the Code and Codex columns, with a light bracket underneath tying them together. All existing elements (ChatGPT | Cowork | Code | Codex boxes, axis labels) unchanged. Stroke widths, fonts, and colors match _style-guide.md: 2px strokes, #222 ink, #a84b2b accent, Inter 11-14px. Alt text update preview below.</desc>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+    .dev-label { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; fill: #222; letter-spacing: 0.02em; }
+    .dev-bracket { fill: none; stroke: #222; stroke-width: 1.25; stroke-linecap: round; }
+    .mockup-note { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #a84b2b; font-style: italic; }
+  </style>
+
+  <!-- ============================================== -->
+  <!-- NEW: "For developers" label bracket (above Code + Codex columns, y ~25-55) -->
+  <!-- ============================================== -->
+
+  <!-- label text, centered between Code-center (x=446) and Codex-center (x=622) → midpoint x=534 -->
+  <text class="dev-label" x="534" y="42" text-anchor="middle">For developers</text>
+
+  <!-- light bracket spanning just the tops of Code (x=366-525) and Codex (x=546-702) columns -->
+  <!-- shape: small downtick on both ends, horizontal line, no center tick (reader's eye connects to label) -->
+  <path class="dev-bracket" d="M 366 52 L 366 58 M 366 52 L 702 52 M 702 52 L 702 58" />
+
+  <!-- ============================================== -->
+  <!-- Existing SVG content, y-shifted by +40 to make room for new label -->
+  <!-- ============================================== -->
+
+  <!-- Box 1: ChatGPT -->
+  <path class="ink" d="M 22 102 Q 24 100 28 101 L 158 100 Q 162 101 161 104 L 160 202 Q 161 206 157 205 L 27 204 Q 22 204 23 200 Z" />
+  <text class="label" x="90" y="140" text-anchor="middle">ChatGPT</text>
+  <text class="caption" x="90" y="162" text-anchor="middle">single-turn</text>
+  <text class="caption" x="90" y="178" text-anchor="middle">chat</text>
+
+  <!-- Box 2: Cowork (accent) -->
+  <path class="ink accent" d="M 182 100 Q 184 98 188 99 L 342 101 Q 346 101 345 104 L 344 204 Q 345 208 341 206 L 187 205 Q 182 205 183 201 Z" />
+  <text class="label label-accent" x="262" y="140" text-anchor="middle">Cowork</text>
+  <text class="caption" x="262" y="162" text-anchor="middle">with memory + files</text>
+  <text class="caption" x="262" y="178" text-anchor="middle">+ connectors</text>
+  <text class="annotation" x="262" y="196" text-anchor="middle" fill="#a84b2b">recommended</text>
+
+  <!-- Box 3: Code -->
+  <path class="ink" d="M 366 101 Q 368 99 372 100 L 522 100 Q 526 100 525 104 L 524 203 Q 525 207 521 206 L 371 204 Q 366 205 367 200 Z" />
+  <text class="label" x="446" y="140" text-anchor="middle">Code</text>
+  <text class="caption" x="446" y="162" text-anchor="middle">developer-grade</text>
+  <text class="caption" x="446" y="178" text-anchor="middle">CLI + IDE</text>
+
+  <!-- Box 4: Codex -->
+  <path class="ink" d="M 546 100 Q 548 98 552 99 L 698 101 Q 702 101 701 104 L 700 204 Q 701 208 697 206 L 551 204 Q 546 204 547 200 Z" />
+  <text class="label" x="622" y="140" text-anchor="middle">Codex</text>
+  <text class="caption" x="622" y="162" text-anchor="middle">autonomous agent</text>
+  <text class="caption" x="622" y="178" text-anchor="middle">CLI-based</text>
+
+  <!-- Axis below: "simpler / more autonomous" (y-shifted by +40) -->
+  <path class="ink" d="M 40 250 Q 200 252 400 250 Q 600 248 680 251" />
+  <path class="ink" d="M 40 250 l -4 -4 M 40 250 l -4 4" />
+  <path class="ink" d="M 680 251 l 4 -4 M 680 251 l 4 4" />
+  <text class="annotation" x="40" y="268" text-anchor="start">simpler, conversational</text>
+  <text class="annotation" x="680" y="268" text-anchor="end">more autonomous, technical</text>
+
+  <!-- ============================================== -->
+  <!-- Mockup-only annotations (do NOT ship in final SVG) -->
+  <!-- ============================================== -->
+  <text class="mockup-note" x="22" y="290">[MOCKUP NOTE] Build step: edit assets/diagrams/stop-1-positioning.svg — add dev-label text + dev-bracket path only; y-shift existing boxes +40; update viewBox height 260→300.</text>
+</svg>

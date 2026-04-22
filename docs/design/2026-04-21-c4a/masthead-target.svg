@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="masthead-mockup-title">
+  <title id="masthead-mockup-title">C4a.1 masthead target — enriched topbar with byline chip + duration badge</title>
+  <desc>Annotated mock of the desktop and narrow-screen topbar states after C4a.1. Current topbar is single row: menu-toggle + stop-counter + progress-bar + block-counter. Target adds byline chip (left of stop-counter) and duration badge (right of block-counter). No height change. Tokens reuse existing var(--muted), var(--ink), var(--rule); no new tokens introduced.</desc>
+
+  <style>
+    .ink      { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ink-thin { fill: none; stroke: #222; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+    .accent   { stroke: #a84b2b; }
+    .muted-s  { fill: none; stroke: #888; stroke-width: 1; stroke-dasharray: 3 3; }
+    .lbl      { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; fill: #222; font-weight: 500; }
+    .lbl-m    { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; }
+    .lbl-a    { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #a84b2b; font-style: italic; }
+    .note     { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #555; font-style: italic; }
+    .hdr      { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; fill: #222; font-weight: 600; }
+    .section  { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #666; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  </style>
+
+  <!-- ============================================== -->
+  <!-- Section 1 — DESKTOP target state (≥900px)     -->
+  <!-- ============================================== -->
+  <text class="section" x="22" y="24">Desktop ≥ 900px · target state</text>
+
+  <!-- topbar outer -->
+  <rect x="22" y="38" width="856" height="48" class="ink" fill="#fafaf7" rx="3" />
+
+  <!-- menu-toggle (hidden on desktop per existing CSS: .topbar #menu-toggle { display: none } up to 899px) -->
+  <!-- label only for reference, nothing rendered -->
+
+  <!-- byline chip (NEW) -->
+  <rect x="40" y="52" width="130" height="20" class="ink-thin" fill="none" rx="2" />
+  <text class="lbl" x="48" y="66">A primer by Mark</text>
+
+  <!-- separator -->
+  <text class="lbl-m" x="178" y="66">·</text>
+
+  <!-- stop counter (existing) -->
+  <text class="lbl" x="188" y="66">Stop 1 of 6 · Start here</text>
+
+  <!-- progress bar (existing) -->
+  <rect x="412" y="60" width="200" height="3" fill="#e6e2da" rx="1.5" />
+  <rect x="412" y="60" width="60" height="3" fill="#a84b2b" rx="1.5" />
+
+  <!-- block counter (existing) -->
+  <line x1="632" y1="52" x2="632" y2="72" class="ink-thin" />
+  <text class="lbl-m" x="642" y="66">Block 1 of 3</text>
+
+  <!-- duration badge (NEW) -->
+  <line x1="760" y1="52" x2="760" y2="72" class="ink-thin" />
+  <text class="lbl-m" x="770" y="66">~20 min</text>
+
+  <!-- annotation arrows -->
+  <path class="muted-s" d="M 70 88 Q 70 106 70 120" />
+  <text class="lbl-a" x="30" y="138">NEW · byline chip</text>
+  <text class="note" x="30" y="152">font-size 12px · color var(--muted)</text>
+  <text class="note" x="30" y="165">no link in v1 · matches .topbar-stop weight</text>
+
+  <path class="muted-s" d="M 785 88 Q 785 106 785 120" />
+  <text class="lbl-a" x="718" y="138" text-anchor="start">NEW · duration badge</text>
+  <text class="note" x="718" y="152">font-size 11px · color var(--muted)</text>
+  <text class="note" x="718" y="165">left-border separator · matches .topbar-block</text>
+
+  <!-- ============================================== -->
+  <!-- Section 2 — NARROW target state (<900px)       -->
+  <!-- ============================================== -->
+  <text class="section" x="22" y="210">Narrow &lt; 900px · target state (hamburger visible, duration hidden)</text>
+
+  <!-- topbar outer, narrow -->
+  <rect x="22" y="224" width="520" height="48" class="ink" fill="#fafaf7" rx="3" />
+
+  <!-- hamburger (visible on narrow) -->
+  <text class="lbl" x="36" y="252">☰</text>
+
+  <!-- byline chip (compressed, stays) -->
+  <rect x="70" y="238" width="114" height="20" class="ink-thin" fill="none" rx="2" />
+  <text class="lbl" x="78" y="252">A primer · Mark</text>
+
+  <!-- stop counter (compressed) -->
+  <text class="lbl" x="196" y="252">Stop 1/6</text>
+
+  <!-- progress bar (shrunk) -->
+  <rect x="262" y="246" width="120" height="3" fill="#e6e2da" rx="1.5" />
+  <rect x="262" y="246" width="36" height="3" fill="#a84b2b" rx="1.5" />
+
+  <!-- block counter -->
+  <text class="lbl-m" x="400" y="252">Block 1/3</text>
+
+  <!-- duration badge HIDDEN -->
+  <text class="lbl-m" x="478" y="252" text-decoration="line-through" fill="#bbb">~20 min</text>
+  <path class="muted-s" d="M 500 248 Q 510 248 520 248" />
+  <text class="lbl-a" x="560" y="252">hidden &lt; 900px</text>
+
+  <!-- ============================================== -->
+  <!-- Section 3 — MARKUP TARGET                      -->
+  <!-- ============================================== -->
+  <text class="section" x="22" y="310">Markup target (inside existing &lt;header class="topbar"&gt;)</text>
+
+  <rect x="22" y="324" width="856" height="78" fill="#fafaf7" stroke="#e6e2da" rx="3" />
+  <text class="note" x="34" y="342" font-family="ui-monospace, monospace" font-size="11" fill="#222" font-style="normal">
+    &lt;button id="menu-toggle" ...&gt;☰&lt;/button&gt;
+  </text>
+  <text class="note" x="34" y="358" font-family="ui-monospace, monospace" font-size="11" fill="#a84b2b" font-style="normal">
+    &lt;div class="topbar-byline"&gt;A primer by Mark&lt;/div&gt;  ← NEW (C4a.1)
+  </text>
+  <text class="note" x="34" y="374" font-family="ui-monospace, monospace" font-size="11" fill="#222" font-style="normal">
+    &lt;div class="topbar-stop"&gt;Stop &lt;span id="tb-stop"&gt;1&lt;/span&gt; of 6 · &lt;span id="tb-title"&gt;Start here&lt;/span&gt;&lt;/div&gt;
+  </text>
+  <text class="note" x="34" y="390" font-family="ui-monospace, monospace" font-size="11" fill="#222" font-style="normal">
+    &lt;div class="topbar-progress"&gt;...&lt;/div&gt; · &lt;div class="topbar-block"&gt;Block 1 of 3&lt;/div&gt;
+  </text>
+  <text class="note" x="34" y="406" font-family="ui-monospace, monospace" font-size="11" fill="#a84b2b" font-style="normal">
+    &lt;div class="topbar-duration"&gt;~20 min&lt;/div&gt;  ← NEW (C4a.1)
+  </text>
+</svg>

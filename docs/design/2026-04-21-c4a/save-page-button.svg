@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="save-page-mockup-title">
+  <title id="save-page-mockup-title">C4a.2 save-page button target — placement inside completion-reveal + print-state strategy</title>
+  <desc>Annotated mock of the completion-reveal block after C4a.2. Current block: hero image, caption, two copy paragraphs. Target adds a "Save this page" button below the second copy paragraph. window.print() triggers browser print. Print stylesheet gets an override so completion-reveal prints even when not yet revealed on-screen.</desc>
+
+  <style>
+    .ink      { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ink-thin { fill: none; stroke: #222; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+    .accent   { stroke: #a84b2b; }
+    .muted-s  { fill: none; stroke: #888; stroke-width: 1; stroke-dasharray: 3 3; }
+    .lbl      { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; fill: #222; font-weight: 500; }
+    .lbl-m    { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; }
+    .lbl-a    { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #a84b2b; font-style: italic; }
+    .note     { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #555; font-style: italic; }
+    .section  { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #666; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    .body     { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; fill: #222; }
+    .caption  { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; text-anchor: middle; }
+  </style>
+
+  <!-- ============================================== -->
+  <!-- Section 1 — completion-reveal target state     -->
+  <!-- ============================================== -->
+  <text class="section" x="22" y="24">Completion reveal · target state after C4a.2</text>
+
+  <!-- outer card, max-width 720 centered, with rule-soft border-top -->
+  <rect x="90" y="40" width="720" height="340" class="ink-thin" fill="#ffffff" />
+
+  <!-- border-top thin line to show the separator -->
+  <line x1="90" y1="40" x2="810" y2="40" stroke="#e6e2da" stroke-width="1" />
+
+  <!-- hero figure placeholder -->
+  <rect x="118" y="70" width="664" height="140" fill="#fafaf7" stroke="#d8d2c6" stroke-width="1" />
+  <text class="caption" x="450" y="150">[hero-summit.jpg — Triglav ridgeline]</text>
+  <text class="caption" x="450" y="225">Slovenia · Triglav ridgeline, near the summit</text>
+
+  <!-- copy paragraphs (existing) -->
+  <text class="body" x="118" y="258">Primer's done. What you do next is yours. If this page is still up in a few weeks,</text>
+  <text class="body" x="118" y="274">that's a bug — copy what you want before then.</text>
+
+  <text class="body" x="118" y="302">If you want the reasoning behind the six stops, the tool-landscape notes, and the</text>
+  <text class="body" x="118" y="318">market map: Research (below).</text>
+
+  <!-- NEW: save-page button -->
+  <rect x="118" y="340" width="158" height="30" class="ink accent" fill="#ffffff" rx="4" />
+  <text class="body" x="197" y="360" fill="#a84b2b" text-anchor="middle" font-weight="600">Save this page</text>
+
+  <!-- annotation for button -->
+  <path class="muted-s" d="M 280 356 Q 310 356 340 356" />
+  <text class="lbl-a" x="350" y="352">NEW · .save-page-button</text>
+  <text class="note" x="350" y="366">onclick=&quot;window.print()&quot; · uses var(--accent) as affordance</text>
+  <text class="note" x="350" y="379">type=&quot;button&quot; · focus-visible ring from global focus style</text>
+
+  <!-- ============================================== -->
+  <!-- Section 2 — print-state strategy                -->
+  <!-- ============================================== -->
+  <text class="section" x="22" y="412">Print-state fix (Decision §3: option A — @media print override)</text>
+
+  <rect x="22" y="422" width="856" height="32" fill="#fafaf7" stroke="#e6e2da" rx="3" />
+  <text class="note" x="34" y="440" font-family="ui-monospace, monospace" font-size="11" fill="#222" font-style="normal">
+    @media print { .completion-reveal[hidden] { display: block !important; } .save-page-button { display: none !important; } }
+  </text>
+  <text class="note" x="34" y="454" font-family="ui-monospace, monospace" font-size="10" fill="#555" font-style="normal">
+    → ensures completion block prints even if reader hits Save before reaching Stop 6; button itself hidden in print.
+  </text>
+</svg>
