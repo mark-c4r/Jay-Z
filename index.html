@@ -1799,7 +1799,7 @@ Pick one thing you'd normally type or look up that you've done more than twice i
           <p class="research-intro">This appendix is for the curious reader. It maps the tool landscape, names a few other voices teaching in this space, and explains why the primer stops where it stops.</p>
         </div>
 
-        <div class="research-block">
+        <div class="research-block" id="research-tool-landscape">
           <h3 class="research-subtitle">Tool landscape</h3>
           <p>Four names come up often. Cowork, Code, Codex, and Gemini. Each sits in a different spot on the spectrum from "chat with memory" to "developer assistant running in a terminal". Describing the shape is more useful than ranking them.</p>
           <p>Cowork is a chat product. You type. It remembers. It reads files you upload. It can reach into a short list of connected tools — a calendar, a drive, a mailbox — when you allow it. The interface is a conversation, and the work happens inside that conversation. For someone who has only used chatbots, this is the smallest step up. Two minutes to understand, five to set up.</p>
@@ -1808,24 +1808,19 @@ Pick one thing you'd normally type or look up that you've done more than twice i
           <p>Gemini is a parallel product from a different vendor, with its own chat surface and its own app integrations. The shape is close to Cowork's — chat with memory and files — but the connected tools, the mobile app, and the pricing tier differ. Worth knowing exists. Not the entry point for this primer.</p>
         </div>
 
-        <div class="research-block">
-          <h3 class="research-subtitle">Market map</h3>
+        <div class="research-block" id="research-teaching-voices">
+          <h3 class="research-subtitle">Teaching voices</h3>
           <p>A short list of other voices teaching in this space. Notes describe the shape of their output, not a verdict on it. A reader who wants to compare notes — see the same idea explained differently, or find someone aimed at a different audience — can start with any of these.</p>
           <ul>
-            <li><strong>Hesselberg.</strong> Long-form YouTube explainers. Screen-record style, methodical pace. Focus on daily workflows and how the tool fits into a working day. Audience tends toward people who watch full-length videos on the way in.</li>
-            <li><strong>Ceranna.</strong> Instructor register. Mid-length videos. Emphasis on creative and content-production workflows rather than technical setup. Audience is creators and solo operators.</li>
-            <li><strong>Zibura.</strong> Shorter form. Threads and clips. Attention to agents and automation more than to the chat surface. Audience leans toward builders already comfortable with APIs.</li>
-            <li><strong>Ben Love.</strong> Consulting and professional-services framing. Longer videos, worked examples with client-shaped problems. Audience is practitioners who serve clients.</li>
-            <li><strong>Honest Guide.</strong> Sits outside the AI-teaching cluster — a tourism and travel channel — and is included because it shows the tool used as a writing, translation, and scripting aid in a non-technical trade. Demonstrates Cowork in use outside a knowledge-work office setting.</li>
-            <li><strong>Rexby.</strong> A brand in the agents and home-automation cluster. Shorter format, product-led rather than tutorial-led. Audience overlaps with Zibura's but skews more consumer.</li>
+            <li><strong><a href="https://ruben.substack.com/" target="_blank" rel="noopener">Ruben Hassid — <em>How to AI</em> Substack</a>.</strong> The clearest non-technical Cowork curriculum online. He named the prompts → projects → skills progression that this primer borrows for its shape. A good second voice if someone wants more at a similar pace.</li>
+            <li><strong><a href="https://www.jeffsu.org/" target="_blank" rel="noopener">Jeff Su</a>.</strong> Productivity and workflow videos. Stop 1's intro video is one of his. Low-fluff, high-signal. If Stop 1's rhythm worked, there is more like it on his channel.</li>
+            <li><strong><a href="https://www.lennysnewsletter.com/p/5-openclaw-agents-run-my-home-finances" target="_blank" rel="noopener">Jesse Genet</a>.</strong> A non-technical parent running AI at home. Already featured in Stops 5 and 6. Her habits — voice-first dictation, a confetti time-limit, Obsidian notes — transfer to most readers' lives without modification.</li>
           </ul>
-          <p>The list is not exhaustive. These six came up most often when looking for the second or third voice a reader might want after finishing a primer. Pricing, channel sizes, and posting cadences are not recorded here because they change quickly and the reader can check them directly. The names are alphabetical, not ranked.</p>
-          <p>One observation about the shape of the field. The material splits along two axes. One axis is the tool being taught — chat surface, code surface, agent surface. The other is the audience — general reader, creator, builder, practitioner. Every voice above picks a pair of those and stays with it. The primer does the same. Cowork as the tool. A general reader with no programming assumed as the audience.</p>
-          <p>A second observation. Most of the voices above teach by recording their own work. The viewer watches the prompt go in and the output come back, in real time, at the creator's pace. The shape is closer to a cooking show than a textbook. Some readers learn well from that. Others do not.</p>
-          <p>A third observation. None of the voices above is a vendor of the tool they teach. The incentives are different from a vendor channel — less sales pressure, more idiosyncrasy. The trade-off is that older videos go out of date quickly when the vendor ships something new.</p>
+          <p>One observation about the shape of the field. The material splits along two axes. One axis is the tool being taught — chat surface, code surface, agent surface. The other is the audience — general reader, creator, builder, practitioner. Each voice above picks a pair of those and stays with it. The primer does the same. Cowork as the tool. A general reader with no programming assumed as the audience.</p>
+          <p>A second observation. None of the voices above is a vendor of the tool they teach. The incentives are different from a vendor channel — less sales pressure, more idiosyncrasy. The trade-off is that older material goes out of date quickly when the vendor ships something new.</p>
         </div>
 
-        <div class="research-block">
+        <div class="research-block" id="research-six-stops">
           <h3 class="research-subtitle">Why these six stops?</h3>
           <p>Each stop answers a question the previous one raised. What is this. How do I set it up. How do I ask it for something useful. How does it remember me. How do I plug it into a tool I already use. What does real work with it look like. The sequence is the smallest path from nothing to a running workflow.</p>
           <p>A few stops were considered and dropped. An advanced-prompting stop was cut because the basics covered in Stop 3 carry most of the weight, and the rest is taste. A price-and-model comparison stop was cut because the numbers change every quarter and a snapshot would be wrong by the time anyone read it. A "deploying agents" stop was cut because it sits a level above this primer — the reader who wants it will know where to look. Six stops is already close to the ceiling for one sitting. Cutting further would leave the primer incomplete on its own terms.</p>
