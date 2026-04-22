@@ -54,3 +54,6 @@ Thumbs.db
 node_modules/
 dist/
 build/
+
+# === qa-lint artifacts (regenerated on each run) ===
+.qa-reports/
