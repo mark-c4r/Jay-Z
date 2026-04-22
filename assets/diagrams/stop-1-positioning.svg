@@ -8,7 +8,13 @@
     .label-accent { fill: #a84b2b; }
     .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
     .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #888; font-style: italic; }
+    .dev-label { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; fill: #222; letter-spacing: 0.02em; }
+    .dev-bracket { fill: none; stroke: #222; stroke-width: 1.25; stroke-linecap: round; }
   </style>
+
+  <!-- "For developers" label + bracket spanning Code + Codex columns (C4a.3) -->
+  <text class="dev-label" x="534" y="42" text-anchor="middle">For developers</text>
+  <path class="dev-bracket" d="M 366 52 L 366 58 M 366 52 L 702 52 M 702 52 L 702 58" />
 
   <!-- Box 1: ChatGPT -->
   <path class="ink" d="M 22 62 Q 24 60 28 61 L 158 60 Q 162 61 161 64 L 160 162 Q 161 166 157 165 L 27 164 Q 22 164 23 160 Z" />
