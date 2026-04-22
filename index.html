@@ -1039,7 +1039,7 @@
 
     .topbar {
       position: sticky; top: 0; z-index: 20;
-      display: grid; grid-template-columns: auto 1fr auto auto; gap: 16px; align-items: center;
+      display: grid; grid-template-columns: auto auto 1fr auto auto auto; gap: 16px; align-items: center;
       padding: 10px 22px; background: var(--bg); border-bottom: 1px solid var(--rule);
     }
     .topbar #menu-toggle {
@@ -1047,16 +1047,21 @@
       background: transparent; border: none; font-size: 22px; padding: 4px 10px; cursor: pointer;
       min-height: 44px; min-width: 44px;
     }
+    .topbar-byline { font-size: 12px; color: var(--muted); font-weight: 500; white-space: nowrap; }
     .topbar-stop { font-size: 12px; color: var(--ink); font-weight: 500; }
     .topbar-progress { height: 3px; background: var(--rule-soft); border-radius: 999px; position: relative; min-width: 120px; }
     .topbar-progress-fill { height: 3px; background: var(--accent); border-radius: 999px; width: 0%; transition: width 200ms ease-out; }
     .topbar-block { font-size: 11px; color: var(--muted); padding-left: 12px; border-left: 1px solid var(--rule); }
+    .topbar-duration { font-size: 11px; color: var(--muted); padding-left: 12px; border-left: 1px solid var(--rule); white-space: nowrap; }
 
     .layout { display: grid; grid-template-columns: 230px 1fr; min-height: calc(100vh - 140px); }
     @media (max-width: 1200px) { .layout { grid-template-columns: 180px 1fr; } }
     @media (max-width: 899px) {
       .layout { grid-template-columns: 1fr; }
+      .topbar { grid-template-columns: auto auto 1fr auto auto; }
       .topbar #menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+      .topbar-duration { display: none; }
+      .topbar-byline { font-size: 11px; }
       .rail { display: none; }
       .rail.rail-open {
         display: block; position: fixed; left: 0; top: 0; bottom: 0; width: 85vw; max-width: 340px;
@@ -1281,9 +1286,11 @@
 
   <header class="topbar" role="banner">
     <button id="menu-toggle" aria-label="Open course menu" aria-expanded="false" aria-controls="rail">☰</button>
+    <div class="topbar-byline">A primer by Mark</div>
     <div class="topbar-stop">Stop <span id="tb-stop">1</span> of 6 · <span id="tb-title">Start here</span></div>
     <div class="topbar-progress" aria-hidden="true"><div class="topbar-progress-fill" id="tb-fill"></div></div>
     <div class="topbar-block" aria-live="polite">Block <span id="tb-block">1</span> of <span id="tb-blocks-total">3</span></div>
+    <div class="topbar-duration">~20 min</div>
   </header>
 
   <div class="layout">
