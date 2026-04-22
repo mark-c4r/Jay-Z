@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="ladder-title">
+  <title id="ladder-title">Tool escalation ladder — most opportunities stay in Cowork; three specific ones earn the upgrade to Code for batch operations.</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .rule-soft { stroke: #c9c6c1; stroke-width: 1.5; }
+    .box-fill { fill: #fafaf7; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .sublabel { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #333; }
+    .item { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #333; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #888; font-style: italic; }
+    .phase-num { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #a84b2b; letter-spacing: 0.1em; }
+  </style>
+
+  <!-- Phase 1: Cowork projects + skills -->
+  <path class="ink" d="M 30 60 Q 32 58 36 59 L 224 60 Q 228 60 227 64 L 226 258 Q 227 262 223 261 L 35 260 Q 30 260 31 256 Z" fill="#fafaf7" />
+  <text class="phase-num" x="42" y="82">PHASE 1 · DAY 1</text>
+  <text class="label" x="42" y="104">Cowork projects</text>
+  <text class="label" x="42" y="121">+ skills</text>
+  <text class="sublabel" x="42" y="144">One conversation at a time.</text>
+  <text class="sublabel" x="42" y="158">No file wrangling.</text>
+
+  <path class="ink rule-soft" d="M 40 176 L 214 176" />
+
+  <text class="item" x="42" y="194">1  Bilingual voice project</text>
+  <text class="item" x="42" y="208">2  Inquiry-qualifier skill</text>
+  <text class="item" x="42" y="222">3  Shoot-log repurposer</text>
+  <text class="item" x="42" y="236">4  Brand-voice rules</text>
+  <text class="item" x="42" y="250">5  Episode-structure skill</text>
+
+  <!-- Arrow 1 -->
+  <path class="ink" d="M 236 160 Q 255 161 272 159" />
+  <path class="ink" d="M 272 159 l -5 -4 M 272 159 l -5 4" />
+
+  <!-- Phase 2: Cowork + connectors -->
+  <path class="ink" d="M 282 60 Q 284 58 288 59 L 476 60 Q 480 60 479 64 L 478 258 Q 479 262 475 261 L 287 260 Q 282 260 283 256 Z" fill="#fafaf7" />
+  <text class="phase-num" x="294" y="82">PHASE 2 · MONTH 2</text>
+  <text class="label" x="294" y="104">Cowork + connectors</text>
+  <text class="sublabel" x="294" y="126">Gmail, Drive, Calendar.</text>
+  <text class="sublabel" x="294" y="140">Read-only first, write later.</text>
+
+  <path class="ink rule-soft" d="M 292 176 L 466 176" />
+
+  <text class="item" x="294" y="194">7  Unified newsletter funnel</text>
+  <text class="item" x="294" y="208">9  Anniversary engine</text>
+  <text class="item" x="294" y="222">10  Book-to-leads bridge</text>
+
+  <!-- Arrow 2 (accent) -->
+  <path class="ink accent" d="M 488 160 Q 507 161 524 159" />
+  <path class="ink accent" d="M 524 159 l -5 -4 M 524 159 l -5 4" />
+
+  <!-- Phase 3: Code (optional, later) -->
+  <path class="ink accent" d="M 534 60 Q 536 58 540 59 L 688 60 Q 692 60 691 64 L 690 258 Q 691 262 687 261 L 539 260 Q 534 260 535 256 Z" fill="#fafaf7" />
+  <text class="phase-num" x="546" y="82">PHASE 3 · IF EVER</text>
+  <text class="label label-accent" x="546" y="104">Code</text>
+  <text class="sublabel" x="546" y="126">Batch mode.</text>
+  <text class="sublabel" x="546" y="140">Files in, files out,</text>
+  <text class="sublabel" x="546" y="154">90 at a time.</text>
+
+  <path class="ink rule-soft" d="M 544 176 L 678 176" />
+
+  <text class="item" x="546" y="194">8  CZ podcast batch</text>
+  <text class="annotation" x="560" y="207">(91 transcripts)</text>
+  <text class="item" x="546" y="226">11  Peak outlines batch</text>
+  <text class="annotation" x="560" y="239">(30 articles)</text>
+  <text class="item" x="546" y="252">12  Schema inject</text>
+
+  <!-- Bottom annotation: "Most opportunities never need Phase 3" -->
+  <path class="ink rule-soft" d="M 30 288 L 690 288" stroke-dasharray="3 4" />
+  <text class="annotation" x="30" y="308">Most opportunities live in Phase 1. Phase 3 is worth it only when the same operation repeats across a folder of</text>
+  <text class="annotation" x="30" y="322">50+ items — the leverage pays back a weekend of learning the terminal.</text>
+</svg>

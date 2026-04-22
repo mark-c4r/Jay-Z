@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="matrix-title">
+  <title id="matrix-title">Opportunity matrix — 12 AI-automation opportunities plotted by Impact versus Implementation cost, with the top 5 highlighted.</title>
+
+  <style>
+    .ink { fill: none; stroke: #222; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .accent { stroke: #a84b2b; }
+    .rule-soft { stroke: #c9c6c1; stroke-width: 1.5; }
+    .label { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #222; }
+    .label-accent { fill: #a84b2b; }
+    .quadrant { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #555; }
+    .quadrant-accent { fill: #a84b2b; }
+    .caption { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #555; }
+    .annotation { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #888; font-style: italic; }
+    .dot-number { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #222; text-anchor: middle; dominant-baseline: middle; }
+    .dot-number-accent { fill: #ffffff; font-weight: 700; }
+    .legend-text { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; fill: #333; }
+    .legend-muted { fill: #888; }
+  </style>
+
+  <!-- Axes -->
+  <!-- X-axis (Implementation Cost) -->
+  <path class="ink" d="M 90 390 Q 300 391 500 389 Q 620 390 650 391" />
+  <path class="ink" d="M 650 391 l -5 -4 M 650 391 l -5 4" />
+  <text class="annotation" x="90" y="410" text-anchor="start">low cost</text>
+  <text class="annotation" x="650" y="410" text-anchor="end">high cost</text>
+  <text class="caption" x="370" y="410" text-anchor="middle">Implementation cost →</text>
+
+  <!-- Y-axis (Impact) -->
+  <path class="ink" d="M 90 390 Q 89 240 91 120 Q 90 80 90 60" />
+  <path class="ink" d="M 90 60 l -4 5 M 90 60 l 4 5" />
+  <text class="annotation" x="82" y="60" text-anchor="end" transform="rotate(-90 82 60)">high impact</text>
+  <text class="annotation" x="82" y="390" text-anchor="start" transform="rotate(-90 82 390)">low impact</text>
+  <text class="caption" x="70" y="225" text-anchor="middle" transform="rotate(-90 70 225)">Impact →</text>
+
+  <!-- Midline crosshair (at I=3, C=3) -->
+  <path class="ink rule-soft" d="M 90 225 L 650 225" stroke-dasharray="3 4" />
+  <path class="ink rule-soft" d="M 370 60 L 370 390" stroke-dasharray="3 4" />
+
+  <!-- Quadrant labels -->
+  <text class="quadrant quadrant-accent" x="110" y="80">Do first</text>
+  <text class="annotation" x="110" y="95">high impact · low cost</text>
+
+  <text class="quadrant" x="630" y="80" text-anchor="end">Big bets</text>
+  <text class="annotation" x="630" y="95" text-anchor="end">high impact · high cost</text>
+
+  <text class="quadrant" x="110" y="378">Fill-in</text>
+  <text class="annotation" x="110" y="363">low impact · low cost</text>
+
+  <text class="quadrant" x="630" y="378" text-anchor="end">Skip</text>
+  <text class="annotation" x="630" y="363" text-anchor="end">low impact · high cost</text>
+
+  <!-- Plotted opportunities -->
+  <!-- Coordinate helper: x = 90 + (cost-1)*140; y = 390 - (impact-1)*82.5 -->
+  <!-- Top-5 (accent filled): #2, #1, #11, #3, #8 -->
+
+  <!-- #2 Inquiry-qualifier  I=4.0 C=1.5 → x=160, y=142.5 (TOP-5) -->
+  <circle cx="160" cy="143" r="16" class="ink accent" fill="#a84b2b" />
+  <text class="dot-number dot-number-accent" x="160" y="143">2</text>
+
+  <!-- #1 Bilingual voice  I=4.0 C=2.0 → x=230, y=142 (TOP-5) -->
+  <circle cx="230" cy="143" r="16" class="ink accent" fill="#a84b2b" />
+  <text class="dot-number dot-number-accent" x="230" y="143">1</text>
+
+  <!-- #11 Peak-series outline  I=4.0 C=2.0 → nudged to avoid #1 → x=262, y=167 (TOP-5) -->
+  <circle cx="262" cy="167" r="16" class="ink accent" fill="#a84b2b" />
+  <text class="dot-number dot-number-accent" x="262" y="167">11</text>
+
+  <!-- #3 Shoot-log repurposer  I=4.5 C=2.5 → x=300, y=101 (TOP-5) -->
+  <circle cx="300" cy="101" r="16" class="ink accent" fill="#a84b2b" />
+  <text class="dot-number dot-number-accent" x="300" y="101">3</text>
+
+  <!-- #8 Language repurposing  I=4.5 C=3.0 → x=370, y=101 (TOP-5) -->
+  <circle cx="370" cy="101" r="16" class="ink accent" fill="#a84b2b" />
+  <text class="dot-number dot-number-accent" x="370" y="101">8</text>
+
+  <!-- Non-top-5 (white filled, ink stroke) -->
+
+  <!-- #5 Episode-structure  I=3.0 C=2.0 → x=230, y=225 -->
+  <circle cx="230" cy="225" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="230" y="225">5</text>
+
+  <!-- #4 Brand-voice authenticity  I=3.0 C=2.5 → x=300, y=225 -->
+  <circle cx="300" cy="225" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="300" y="225">4</text>
+
+  <!-- #9 Anniversary engine  I=4.0 C=3.0 → x=370, y=143 -->
+  <circle cx="370" cy="143" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="370" y="143">9</text>
+
+  <!-- #7 Funnel integration  I=4.5 C=4.0 → x=510, y=101 -->
+  <circle cx="510" cy="101" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="510" y="101">7</text>
+
+  <!-- #10 Book-to-leads  I=3.5 C=3.5 → x=440, y=184 -->
+  <circle cx="440" cy="184" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="440" y="184">10</text>
+
+  <!-- #6 Research-digest  I=2.0 C=3.5 → x=440, y=308 -->
+  <circle cx="440" cy="308" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="440" y="308">6</text>
+
+  <!-- #12 Schema markup  I=2.0 C=5.0 → x=650, y=308 — nudge inward to x=640 -->
+  <circle cx="640" cy="308" r="16" class="ink" fill="#fafaf7" />
+  <text class="dot-number" x="640" y="308">12</text>
+
+  <!-- Legend -->
+  <path class="ink rule-soft" d="M 90 440 L 650 440" />
+
+  <text class="caption" x="90" y="460" font-weight="600" fill="#222">Legend (top 5 in orange, averaged Gemini × Codex scores)</text>
+
+  <!-- Column 1 -->
+  <circle cx="100" cy="478" r="7" class="ink accent" fill="#a84b2b" />
+  <text class="legend-text" x="114" y="482">1  Bilingual voice-and-style project</text>
+
+  <circle cx="100" cy="498" r="7" class="ink accent" fill="#a84b2b" />
+  <text class="legend-text" x="114" y="502">2  Inquiry-qualifier skill</text>
+
+  <circle cx="100" cy="518" r="7" class="ink accent" fill="#a84b2b" />
+  <text class="legend-text" x="114" y="522">3  Shoot-log repurposer</text>
+
+  <circle cx="100" cy="538" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="114" y="542">4  Brand-voice authenticity project</text>
+
+  <!-- Column 2 -->
+  <circle cx="290" cy="478" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="304" y="482">5  Episode-structure skill</text>
+
+  <circle cx="290" cy="498" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="304" y="502">6  Research-digest skill</text>
+
+  <circle cx="290" cy="518" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="304" y="522">7  Funnel integration</text>
+
+  <circle cx="290" cy="538" r="7" class="ink accent" fill="#a84b2b" />
+  <text class="legend-text" x="304" y="542">8  Language repurposing (91 CZ → EN)</text>
+
+  <!-- Column 3 -->
+  <circle cx="480" cy="478" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="494" y="482">9  Anniversary engine</text>
+
+  <circle cx="480" cy="498" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="494" y="502">10  Book-to-leads bridge</text>
+
+  <circle cx="480" cy="518" r="7" class="ink accent" fill="#a84b2b" />
+  <text class="legend-text" x="494" y="522">11  Peak-series outline generator</text>
+
+  <circle cx="480" cy="538" r="7" class="ink" fill="#fafaf7" />
+  <text class="legend-text" x="494" y="542">12  Schema markup generator</text>
+</svg>
