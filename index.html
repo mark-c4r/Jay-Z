@@ -2174,6 +2174,63 @@
         if (fill) fill.style.width = pct + '%';
       }
 
+      function initScrollSync() {
+        const stops = Array.from(document.querySelectorAll('section.stop[id^="stop-"]'));
+        if (stops.length === 0) return;
+
+        const applyStop = (section) => {
+          const match = section.id.match(/^stop-(\d+)$/);
+          if (!match) return;
+          const nextStop = parseInt(match[1], 10);
+          if (!Number.isFinite(nextStop) || nextStop === state.currentStop) return;
+          state.currentStop = nextStop;
+          state.currentBlock = 1;
+          saveState(state);
+          renderRail();
+          updateTopbar();
+        };
+
+        const pickMostVisible = () => {
+          const vh = window.innerHeight || document.documentElement.clientHeight;
+          let best = null;
+          let bestRatio = 0;
+          for (const section of stops) {
+            const r = section.getBoundingClientRect();
+            const visible = Math.max(0, Math.min(vh, r.bottom) - Math.max(0, r.top));
+            const ratio = visible / Math.max(1, Math.min(vh, r.height));
+            if (ratio >= 0.4 && ratio > bestRatio) {
+              best = section;
+              bestRatio = ratio;
+            }
+          }
+          return best;
+        };
+
+        if (typeof window.IntersectionObserver !== 'undefined') {
+          const io = new IntersectionObserver((entries) => {
+            const active = entries
+              .filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.4)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (active) applyStop(active.target);
+          }, { threshold: [0, 0.4, 0.5, 0.75, 1] });
+          stops.forEach(section => io.observe(section));
+          const initial = pickMostVisible();
+          if (initial) applyStop(initial);
+        } else {
+          let rafId = 0;
+          const onScroll = () => {
+            if (rafId) return;
+            rafId = requestAnimationFrame(() => {
+              rafId = 0;
+              const active = pickMostVisible();
+              if (active) applyStop(active);
+            });
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
+      }
+
       function scrollToStop(n) {
         const el = document.getElementById('stop-' + n);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2185,6 +2242,7 @@
       // --- Init ---
       renderRail();
       updateTopbar();
+      initScrollSync();
 
       // --- Mobile drawer ---
       const menuToggle = document.getElementById('menu-toggle');
