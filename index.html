@@ -1090,6 +1090,23 @@
     }
     .bottom-nav.hidden { visibility: hidden; } /* drawer-open state */
 
+    .page-footer {
+      max-width: 720px;
+      margin: 32px auto 48px;
+      padding: 16px 22px;
+      text-align: center;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .page-footer-stuck {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+    @media (max-width: 480px) {
+      .page-footer { margin: 24px auto 32px; padding: 12px 18px; }
+      .page-footer-stuck { font-size: 12.5px; }
+    }
+
     /* === v2a stops === */
     .stop { padding: 28px 28px 36px; border-bottom: 1px solid var(--rule); }
     .stop-placeholder { opacity: 0.55; }
@@ -1622,7 +1639,7 @@
         <div class="stop-header">
           <div class="stop-meta">Stop 4 of 6 · Block 1</div>
           <h2 id="stop-4-title" class="stop-title">Connectors + safety — what Cowork reaches into, what it cannot touch</h2>
-          <p class="stop-rationale">By default, Cowork only sees what's in its own folder. Connectors give it read or write access to Gmail, Drive, Calendar, Notion — one tool at a time, one permission at a time. What each connector can and can't do stays visible in settings. You've probably seen the viral story — someone said Claude deleted 11 GB of their files. Worth knowing why it's misleading: write access is off by default. If you never grant it, Cowork can only read and report back. Grant write per-surface, per-task.</p>
+          <p class="stop-rationale">By default, Cowork only sees what's in its own folder. Connectors give it read or write access to Gmail, Drive, Calendar, Notion — one tool at a time, one permission at a time. What each connector can and can't do stays visible in settings. You've probably seen the viral story — someone said Claude deleted 11 GB of their files. Worth knowing why it's misleading: write access is off by default. If you never grant it, Cowork can only read and report back. Grant write per-surface, per-task. Stuck? Screenshot this stop and ask Claude: "I'm at Stop 4 and I don't see the connector menu — help?" Cowork can read the page back to you.</p>
         </div>
 
         <div class="block block-video" data-block="1" id="stop-4-block-1">
@@ -1941,6 +1958,10 @@
     <a href="#" class="bn-jump">Jump to any</a>
     <a href="#stop-2" class="bn-next">Next stop →</a>
   </nav>
+
+  <footer class="page-footer" role="contentinfo">
+    <p class="page-footer-stuck">Stuck? Reply to the email I sent you with this link — I'll help unstick.</p>
+  </footer>
 
   <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
 
