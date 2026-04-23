@@ -26,7 +26,7 @@ Goal: 20 atomic PRDs + per-PRD Codex R2 + handoff — ready for Sonnet execution
 | [C5.2](C5/C5.2-activate-facade.md) | Extend activateFacade signature | S | 3 | completed | — | C5.3, C5.4, C2.2 | REJECT | 2/3 |
 | [C5.3](C5/C5.3-render-chapters.md) | Render chapter lists per facade | M | 3 | completed | C5.1, C5.2 | C5.4, C5.5 | REJECT | 1/4 |
 | [C5.4](C5/C5.4-click-handlers.md) | Chapter click handlers | M | 4 | completed | C5.1, C5.2, C5.3 | C5.5 | REJECT | 3/2 |
-| [C5.5](C5/C5.5-a11y-keyboard.md) | C5 a11y + keyboard verification | S | 1 | approved | C5.1, C5.2, C5.3, C5.4 | — | REJECT | 3/2 |
+| [C5.5](C5/C5.5-a11y-keyboard.md) | C5 a11y + keyboard verification | S | 1 | completed | C5.1, C5.2, C5.3, C5.4 | — | REJECT | 3/2 |
 | [C2.1](C2/C2.1-scroll-sync.md) | Topbar scroll-sync IO + fallback | M | 4 | completed | — | — | REJECT | 5/3 |
 | [C2.2](C2/C2.2-touch-click-guard.md) | Facade touchend handler | M | 4 | completed | C5.2 | — | REJECT | 2/2 |
 | [C2.3](C2/C2.3-stuck-stop4.md) | Stop 4 "Stuck?" cure | S | 2 | completed | C3.3 | — | REJECT | 4/3 |
