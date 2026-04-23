@@ -103,8 +103,8 @@ Each Sonnet session, in order:
 
 ## Handoff doc
 
-The new handover for Sonnet sessions is [`../../2026-04-22-HANDOFF-prd-pipeline.md`](../../2026-04-22-HANDOFF-prd-pipeline.md).
-The prior Day-2 handover [`../../2026-04-22-HANDOFF-day2-round2-build.md`](../../2026-04-22-HANDOFF-day2-round2-build.md) is superseded.
+The new handover for Sonnet sessions is [`../../../../docs/handoffs/HANDOFF-prd-pipeline.md`](../../../../docs/handoffs/HANDOFF-prd-pipeline.md) (relocated to umbrella 2026-04-23).
+The prior Day-2 handover [`../../../../docs/handoffs/archive/2026-04-22-HANDOFF-day2-round2-build.md`](../../../../docs/handoffs/archive/2026-04-22-HANDOFF-day2-round2-build.md) is superseded.
 
 ## Codex review artifacts
 
