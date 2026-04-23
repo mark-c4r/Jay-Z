@@ -33,7 +33,7 @@ Goal: 20 atomic PRDs + per-PRD Codex R2 + handoff — ready for Sonnet execution
 | [C2.4](C2/C2.4-stuck-footer.md) | Footer fallback | S | 2 | completed | — | — | REJECT | 3/2 |
 | [C7.4](C7-content/C7.4-block-D-market.md) | Block D market clusters | M-L | 5 | completed | C7.3 | — | REJECT | 3/3 |
 | [C7.5](C7-content/C7.5-block-E-growth.md) | Block E growth opportunities | M | 4 | completed | C7.3 | C7.6 | REJECT | 2/2 |
-| [C7.6](C7-content/C7.6-block-F-plus-bridge.md) | Block F+ bridge | S | 2 | approved | C7.5 | — | REJECT | 3/2 |
+| [C7.6](C7-content/C7.6-block-F-plus-bridge.md) | Block F+ bridge | S | 2 | completed | C7.5 | — | REJECT | 3/2 |
 | [C7.7](C7-content/C7.7-block-F-seo.md) | Block F SEO recipes | M | 3 | approved | C7.3, C7.6 | — | REJECT | 3/3 |
 | [C7.8](C7-content/C7.8-block-G-10year.md) | Block G 10-year picture | M | 5 | approved | C7.3 | — | REJECT | 4/3 |
 
