@@ -1158,6 +1158,12 @@
     .diagram-placeholder { background: var(--bg-inset); border: 1px dashed var(--rule); border-radius: 4px; aspect-ratio: 16/7; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; font-style: italic; padding: 16px; text-align: center; }
 
     .try-one-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; }
+    .try-one-framing {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 8px;
+    }
     .try-one-prompt { font-family: ui-monospace, SF Mono, Menlo, monospace; font-size: 13px; color: var(--ink); background: var(--bg-inset); border-left: 3px solid var(--accent); padding: 14px 18px; white-space: pre-wrap; line-height: 1.55; margin: 0; border-radius: 0 4px 4px 0; }
     .try-one-check { display: flex; align-items: center; padding: 12px 0; font-size: 13px; color: var(--ink); cursor: pointer; }
     .try-one-check input { margin-right: 10px; transform: translateY(1px); }
@@ -1428,10 +1434,9 @@
         </div>
 
         <div class="block block-try-one" data-block="3" id="stop-1-block-3">
+          <p class="try-one-framing">These "try-one" blocks are read-alongs. Paste into claude.ai if you're already signed in, or just read — the shape is what matters here.</p>
           <div class="try-one-label">Try one · Block 3 of 3</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-Give me an overview of what today looks like based on my calendar. Read the events, summarize in one short paragraph, flag any that look back-to-back with no buffer. Don't edit anything — just summarize.</pre>
+          <pre class="try-one-prompt">Give me an overview of what today looks like based on my calendar. Read the events, summarize in one short paragraph, flag any that look back-to-back with no buffer. Don't edit anything — just summarize.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-1-try-one">
             Done this one
@@ -1503,9 +1508,7 @@ Give me an overview of what today looks like based on my calendar. Read the even
 
         <div class="block block-try-one" data-block="3" id="stop-2-block-3">
           <div class="try-one-label">Try one · block 3 of 3</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-Create a project called "intro test" (mentally — don't actually create it). Draft a one-page "who I am, what I do" that a model could use to understand my work. Three short sections: what I make, who it's for, constraints you should know. Keep it under 300 words. Show me the draft.</pre>
+          <pre class="try-one-prompt">Create a project called "intro test" (mentally — don't actually create it). Draft a one-page "who I am, what I do" that a model could use to understand my work. Three short sections: what I make, who it's for, constraints you should know. Keep it under 300 words. Show me the draft.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-2-try-one">
             Done this one
@@ -1577,9 +1580,7 @@ Create a project called "intro test" (mentally — don't actually create it). Dr
 
         <div class="block block-try-one" data-block="3" id="stop-3-block-3">
           <div class="try-one-label">Try one · block 3 of 3</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-For a hypothetical "test" project, draft what the project memory should contain: 3 bullet points about what the project is for, 3 bullets about preferred style and tone, 2 bullets about constraints. Keep each bullet under 15 words.</pre>
+          <pre class="try-one-prompt">For a hypothetical "test" project, draft what the project memory should contain: 3 bullet points about what the project is for, 3 bullets about preferred style and tone, 2 bullets about constraints. Keep each bullet under 15 words.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-3-try-one">
             Done this one
@@ -1655,9 +1656,7 @@ For a hypothetical "test" project, draft what the project memory should contain:
 
         <div class="block block-try-one" data-block="4" id="stop-4-block-4">
           <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox: how many unread, which senders appear most often, any with a clear action verb in the subject. Give me a one-paragraph summary. Don't reply to anything, don't archive anything, don't draft anything. Just the summary.</pre>
+          <pre class="try-one-prompt">Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox: how many unread, which senders appear most often, any with a clear action verb in the subject. Give me a one-paragraph summary. Don't reply to anything, don't archive anything, don't draft anything. Just the summary.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-4-try-one">
             Done this one
@@ -1758,9 +1757,7 @@ Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox:
 
         <div class="block block-try-one" data-block="4" id="stop-5-block-4">
           <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-Pick a recurring task you do most weeks — anything that has Input, Transform, Check, Output steps. Describe it to me in 4-5 lines using those step names. Don't suggest automation yet. Don't tell me which step Cowork could handle. Just the shape.</pre>
+          <pre class="try-one-prompt">Pick a recurring task you do most weeks — anything that has Input, Transform, Check, Output steps. Describe it to me in 4-5 lines using those step names. Don't suggest automation yet. Don't tell me which step Cowork could handle. Just the shape.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-5-try-one">
             Done this one
@@ -1836,9 +1833,7 @@ Pick a recurring task you do most weeks — anything that has Input, Transform, 
 
         <div class="block block-try-one" data-block="4" id="stop-6-block-4">
           <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">First draft in chat. Do NOT save, create, move, or edit any file until I review and approve.
-
-Pick one thing you'd normally type or look up that you've done more than twice in the last month. Describe it to me in 3-4 lines: the trigger (what made you do it), the steps you took, and the output you needed. Don't tell me how Cowork could help yet. Just describe the loop. That's the primitive.</pre>
+          <pre class="try-one-prompt">Pick one thing you'd normally type or look up that you've done more than twice in the last month. Describe it to me in 3-4 lines: the trigger (what made you do it), the steps you took, and the output you needed. Don't tell me how Cowork could help yet. Just describe the loop. That's the primitive.</pre>
           <label class="try-one-check">
             <input type="checkbox" data-block-id="stop-6-try-one">
             Done this one
