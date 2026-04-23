@@ -2326,9 +2326,16 @@
         });
       });
 
-      // --- YouTube facade: click to swap facade → live iframe with autoplay ---
+      // --- YouTube facade: click + touchend to swap facade → live iframe with autoplay (C2.2).
+      //     activateFacade is idempotent (!facade.isConnected early-return, from C5.2),
+      //     so a touchend followed by a synthesized click is safe.
       document.querySelectorAll('.yt-facade').forEach(facade => {
         facade.addEventListener('click', () => activateFacade(facade));
+        facade.addEventListener('touchend', (e) => {
+          // preventDefault suppresses the 300ms-delayed synthetic click after touchend.
+          e.preventDefault();
+          activateFacade(facade);
+        }, { passive: false });
       });
 
       function activateFacade(facade, startOverride) {
