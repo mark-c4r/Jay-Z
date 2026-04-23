@@ -2374,6 +2374,36 @@
       //     Click wiring lives in C5.4.
       renderVideoChapters();
 
+      // --- Chapter button click handler (C5.4): branch on facade-vs-iframe.
+      document.querySelectorAll('.video-chapter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const seek = parseInt(btn.dataset.seek, 10);
+          if (!Number.isFinite(seek)) return;
+          const grid = btn.closest('.block-grid');
+          if (!grid) return;
+          const facade = grid.querySelector('.yt-facade');
+          if (facade) {
+            // Branch A: facade still static — activate with chapter start as override.
+            activateFacade(facade, seek);
+            return;
+          }
+          const iframe = grid.querySelector('iframe');
+          if (!iframe || !iframe.contentWindow) return;  // silent no-op fallback
+          // Branch B: iframe live — seek via YouTube IFrame API postMessage.
+          try {
+            iframe.contentWindow.postMessage(JSON.stringify({
+              event: 'command',
+              func: 'seekTo',
+              args: [seek, true]
+            }), '*');
+            iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } catch (err) {
+            /* defensive: if postMessage fails, do nothing; fallback is the native anchor, but we preventDefault'd */
+          }
+        });
+      });
+
       function renderVideoChapters() {
         document.querySelectorAll('.yt-facade').forEach(facade => {
           const videoId = facade.dataset.videoId;
