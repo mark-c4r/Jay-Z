@@ -1279,6 +1279,38 @@
       margin: 16px auto 0;
       text-align: left;
     }
+    .prereq-card {
+      max-width: 720px;
+      margin: 24px auto 32px;
+      padding: 20px 22px 16px;
+      background: var(--bg-inset);
+      border: 1px solid var(--rule-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+    .prereq-card > p,
+    .prereq-card > div { margin: 0 0 10px; }
+    .prereq-card > *:last-child { margin-bottom: 0; }
+    .prereq-byline { font-weight: 600; }
+    .prereq-duration,
+    .prereq-what { color: var(--ink); }
+    .prereq-mobile { color: var(--muted); font-size: 13px; }
+    .prereq-vocab-intro,
+    .prereq-prereqs-intro { font-weight: 600; margin-bottom: 6px !important; }
+    .prereq-vocab-list,
+    .prereq-prereqs-list { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+    .prereq-vocab-list li,
+    .prereq-prereqs-list li { margin-bottom: 4px; }
+    .prereq-vocab-list strong { color: var(--ink); }
+    @media (max-width: 480px) {
+      .prereq-card { padding: 16px 18px 14px; margin: 16px auto 24px; font-size: 13px; }
+      .prereq-mobile,
+      .prereq-vocab-list,
+      .prereq-prereqs-list { font-size: 12.5px; }
+    }
     .save-page-button {
       display: inline-block;
       margin: 20px auto 0;
@@ -1331,6 +1363,28 @@
     </aside>
 
     <main id="main" class="content" role="main">
+      <aside class="prereq-card" id="prereq-card" aria-label="Before you begin">
+        <p class="prereq-byline">A primer by Mark — friend, not vendor. Written for one reader.</p>
+        <p class="prereq-duration">~20 minutes end to end. Skip anywhere — the rail saves your spot.</p>
+        <p class="prereq-what">Cowork, as this primer uses the name: Claude with memory, files, and a few connectors — ChatGPT, but it remembers you.</p>
+        <p class="prereq-mobile">Cowork runs on desktop (Mac, Windows, or the web app). On your phone, Claude reads your projects and uses connectors you've already set up — but new setup needs a keyboard. Read this primer from wherever; do the setup at a keyboard.</p>
+        <div class="prereq-vocab">
+          <p class="prereq-vocab-intro">Three names to untangle once.</p>
+          <ul class="prereq-vocab-list">
+            <li><strong>Chat</strong> — the conversation-only version (chatgpt-style).</li>
+            <li><strong>Cowork</strong> — chat plus projects, files, memory, connectors (this primer).</li>
+            <li><strong>Code</strong> — a terminal tool for developers. If you don't edit code for a living, Cowork is the one.</li>
+          </ul>
+        </div>
+        <div class="prereq-prereqs">
+          <p class="prereq-prereqs-intro">What you need:</p>
+          <ul class="prereq-prereqs-list">
+            <li>A Claude account — Pro ($17/mo annual, $20/mo monthly) gets you memory, files, and connectors.</li>
+            <li>A desktop or laptop for setup.</li>
+            <li>A notes app you already use (for the project's Instructions file).</li>
+          </ul>
+        </div>
+      </aside>
       <section id="stop-1" class="stop stop-current" aria-labelledby="stop-1-title">
         <div class="stop-header">
           <div class="stop-meta">Stop 1 of 6 · Block 1 of 3</div>
