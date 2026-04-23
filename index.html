@@ -1286,6 +1286,30 @@
       .research-bridge { padding: 12px 16px; font-size: 13px; }
       .research-bridge code { font-size: 12.5px; word-break: break-all; }
     }
+    .research-block .recipe-heading {
+      font-family: var(--serif, Georgia, serif);
+      font-size: 15px;
+      font-weight: 600;
+      margin: 28px 0 10px;
+      color: var(--ink);
+    }
+    .research-block .recipe-prompt {
+      display: block;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12.5px;
+      line-height: 1.5;
+      background: var(--bg-inset);
+      border-left: 3px solid var(--muted);
+      padding: 14px 18px;
+      margin: 10px 0 20px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: var(--ink);
+      border-radius: 3px;
+    }
+    @media (max-width: 480px) {
+      .research-block .recipe-prompt { font-size: 12px; padding: 12px 14px; }
+    }
     .research-block .cluster-heading {
       font-family: var(--serif, Georgia, serif);
       font-size: 16px;
@@ -2074,8 +2098,149 @@
 
         <p class="research-bridge">One vertical compounds several of the items above: gear content. A gear list in your voice for each peak turns every blog post into affiliate revenue plus lead-magnet fodder plus a conditions-report asset. The full playbook — peer patterns, three-tier Claude automation, European affiliate catalog — lives in the research bundle at <code>docs/research/2026-04-21-round-2-research/gear-lists-business-research.md</code>. Short version: start with one gear list for one peak, pick two affiliate programs (Bergfreunde.eu + Amazon DE), ship in three weeks, learn what converts, then scale with Claude.</p>
 
-        <div class="research-block" id="research-seo-recipes" hidden>
+        <div class="research-block" id="research-seo-recipes">
           <h3 class="research-subtitle">SEO in 2026 and 8 concrete Cowork prompts for your site</h3>
+
+          <p>SEO shifted in 2026. Citations from ChatGPT, Perplexity, and Google AI Overviews matter more than blue-link clicks. The first 100–150 words of any post now double as the answer snippet that AI-search cites. Below are 8 paste-ready Cowork prompts built around the niches your site already covers. None of them write final posts — they draft outlines, do research, generate schema. You still write the prose.</p>
+
+          <h4 class="recipe-heading">1. AEO intro rewriter</h4>
+          <p>Takes a post's opening and rewrites the first 150 words to directly answer the core question with scannable formatting, without losing your voice.</p>
+          <pre class="recipe-prompt">You are rewriting the intro (first 150 words) of one of my blog posts so AI-search engines (ChatGPT, Perplexity, Google AI Overviews) can cite it cleanly.
+
+Post: [paste the full post here]
+
+Rewrite rules:
+- Answer the post's core question in the very first sentence.
+- Use a short bullet list (3-5 items) or a brief table if the answer is comparative.
+- Preserve my voice: first-person, plain language, no "In today's fast-paced world" intros.
+- Keep the rewrite under 150 words.
+
+Return the rewritten intro only. Do not touch anything past word 150.</pre>
+
+          <h4 class="recipe-heading">2. Peak-series outline generator</h4>
+          <p>Given a peak that isn't on your site yet, drafts an outline following the structure of your strongest existing post.</p>
+          <pre class="recipe-prompt">I publish a series of trail guides for European peaks. I'm missing a guide for [peak name + region]. Using the structure of my strongest existing post (paste below as "reference"), draft an outline for the missing peak.
+
+Reference post: [paste full existing post]
+
+Missing peak: [name, region, elevation, access notes I already know]
+
+Draft an outline with these sections (match reference's section order):
+- Opening answer snippet (≤150 words, AEO-friendly)
+- Access + logistics
+- Route options + difficulty
+- Seasonality + conditions
+- What I recommend + why
+
+Leave placeholder text I can fill — don't invent facts I haven't given you.</pre>
+
+          <h4 class="recipe-heading">3. Seasonal publishing calendar</h4>
+          <p>Given your existing posts + the peaks you haven't covered yet, proposes a month-by-month calendar that pre-stages content before search interest peaks.</p>
+          <pre class="recipe-prompt">I publish trail guides; each peak has a search-interest peak tied to its climbing season. Help me build a 12-month publishing calendar.
+
+Existing posts (titles + publication dates): [paste list]
+
+Peaks I haven't covered yet: [paste list]
+
+Each peak's climbing season: [paste or let me tell you per peak — for known ones, you can estimate]
+
+Produce:
+- A month-by-month table: month | peaks to publish | rationale (why this month, i.e. search-interest lead time).
+- 8-12 weeks of lead time before peak season is ideal (AEO needs indexing + crawl).
+- Flag months that are overcrowded or empty.
+
+Don't invent climbing seasons you don't know; ask me.</pre>
+
+          <h4 class="recipe-heading">4. Image alt-text and caption batch</h4>
+          <p>Feed a batch of image filenames + context; get descriptive alt text + SEO-friendly captions for each.</p>
+          <pre class="recipe-prompt">I'm adding images to one of my trail guide posts and need alt text + captions for each.
+
+Context: [brief — what the post is about, 1-2 sentences]
+
+Images (filename + 1-line description each):
+- [filename-1.jpg: short description]
+- [filename-2.jpg: short description]
+- ...
+
+For each image, return:
+- alt: a descriptive sentence focusing on what's visible (WCAG-style, ≤125 chars)
+- caption: a 1-2 sentence SEO-friendly caption that fits my voice (first-person, concrete, no "breathtaking")
+
+No emoji. No "stunning", "awe-inspiring", or "breathtaking" — banned adjectives for me.</pre>
+
+          <h4 class="recipe-heading">5. Schema markup generator</h4>
+          <p>Given a post URL, outputs HowTo + Article + Person schema as JSON-LD ready to paste into the page source or a WordPress schema plugin.</p>
+          <pre class="recipe-prompt">Generate JSON-LD schema for a blog post of mine.
+
+Post URL: [url]
+Post title: [title]
+Author (me): [preferred display name, e.g. "Mark"]
+Publication date: [YYYY-MM-DD]
+
+Output three separate schema blocks, each in a &lt;script type="application/ld+json"&gt; tag:
+1. Article schema (with author, datePublished, headline, description, mainEntityOfPage).
+2. HowTo schema IF the post contains step-by-step instructions (skip if not).
+3. Person schema for the author (name, url, sameAs with my public profiles — tell me what to put).
+
+Leave placeholders for any info I haven't given you. Don't invent URLs.</pre>
+
+          <h4 class="recipe-heading">6. Internal linking audit</h4>
+          <p>Scans a folder of posts and flags un-linked mentions of other peaks / gear / trails that should link to existing posts.</p>
+          <pre class="recipe-prompt">I pasted 5-10 of my blog posts below. Scan them for un-linked mentions of peaks, trails, gear items, or topics that I ALREADY have dedicated posts for.
+
+My existing posts (titles + slugs):
+- [slug-1: title]
+- [slug-2: title]
+- ...
+
+Posts to scan: [paste posts]
+
+For each un-linked mention, return:
+- Which post it's in (by slug)
+- The surrounding sentence
+- Which target post's slug should be linked
+- A short justification (1 line)
+
+Only flag LOW-RISK links (clear topic match). Don't force keyword-stuffing.</pre>
+
+          <h4 class="recipe-heading">7. AI-search citation check</h4>
+          <p>Weekly prompt: check which of your posts (if any) are cited by Perplexity or ChatGPT for representative queries. Manual for now — there's no clean automated API for this.</p>
+          <pre class="recipe-prompt">I want to check AI-search citation coverage for my site.
+
+Representative queries my readers ask:
+- [query 1]
+- [query 2]
+- [query 3]
+
+For each query, help me design a manual check:
+- What to search in Perplexity / ChatGPT / Google AI Overviews
+- What counts as a "cite" (URL in citations panel, or just text mention?)
+- A simple tracking shape (query | date | citer | cited URL | notes)
+
+Then: based on what I tell you next week, suggest which posts to AEO-rewrite first to improve citation rate.</pre>
+
+          <h4 class="recipe-heading">8. Podcast transcript to blog draft</h4>
+          <p>Takes a podcast transcript (Czech or English) and produces a blog outline structured for AEO.</p>
+          <pre class="recipe-prompt">I have a podcast transcript I'd like to turn into a blog post.
+
+Transcript language: [cz | en]
+Target blog language: [cz | en]
+Transcript: [paste full transcript]
+
+Produce an outline (not the full post):
+- First-150-word answer snippet in the target language (AEO-friendly).
+- 4-6 section headers that map the transcript's arc.
+- Under each header: 2-4 bullet points of key ideas from the transcript.
+- A "quotes to consider preserving verbatim" list (≤5 quotes, with timestamps).
+
+If the target language is different from the source, translate key terms but keep names of places/people verbatim. I'll write the prose from this skeleton.</pre>
+
+          <h4 class="recipe-heading">What NOT to automate on your SEO</h4>
+          <ul>
+            <li>Don't let an agent write full posts unsupervised. Voice matters; readers can smell AI-written content. The agent drafts an outline + research pack; you write the prose.</li>
+            <li>Don't automate publishing. Claude drafts, you review, you publish. Always.</li>
+            <li>Don't chase every keyword. Topical authority around your core domains (European peaks, Scandinavia adventure, mountain photography) is a better moat than sprayed content.</li>
+          </ul>
         </div>
 
         <div class="research-block" id="research-ten-year-picture" hidden>
