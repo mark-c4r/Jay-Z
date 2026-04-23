@@ -1153,6 +1153,37 @@
       opacity: 1; transform: translate(-50%, -50%) scale(1.05);
     }
 
+    .video-chapters {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-height: 80px;              /* reserved for CLS — up to 3 chapters */
+    }
+    .video-chapters li { margin: 0; }
+    .video-chapter-btn {
+      font-family: inherit;
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      padding: 4px 6px;
+      margin: 0;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      border-radius: 3px;
+    }
+    .video-chapter-btn:hover { color: var(--ink); background: var(--bg-inset); }
+    .video-chapter-btn:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+    @media (max-width: 480px) {
+      .video-chapters { min-height: 60px; gap: 1px; }
+      .video-chapter-btn { font-size: 12.5px; padding: 6px 6px; }
+    }
+
     .yt-facade-ts {
       position: absolute; left: 0; right: 0; bottom: 0;
       padding: 8px 12px;
@@ -2337,6 +2368,39 @@
           activateFacade(facade);
         }, { passive: false });
       });
+
+      // --- Chapter lists (C5.3): render <ul class="video-chapters"> below each
+      //     facade, filtered by interval-overlap against the facade window.
+      //     Click wiring lives in C5.4.
+      renderVideoChapters();
+
+      function renderVideoChapters() {
+        document.querySelectorAll('.yt-facade').forEach(facade => {
+          const videoId = facade.dataset.videoId;
+          const facadeStart = parseInt(facade.dataset.start, 10);
+          const facadeEnd = parseInt(facade.dataset.end, 10);
+          const allChapters = (videoChapters[videoId] || []);
+          const visible = allChapters.filter(c => c.start < facadeEnd && c.end > facadeStart);
+          if (visible.length === 0) return;
+          const ul = document.createElement('ul');
+          ul.className = 'video-chapters';
+          ul.setAttribute('aria-label', 'Chapters in this segment');
+          visible.forEach(c => {
+            const seek = Math.max(c.start, facadeStart);
+            const mm = String(Math.floor(seek / 60)).padStart(1, '0');
+            const ss = String(seek % 60).padStart(2, '0');
+            const li = document.createElement('li');
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'video-chapter-btn';
+            btn.dataset.seek = seek;
+            btn.textContent = `${mm}:${ss} — ${c.title}`;
+            li.appendChild(btn);
+            ul.appendChild(li);
+          });
+          facade.insertAdjacentElement('afterend', ul);
+        });
+      }
 
       function activateFacade(facade, startOverride) {
         // Idempotent guard: if facade has already been replaced (not in DOM),
