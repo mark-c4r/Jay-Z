@@ -2177,8 +2177,16 @@
         facade.addEventListener('click', () => activateFacade(facade));
       });
 
-      function activateFacade(facade) {
-        const { videoId, start, end, title } = facade.dataset;
+      function activateFacade(facade, startOverride) {
+        // Idempotent guard: if facade has already been replaced (not in DOM),
+        // there is nothing to activate. Prevents duplicate iframes on rapid
+        // clicks, touch-click double-fires, or chapter-click after facade
+        // already activated via another path.
+        if (!facade || !facade.isConnected) return;
+        const { videoId, end, title } = facade.dataset;
+        const start = startOverride != null && Number.isFinite(+startOverride)
+          ? Math.floor(+startOverride)
+          : facade.dataset.start;
         const iframe = document.createElement('iframe');
         iframe.title = title;
         iframe.src = `https://www.youtube.com/embed/${videoId}?start=${start}&end=${end}&autoplay=1&enablejsapi=1`;
