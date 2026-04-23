@@ -1266,6 +1266,26 @@
       margin: 0 0 12px;
       font-weight: 600;
     }
+    .research-bridge {
+      max-width: 720px;
+      margin: 28px auto;
+      padding: 16px 20px;
+      background: var(--bg-inset);
+      border-left: 3px solid var(--muted);
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+    .research-bridge code {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 13px;
+      background: transparent;
+    }
+    @media (max-width: 480px) {
+      .research-bridge { padding: 12px 16px; font-size: 13px; }
+      .research-bridge code { font-size: 12.5px; word-break: break-all; }
+    }
     .research-block .cluster-heading {
       font-family: var(--serif, Georgia, serif);
       font-size: 16px;
@@ -2051,6 +2071,8 @@
           </ol>
           <p>Each of these is sized for a weekend of setup plus ongoing 15-minute-per-week care. None is "build an agent." All are "save 30 minutes a week, 52 weeks a year."</p>
         </div>
+
+        <p class="research-bridge">One vertical compounds several of the items above: gear content. A gear list in your voice for each peak turns every blog post into affiliate revenue plus lead-magnet fodder plus a conditions-report asset. The full playbook — peer patterns, three-tier Claude automation, European affiliate catalog — lives in the research bundle at <code>docs/research/2026-04-21-round-2-research/gear-lists-business-research.md</code>. Short version: start with one gear list for one peak, pick two affiliate programs (Bergfreunde.eu + Amazon DE), ship in three weeks, learn what converts, then scale with Claude.</p>
 
         <div class="research-block" id="research-seo-recipes" hidden>
           <h3 class="research-subtitle">SEO in 2026 and 8 concrete Cowork prompts for your site</h3>
