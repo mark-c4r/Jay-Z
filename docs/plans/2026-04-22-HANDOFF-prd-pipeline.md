@@ -1,6 +1,6 @@
 ---
 ticket: jarda-ai-start#round2-prd-pipeline
-status: active
+status: completed
 appetite: L (multi-session — Phase E folding + Phase G Sonnet execution × 20)
 project: jarda-ai-start
 updated: 2026-04-22
