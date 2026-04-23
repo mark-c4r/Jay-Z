@@ -1311,11 +1311,21 @@
     .prereq-vocab-list li,
     .prereq-prereqs-list li { margin-bottom: 4px; }
     .prereq-vocab-list strong { color: var(--ink); }
+    .prereq-ack {
+      margin-top: 12px !important;
+      padding-top: 10px;
+      border-top: 1px solid var(--rule-soft);
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--muted);
+    }
+    .prereq-ack a { color: var(--ink); text-decoration: underline; }
     @media (max-width: 480px) {
       .prereq-card { padding: 16px 18px 14px; margin: 16px auto 24px; font-size: 13px; }
       .prereq-mobile,
       .prereq-vocab-list,
       .prereq-prereqs-list { font-size: 12.5px; }
+      .prereq-ack { font-size: 12px; }
     }
     .save-page-button {
       display: inline-block;
@@ -1390,6 +1400,7 @@
             <li>A notes app you already use (for the project's Instructions file).</li>
           </ul>
         </div>
+        <p class="prereq-ack">This primer is built for one reader — an adventure photographer and author with a specific set of online projects. The <a href="#research">appendix</a> maps how Cowork fits those niches specifically.</p>
       </aside>
       <section id="stop-1" class="stop stop-current" aria-labelledby="stop-1-title">
         <div class="stop-header">
