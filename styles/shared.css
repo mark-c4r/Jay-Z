@@ -1436,3 +1436,181 @@
       .completion-reveal[hidden] { display: block !important; }
       .save-page-button { display: none !important; }
     }
+
+/* ============================================================
+   Slice 4 append — wireframe A semantic classes (main-brief layout)
+   Added 2026-04-24. Append-only: all pre-existing rules above are
+   Slice 3 verbatim-move; this block introduces the new IA shell.
+   Token restructuring remains deferred per D12 policy.
+   ============================================================ */
+
+body.main-brief {
+  background: var(--bg);
+  color: var(--ink, #222);
+  font-family: var(--sans, "Inter", system-ui, sans-serif);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+body.main-brief .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule, rgba(0, 0, 0, 0.08));
+  padding: 10px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body.main-brief .site-header .progress-line {
+  height: 2px;
+  background: linear-gradient(to right, var(--accent, #3a5a7a) 0%, var(--rule, rgba(0,0,0,0.08)) 100%);
+  border-radius: 1px;
+}
+body.main-brief .site-header .last-updated {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted, #6b7280);
+  font-family: var(--sans, "Inter", sans-serif);
+}
+
+body.main-brief main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 96px;
+}
+
+body.main-brief main > section {
+  margin: 0 0 72px;
+}
+
+body.main-brief h1,
+body.main-brief h2,
+body.main-brief h3 {
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  color: var(--ink, #1a1a1a);
+  font-weight: 500;
+  line-height: 1.25;
+}
+body.main-brief h1 { font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; }
+body.main-brief h2 { font-size: clamp(24px, 3.5vw, 30px); margin: 48px 0 16px; border-top: 1px solid var(--rule, rgba(0,0,0,0.08)); padding-top: 28px; }
+body.main-brief main > section:first-of-type h2:first-of-type,
+body.main-brief #opening h1 { border-top: none; padding-top: 0; }
+body.main-brief h3 { font-size: 20px; margin: 32px 0 10px; }
+
+body.main-brief p,
+body.main-brief li { font-size: 17px; color: var(--ink, #222); }
+body.main-brief p { margin: 0 0 14px; }
+body.main-brief .letter-body p.signoff { margin: 4px 0 28px; color: var(--muted, #6b7280); }
+body.main-brief .letter-body .letter-intro { margin-top: 24px; color: var(--ink, #333); border-top: 1px dashed var(--rule, rgba(0,0,0,0.08)); padding-top: 20px; }
+body.main-brief .section-lead { color: var(--muted, #4a5568); font-size: 16px; margin-bottom: 24px; }
+
+body.main-brief .video-companion {
+  margin: 32px 0 40px;
+  padding: 0;
+}
+body.main-brief .video-companion .yt-facade {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 14px;
+}
+body.main-brief .video-companion.interview .companion-text { background: var(--bg-inset, #f5f5f7); padding: 18px 20px; border-radius: 6px; border-left: 3px solid var(--accent, #3a5a7a); }
+body.main-brief .video-companion .companion-text p.signoff { color: var(--muted, #6b7280); }
+body.main-brief .video-companion blockquote {
+  margin: 12px 0;
+  padding: 6px 0 6px 14px;
+  border-left: 2px solid var(--accent, #3a5a7a);
+  color: var(--ink, #333);
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  font-size: 16px;
+}
+body.main-brief .video-companion blockquote em { font-style: italic; }
+
+body.main-brief ul.video-chapters {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+body.main-brief ul.video-chapters li { margin: 0; }
+body.main-brief .video-chapter-btn {
+  background: var(--bg-inset, #f5f5f7);
+  border: 1px solid var(--rule, rgba(0,0,0,0.1));
+  color: var(--ink, #222);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: var(--sans, "Inter", sans-serif);
+  line-height: 1.3;
+}
+body.main-brief .video-chapter-btn:hover { background: var(--bg, #fbfbfd); border-color: var(--accent, #3a5a7a); }
+
+body.main-brief .brief-handoff {
+  background: var(--bg-inset, #f5f5f7);
+  padding: 20px 22px;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent, #3a5a7a);
+  margin: 0 0 28px;
+}
+body.main-brief .brief-handoff p { margin: 0; font-style: italic; color: var(--ink, #333); }
+
+body.main-brief #the-brief article {
+  margin: 32px 0;
+  padding-top: 8px;
+}
+body.main-brief #the-brief article + article { border-top: 1px solid var(--rule, rgba(0,0,0,0.08)); padding-top: 28px; }
+body.main-brief #brief-wrong .humility-clause {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--bg, #fbfbfd);
+  border: 1px solid var(--rule, rgba(0,0,0,0.08));
+  border-radius: 6px;
+  font-style: italic;
+  color: var(--ink, #333);
+}
+
+body.main-brief ul.research-pointers {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+body.main-brief ul.research-pointers li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule, rgba(0,0,0,0.08));
+}
+body.main-brief ul.research-pointers li:last-child { border-bottom: none; }
+body.main-brief ul.research-pointers a {
+  font-weight: 600;
+  color: var(--accent, #3a5a7a);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+body.main-brief .site-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+  border-top: 1px solid var(--rule, rgba(0,0,0,0.08));
+  color: var(--muted, #6b7280);
+  font-size: 15px;
+}
+body.main-brief .site-footer p { margin: 0; }
+
+body.main-brief #opening .letter-body p a,
+body.main-brief .companion-text p a,
+body.main-brief .letter-intro a,
+body.main-brief #the-brief a { color: var(--accent, #3a5a7a); border-bottom: 1px solid currentColor; text-decoration: none; }
+body.main-brief #opening .letter-body p a:hover,
+body.main-brief .companion-text p a:hover,
+body.main-brief #the-brief a:hover { color: var(--accent-dark, #2a4562); }
+
+@media (max-width: 640px) {
+  body.main-brief main { padding: 24px 18px 72px; }
+  body.main-brief main > section { margin-bottom: 56px; }
+  body.main-brief h2 { margin-top: 36px; padding-top: 22px; }
+}

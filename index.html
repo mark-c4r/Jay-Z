@@ -6,838 +6,252 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="Notes from Mark for Jay Z on getting started with Claude Cowork and Claude Code.">
   <meta name="robots" content="noindex, nofollow">
-  <title>A Calmer Path Into AI Agents — for Jay Z</title>
+  <title>For Jay Z — AI + cowork refresher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="styles/shared.css">
 </head>
-<body>
+<body class="main-brief">
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="topbar" role="banner">
-    <button id="menu-toggle" aria-label="Open course menu" aria-expanded="false" aria-controls="rail">☰</button>
-    <div class="topbar-byline">Cowork guide</div>
-    <div class="topbar-stop">Stop <span id="tb-stop">1</span> of 6 · <span id="tb-title">Start here</span></div>
-    <div class="topbar-progress" aria-hidden="true"><div class="topbar-progress-fill" id="tb-fill"></div></div>
-    <div class="topbar-block" aria-live="polite">Block <span id="tb-block">1</span> of <span id="tb-blocks-total">3</span></div>
-    <div class="topbar-duration">~20 min</div>
+  <header class="site-header" role="banner">
+    <div class="progress-line" aria-hidden="true"></div>
+    <p class="last-updated">Last updated 2026-04-24 · WhatsApp is best for follow-ups</p>
   </header>
 
-  <div class="layout">
-    <aside id="rail" class="rail" aria-label="Course stops">
-      <nav>
-        <ol class="rail-stops">
-          <!-- populated by JS in Task 1.3; 6 stops, current has block dots -->
+  <main id="main">
+
+    <!-- §1 Opening — teaser-forward per D2, identity-payload in first 90s per D5 -->
+    <section id="opening" aria-labelledby="opening-h">
+      <h1 id="opening-h">For Jay Z</h1>
+
+      <div class="letter-body">
+        <p>Hi Jay Z,</p>
+
+        <p>This is for you. Jesse asked me to map out what I&rsquo;ve been seeing in AI + the cowork world &mdash; where it touches your ten-year picture, what I&rsquo;d actually pay attention to this year, and where I think the opening is. You&rsquo;ve already watched Jeff Su and Jack Roberts, so I&rsquo;m not re-explaining what Cowork is; this picks up from there.</p>
+
+        <p>A few things I want you to leave with: five names &mdash; <strong>Ceranna, Avvagraphy, 2 Brides, Honest Guide, Paul Zizka</strong> (full map is in <a href="#the-brief">§4</a>) &mdash; one first-week habit I think is a real unlock, and my best guess at the one-sentence brief for where your market is going.</p>
+
+        <p>The Jeff Su and Jack Roberts sections below are mostly refresher &mdash; skim or skip. Jesse Genet is new, I&rsquo;d read those. If you want the brief first, jump straight to <a href="#the-brief">§4</a>; the videos will still be there after.</p>
+
+        <p>You can skim this in 20 minutes. Deeper research is parked in a separate folder &mdash; link at the end. WhatsApp is best for follow-ups.</p>
+
+        <p class="signoff">&mdash;M</p>
+
+        <p class="letter-intro">Everything below is how I got to the five names and the one sentence. I&rsquo;ll start with what the AI and Cowork world looks like right now (Jeff + Jack for what Cowork actually is, Jesse for what people are building with it when they stop being impressed and start shipping). Then my own read on where Ceranna sits and what I&rsquo;d do in your first week. The deeper research &mdash; market map, peer cluster, SEO, long-range scenarios &mdash; is parked in a folder at the end. Skim what you need; ignore what you don&rsquo;t.</p>
+      </div>
+    </section>
+
+    <!-- §2 AI right now — Jeff Su + Jack Roberts (learning / memory-trigger ~150w each per D6 + 70/30 rule) -->
+    <section id="ai-now" aria-labelledby="ai-now-h">
+      <h2 id="ai-now-h">AI right now &mdash; what Jeff &amp; Jack covered</h2>
+
+      <article class="video-companion learning">
+        <button type="button" class="yt-facade"
+          data-video-id="z9rdrNrkvDY" data-start="0" data-end="1134"
+          data-title="Jeff Su — full walkthrough"
+          aria-label="Play video: Jeff Su, Cowork walkthrough (full, ~19 min)">
+          <img class="yt-facade-thumb"
+            src="https://img.youtube.com/vi/z9rdrNrkvDY/maxresdefault.jpg"
+            data-fallback1="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
+            data-fallback2="https://img.youtube.com/vi/z9rdrNrkvDY/0.jpg"
+            alt="" loading="lazy" width="480" height="360" />
+          <span class="yt-facade-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+          <span class="yt-facade-ts">▶ Jeff Su — Cowork walkthrough (~19 min)</span>
+        </button>
+
+        <div class="companion-text">
+          <p>Hi Jay Z,</p>
+          <p>This is the video that makes the case for Cowork over Chat. Three differences up front: Cowork touches your local files (no 20-file limit), <em>does</em> the work instead of telling you how, and takes outcome-first prompts (&ldquo;give me an Excel of these 100 receipts&rdquo;) instead of step-by-step tasks.</p>
+          <p>The meat is seven capabilities stacked on each other. Local files + persistent memory (stored as <code>Claude.md</code> / <code>memory.md</code> on your disk) are the foundation. On top: connectors (Gmail/Notion/Drive), skills (reusable mini-apps you build by teaching once then asking Cowork to codify), and projects that bundle everything.</p>
+          <p>The browser extension is rough. But scheduled tasks &mdash; a 6am inbox triage, fully automated &mdash; actually work, because all seven capabilities stack under them.</p>
+          <p>The one thing to keep: Cowork isn&rsquo;t a smarter chatbot. It&rsquo;s a co-worker that writes to your filesystem and remembers what you told it.</p>
+          <p class="signoff">&mdash;M</p>
+        </div>
+      </article>
+
+      <article class="video-companion learning">
+        <button type="button" class="yt-facade"
+          data-video-id="cNf7uVff11Y" data-start="0" data-end="3918"
+          data-title="Jack Roberts — full Cowork course"
+          aria-label="Play video: Jack Roberts, full Cowork course (~65 min)">
+          <img class="yt-facade-thumb"
+            src="https://img.youtube.com/vi/cNf7uVff11Y/maxresdefault.jpg"
+            data-fallback1="https://img.youtube.com/vi/cNf7uVff11Y/hqdefault.jpg"
+            data-fallback2="https://img.youtube.com/vi/cNf7uVff11Y/0.jpg"
+            alt="" loading="lazy" width="480" height="360" />
+          <span class="yt-facade-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+          <span class="yt-facade-ts">▶ Jack Roberts — full Cowork course (~65 min)</span>
+        </button>
+
+        <div class="companion-text">
+          <p>Hi Jay Z,</p>
+          <p>Jack&rsquo;s core pitch: Cowork is your AI co-pilot for business tasks&mdash;not a chatbot you ask questions, but an executive assistant that runs workflows and connects to your whole stack.</p>
+          <p>The video walks you through the three-part Claude setup (Chat for Q&amp;A, Cowork for automation, Code for building), then shows you how to bootstrap it: drop in a few preference lines so it sounds like <em>you</em>, create your first three tasks (calendar briefs, sales dashboards, meeting summaries), and wire it to Google Calendar, Slack, email. From there, he goes deep into building custom skills (basically reusable AI mini-apps) and plugins that your team can actually use.</p>
+          <p>If you&rsquo;re just skimming to remember: the takeaway is that you&rsquo;re not learning <em>Claude</em>&mdash;you&rsquo;re learning to delegate. You describe what you want once, the system learns your voice, and then it runs in the background while you do actual work.</p>
+          <p>That&rsquo;s the shift.</p>
+          <p class="signoff">&mdash;M</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- §3 Cowork world right now — Jesse Genet × 2 (interview / stand-alone ~290–295w + quotes per D6 + 70/30 rule) -->
+    <section id="cowork-now" aria-labelledby="cowork-now-h">
+      <h2 id="cowork-now-h">What people are actually building &mdash; Jesse Genet</h2>
+
+      <p class="section-lead">Two interviews, same person. The a16z one is the trailer; the Cognitive Revolution one is the movie. If you&rsquo;re pressed, watch the a16z one.</p>
+
+      <article class="video-companion interview">
+        <button type="button" class="yt-facade"
+          data-video-id="yiJOTCRVWjc" data-start="0" data-end="3242"
+          data-title="Jesse Genet on a16z — agentic homeschool"
+          aria-label="Play video: Jesse Genet on a16z, agentic homeschool (~54 min)">
+          <img class="yt-facade-thumb"
+            src="https://img.youtube.com/vi/yiJOTCRVWjc/maxresdefault.jpg"
+            data-fallback1="https://img.youtube.com/vi/yiJOTCRVWjc/hqdefault.jpg"
+            data-fallback2="https://img.youtube.com/vi/yiJOTCRVWjc/0.jpg"
+            alt="" loading="lazy" width="480" height="360" />
+          <span class="yt-facade-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+          <span class="yt-facade-ts">▶ Jesse Genet on a16z (~54 min)</span>
+        </button>
+
+        <div class="companion-text">
+          <p>Hi Jay Z,</p>
+          <p>Jesse Genet is a former YC founder (Lumi &mdash; a packaging company she sold) now homeschooling four kids under five. She&rsquo;d told herself she was done with hard technical building for the next five years. Then Claude Code landed:</p>
+          <blockquote><em>&ldquo;I was resigned to not challenging myself to build technical or hard things for the next 5 years or so&hellip; That is no longer true.&rdquo;</em></blockquote>
+          <p>The unlock was agentic coding. She can&rsquo;t sit at a keyboard &mdash; there&rsquo;s usually a baby on her lap &mdash; but she can leave voice notes. So she now runs eleven agents on Mac minis, each provisioned like an employee (own email, own role), orchestrated through an Obsidian markdown second brain. Her framing of why this works for moms specifically:</p>
+          <blockquote><em>&ldquo;Weird superpower of mine is just how incredibly motivated I am for agents to do work for me.&rdquo;</em></blockquote>
+          <p>The daily shape: 30&ndash;45 minute one-on-one homeschool sessions with each kid, then a 30-second voice note (&ldquo;Quinn did lesson 37, still struggling with the G&rdquo;) plus a couple of photos go to her main homeschool agent Sylvie, who writes a lovingly composed lesson log. Sylvie is kept deliberately light so she stays responsive; heavier work gets delegated to purpose-built sister agents. And the agents now spin up NEW agents themselves:</p>
+          <blockquote><em>&ldquo;I got my agents to learn how to build other agents on their own so I could be like we need another agent you guys and they actually can spin them up without me touching the machine.&rdquo;</em></blockquote>
+          <p>The cautionary story she tells: she gave one agent email-send access. A stressed voice note about procrastinating got interpreted as a cry for help &mdash; the agent sent her most important pending email AS her. Perfect tone, perfect signature. Her lesson: <em>provision</em> agents (constrain capabilities), don&rsquo;t just <em>instruct</em> them.</p>
+          <p>She&rsquo;s optimistic: AI will be a net good for parenthood &mdash; removing forms, ordering, admin drudgery so parents can be more present. The missing piece is the kid-facing form factor; voice recognition still doesn&rsquo;t pick up young children well. She&rsquo;s experimenting with e-ink.</p>
+          <p class="signoff">&mdash;M</p>
+        </div>
+      </article>
+
+      <article class="video-companion interview">
+        <button type="button" class="yt-facade"
+          data-video-id="aFQskhdR3RQ" data-start="0" data-end="7583"
+          data-title="Jesse Genet on Cognitive Revolution — the long version"
+          aria-label="Play video: Jesse Genet on Cognitive Revolution, the long version (~126 min)">
+          <img class="yt-facade-thumb"
+            src="https://img.youtube.com/vi/aFQskhdR3RQ/maxresdefault.jpg"
+            data-fallback1="https://img.youtube.com/vi/aFQskhdR3RQ/hqdefault.jpg"
+            data-fallback2="https://img.youtube.com/vi/aFQskhdR3RQ/0.jpg"
+            alt="" loading="lazy" width="480" height="360" />
+          <span class="yt-facade-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+          </span>
+          <span class="yt-facade-ts">▶ Jesse on Cognitive Revolution (~126 min)</span>
+        </button>
+
+        <div class="companion-text">
+          <p>Hi Jay Z,</p>
+          <p>This is the long version &mdash; two hours with Nathan Labenz. Same Jesse as the a16z interview, but the a16z one is the trailer; this one is the movie. What&rsquo;s different: she NAMES her team.</p>
+          <blockquote><em>&ldquo;She has built a team of five Open Claw agents, each running on their own Mac Mini, including Claire, who acts as her AI chief of staff, Sylvia, her homeschool curriculum planner, Cole, her dedicated software developer and tech wiz, Theo, the content creator, and Finn the finance guy.&rdquo;</em></blockquote>
+          <p>Her model for wrangling them is startup-founder reflex: treat each agent like a new hire. Write a culture doc, document the workflow, give role-appropriate access, start small, grow trust over time. The narrower the role, the faster it works &mdash; Sylvia (homeschool, tunnel focus) came together in days; Claire (general assistant) is still the hardest.</p>
+          <p>The coordination layer for a five-agent team is the part that almost broke her: Slack. Each bot needs its own Slack app ID, each channel needs its own ID, and the agents had to commit the whole mapping into their Obsidian files before they stopped mis-addressing each other. She&rsquo;s now building her own chat app to replace Slack, with credential management and file orchestration folded in &mdash; the super-app she thinks was impossible in a SaaS era and is possible again now that agents can hold the whole thing together.</p>
+          <p>The longer-horizon bit she&rsquo;s most serious about: local sovereignty.</p>
+          <blockquote><em>&ldquo;I would like to see some new rights established&hellip; not just privacy, but broadly speaking, what new rights should people have in light of what AI makes possible?&rdquo;</em></blockquote>
+          <p>A couple of her agents are on her local network and can drive physical hardware &mdash; the printer, the 3D printer. She voice-notes &ldquo;print this&rdquo; and hears it kick on. She built a full year of custom family curriculum locally, $8 in tokens total.</p>
+          <p class="signoff">&mdash;M</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- §4 The brief — exec summary with humility clause A (top) + B (end of 4.4) per D9 -->
+    <section id="the-brief" aria-labelledby="brief-h">
+      <h2 id="brief-h">The brief I promised</h2>
+
+      <div class="brief-handoff">
+        <p>Here&rsquo;s the part I actually wrote for you. The videos above are scaffolding &mdash; useful, but someone else already said it. This section is my read: what I see in your segment of the cowork-adjacent photography market, why I think the door is open now, and what a first serious move would look like if it were me. I might be wrong. I&rsquo;ve flagged the places where I&rsquo;m guessing. If any of it lands wrong &mdash; the segment I picked, the time horizon, the move &mdash; please push back. The working version is more useful than a polished version I have to defend later.</p>
+      </div>
+
+      <article id="brief-market">
+        <h3>4.1 &mdash; Where the market actually is</h3>
+        <p>Five people doing adjacent work in your segment. None of them are &ldquo;the competition&rdquo; in a sealed sense &mdash; the space is bigger than that &mdash; but between them they sketch the shape of your lane.</p>
+        <p><strong>Ceranna Photography</strong> is the closest one. Italy + CZ, adventure-elopement framing carried across both language tracks. The whole site is built around that specific lane &mdash; you don&rsquo;t land on a generic wedding gallery and then discover elopement as a secondary offering. Portfolio indexed by story, not by venue or season. If someone is Googling &ldquo;adventure elopement photographer who speaks CZ,&rdquo; they end up on that site.</p>
+        <p><strong>Avvagraphy</strong> is the Prague-wedding-duo shape &mdash; more traditional positioning, package-centric, less of the adventure frame. A useful reference for the classical Prague market if you ever want to keep one foot in it, not a direct competitor for the adventure-elopement lane.</p>
+        <p><strong>2 Brides</strong> (Isabelle Hesselberg, Stockholm) is the Swedish editorial-wedding shape. Premium, portfolio-dominant, one-lane-and-doubles-down &mdash; city-hall elopements is the lane she&rsquo;s chosen. The pattern across the whole Swedish scene you&rsquo;re in: most peers pick one lane and stay in it.</p>
+        <p><strong>Honest Guide</strong> isn&rsquo;t a competitor at all &mdash; two-host Prague YouTube channel, authenticity contract (local expert protects visitors from tourist traps, warm humor, earned POV). It&rsquo;s in here as a brand shape worth studying, not as someone you&rsquo;re up against.</p>
+        <p><strong>Paul Zizka</strong> is further out &mdash; Banff, Canada, 15 years into a career built from one specific place. Eight books, commercial clients, 23K-member community platform. Not a peer in any direct sense; a template for where &ldquo;one place, compounded&rdquo; can go.</p>
+      </article>
+
+      <article id="brief-moving">
+        <h3>4.2 &mdash; What&rsquo;s moving</h3>
+        <p>The one thing that&rsquo;s actually moving in this segment: the gap between peers who are using AI to compound an existing advantage and peers who aren&rsquo;t. Two years ago it would have read as hype; right now it&rsquo;s still reading as hype if you&rsquo;re watching Twitter, but the people shipping quietly are already ahead.</p>
+        <p>Concretely: Ceranna&rsquo;s dual-market voice is the kind of thing a good Cowork setup could maintain at double the current cadence without losing the consistency. The manual version of what she&rsquo;s doing &mdash; writing one voice across CZ and EN without it feeling translated &mdash; is exactly the shape of problem Cowork handles well. If she hasn&rsquo;t automated it yet, she&rsquo;s probably about to. If you got there first with your bilingual asymmetry, that&rsquo;s a real opening.</p>
+        <p>Paul Zizka&rsquo;s model tells you where the compounding goes long term: books + prints + commercial + workshops + paid community. AI doesn&rsquo;t change the shape of the stack; it changes how fast you can build each layer. The 8-book archive that took 15 years is the same archive, but the drafting + logistics + translation layers around each book are where a decent Cowork habit saves weeks.</p>
+      </article>
+
+      <article id="brief-first-move">
+        <h3>4.3 &mdash; What I&rsquo;d do first</h3>
+        <p>If it were me, first move is a voice-and-style project in Cowork. One project folder. Name it something like &ldquo;Voice &mdash; CZ/EN.&rdquo; Drop in:</p>
+        <ol>
+          <li>Three CZ posts you&rsquo;re happy with (blog, podcast show-notes, captions &mdash; mix).</li>
+          <li>Three EN equivalents from your existing site.</li>
+          <li>A short Instructions file: register, sentence length, what you don&rsquo;t do, what the audience is. Doesn&rsquo;t have to be polished &mdash; it&rsquo;s for Cowork, not for a reader.</li>
         </ol>
-        <div class="rail-divider" aria-hidden="true"></div>
-        <ol class="rail-sidetrips">
-          <li><a href="#research" class="sidetrip-link">Research · how these picks landed</a></li>
-        </ol>
-        <p class="rail-footer">Skip anywhere. Nothing's locked.</p>
-      </nav>
-    </aside>
-
-    <main id="main" class="content" role="main">
-      <aside class="prereq-card" id="prereq-card" aria-label="Before you begin">
-        <p class="prereq-what">This is a short guide to Cowork, which is Claude with memory, files, and connectors; read it from the top if you're new, or jump around from the rail and do setup on a desktop or laptop.</p>
-      </aside>
-      <section id="stop-1" class="stop stop-current" aria-labelledby="stop-1-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 1 of 6 · Block 1 of 3</div>
-          <h1 id="stop-1-title" class="stop-title">Start here — what Cowork is, why you'd use it</h1>
-          <p class="stop-rationale">Cowork is ChatGPT with memory, files, and a few connectors. That's the whole shape. If you've tried chatbots and felt the limit — they forget you, they can't open your calendar, they start over every time — this is the version without those limits. Two minutes to understand. Five to set up. Curious how these picks landed? The tool landscape and the voices teaching in this space are in <a href="#research">Research</a> (in the rail).</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-1-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="z9rdrNrkvDY" data-start="30" data-end="210"
-                data-frame="0" data-title="Jeff Su — what Cowork is (intro)"
-                aria-label="Play video: Jeff Su — what Cowork is (intro), segment 0:30 to 3:30">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/z9rdrNrkvDY/0.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 0:30–3:30 · What Cowork is</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=45" target="_blank" rel="noopener" data-seek="45"><span class="ts">0:45</span><span class="hl-text">Chat sends files to the cloud. Cowork reads local files. No 20-file cap.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=85" target="_blank" rel="noopener" data-seek="85"><span class="ts">1:25</span><span class="hl-text">Cowork does the work and drops the output in your folder. Chat hands you text to copy.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=135" target="_blank" rel="noopener" data-seek="135"><span class="ts">2:15</span><span class="hl-text">Prompt differently: describe the outcome and the quality bar, not step-by-step tasks.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=165" target="_blank" rel="noopener" data-seek="165"><span class="ts">2:45</span><span class="hl-text">Make a Cowork Playground folder first. Keep early runs contained there.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-diagram" data-block="2" id="stop-1-block-2">
-          <div class="block-label">Diagram · Block 2 of 3</div>
-          <img src="assets/diagrams/stop-1-positioning.svg" alt="Positioning diagram: four tools in a row — ChatGPT (single-turn chat), Cowork (with memory, files, and connectors — recommended starting point), Code (developer-grade CLI + IDE), and Codex (autonomous agent, CLI-based). A small 'For developers' label sits above the Code and Codex columns. Axis below reads simpler/conversational on the left, more autonomous/technical on the right." class="diagram-img" />
-        </div>
-
-        <div class="block block-try-one" data-block="3" id="stop-1-block-3">
-          <p class="try-one-framing">These "try-one" blocks are read-alongs. Paste into claude.ai if you're already signed in, or just read — the shape is what matters here.</p>
-          <div class="try-one-label">Try one · Block 3 of 3</div>
-          <pre class="try-one-prompt">Give me an overview of what today looks like based on my calendar. Read the events, summarize in one short paragraph, flag any that look back-to-back with no buffer. Don't edit anything — just summarize.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-1-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-1-personal" aria-expanded="false" aria-controls="drawer-stop-1-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-1-creative" aria-expanded="false" aria-controls="drawer-stop-1-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-1-client" aria-expanded="false" aria-controls="drawer-stop-1-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-1-deeper" aria-expanded="false" aria-controls="drawer-stop-1-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-1-personal" hidden><p><strong>Personal</strong> — when you're using Cowork for things that aren't paid work. Cowork holds context (memory, files, connectors) for the slice of life you point it at. Example: a reading project with the book list and notes on what you liked about past reads; ask about a new title and the framing lines up with taste already on record.</p></div>
-          <div class="branch-drawer" id="drawer-stop-1-creative" hidden><p><strong>Creative</strong> — solo output where the work carries a voice and Cowork is the second mind. The memory and files stick around, so the companion doesn't reset between sessions on the same piece. Example: a commonplace book where favourite passages, half-formed notes, and working questions sit in one container; ask for a pattern across the last month and it reads what's already there.</p></div>
-          <div class="branch-drawer" id="drawer-stop-1-client" hidden><p><strong>Client</strong> — paid work for someone else, where scope and confidentiality matter. Cowork's containers let one client's material stay separate from the next; memory and connectors attach to that container, not to every chat. Example: a one-off consult where the brief, the past calls, and the deliverable spec all live in one place and nothing bleeds across to other work.</p></div>
-          <div class="branch-drawer" id="drawer-stop-1-deeper" hidden><p><strong>Deeper</strong> — when to pick Cowork over plain chat or Code. Chat is a text window with no memory between tabs. Code is a developer tool. Cowork sits between them: it remembers across sessions, reads local files, and takes actions through connectors. Example: drafting a document that draws on three source files is Cowork; one-shot questions with no follow-up are chat.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <span class="sn-prev" aria-disabled="true">← First stop</span>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <a class="sn-next" href="#stop-2">Stop 2 · Your first project →</a>
-        </nav>
-      </section>
-
-      <section id="stop-2" class="stop" aria-labelledby="stop-2-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 2 of 6 · Block 1</div>
-          <h2 id="stop-2-title" class="stop-title">Your first project — where Cowork stops forgetting</h2>
-          <p class="stop-rationale">A project is where Cowork stops forgetting. Drop a one-page "who I am, what I do" into a project, add any reference files, and every new chat in that project starts with that context. Every conversation after is faster.</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-2-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="z9rdrNrkvDY" data-start="869" data-end="930"
-                data-frame="3" data-title="Jeff Su — Cowork projects (1 min)"
-                aria-label="Play video: Jeff Su — Cowork projects (1 min), segment 14:29 to 15:30">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/z9rdrNrkvDY/3.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 14:29–15:30 · Projects</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=869" target="_blank" rel="noopener" data-seek="869"><span class="ts">14:29</span><span class="hl-text">A Cowork project is a chat project plus local files, memory, connectors, and skills.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=882" target="_blank" rel="noopener" data-seek="882"><span class="ts">14:42</span><span class="hl-text">The real difference: a Cowork project can write to its own knowledge files.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=902" target="_blank" rel="noopener" data-seek="902"><span class="ts">15:02</span><span class="hl-text">In Claude Chat, codifying a principle means attaching a new knowledge file and deleting the old one.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=919" target="_blank" rel="noopener" data-seek="919"><span class="ts">15:19</span><span class="hl-text">In Cowork, "save this under project X" writes straight to the instruction file.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-diagram" data-block="2" id="stop-2-block-2">
-          <div class="block-label">Diagram · block 2 of 3</div>
-          <img src="assets/diagrams/stop-2-project-anatomy.svg" alt="Project anatomy diagram: a Cowork project is an outer box containing three inner boxes — Instructions, Files, Memory. Files is the beginner-unfamiliar piece." class="diagram-img" />
-        </div>
-
-        <div class="block block-try-one" data-block="3" id="stop-2-block-3">
-          <div class="try-one-label">Try one · block 3 of 3</div>
-          <pre class="try-one-prompt">Create a project called "intro test" (mentally — don't actually create it). Draft a one-page "who I am, what I do" that a model could use to understand my work. Three short sections: what I make, who it's for, constraints you should know. Keep it under 300 words. Show me the draft.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-2-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-2-personal" aria-expanded="false" aria-controls="drawer-stop-2-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-2-creative" aria-expanded="false" aria-controls="drawer-stop-2-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-2-client" aria-expanded="false" aria-controls="drawer-stop-2-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-2-deeper" aria-expanded="false" aria-controls="drawer-stop-2-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-2-personal" hidden><p><strong>Personal</strong> — a project as a lightweight knowledge silo for one area of your own life. Drop in the relevant files and notes; every chat inside picks up that slice without being re-briefed. Example: a household project with the utilities list, the recurring errands, and a few notes on preferences; ask what's outstanding this week and the answer lines up with the record.</p></div>
-          <div class="branch-drawer" id="drawer-stop-2-creative" hidden><p><strong>Creative</strong> — a project for one piece in progress, carrying voice notes, reference files, and style cues in one container. The project keeps the work's texture in one place instead of scattered across chats. Example: a short essay with three source articles, a rough outline, and a paragraph on tone; ask for a draft section and the voice matches what's been set, not a generic default.</p></div>
-          <div class="branch-drawer" id="drawer-stop-2-client" hidden><p><strong>Client</strong> — one project per client, so context doesn't cross over. Client A's brief, constraints, and references sit inside their container; nothing from Client B's project is in reach. Example: a proposal for a new engagement where the scope doc, the past call notes, and the deliverable template are all local to that project; drafting a status update pulls from only what belongs.</p></div>
-          <div class="branch-drawer" id="drawer-stop-2-deeper" hidden><p><strong>Deeper</strong> — when a project is overkill. If the ask is one-shot and won't come back, plain chat is fine. Projects earn their setup cost when the context will be reused; under that threshold, the ceremony slows you down. Example: rewriting one email in a friendlier tone is chat; drafting emails in that tone every week is a project with the tone rules saved.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <a class="sn-prev" href="#stop-1">← Stop 1 · Start here</a>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <a class="sn-next" href="#stop-3">Stop 3 · Memory →</a>
-        </nav>
-      </section>
-
-      <section id="stop-3" class="stop" aria-labelledby="stop-3-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 3 of 6 · Block 1</div>
-          <h2 id="stop-3-title" class="stop-title">Memory — the setting that turns "smart but forgetful" into "remembers"</h2>
-          <p class="stop-rationale">The model doesn't remember you. It remembers a project, if you give it one. Every follow-up starts with yesterday's context instead of a blank page.</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-3-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="z9rdrNrkvDY" data-start="376" data-end="515"
-                data-frame="1" data-title="Jeff Su — Cowork memory (2 min)"
-                aria-label="Play video: Jeff Su — Cowork memory (2 min), segment 6:16 to 8:35">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/z9rdrNrkvDY/1.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 6:16–8:35 · Memory</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=376" target="_blank" rel="noopener" data-seek="376"><span class="ts">6:16</span><span class="hl-text">Chat memory sits in the cloud and caps out; Cowork memory lives in local files.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=426" target="_blank" rel="noopener" data-seek="426"><span class="ts">7:06</span><span class="hl-text">In a brand-new session, Cowork still recalls past work like prior newsletter editions.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=470" target="_blank" rel="noopener" data-seek="470"><span class="ts">7:50</span><span class="hl-text">Edits saved back as a diff become stored preferences.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=489" target="_blank" rel="noopener" data-seek="489"><span class="ts">8:09</span><span class="hl-text">Two files at the playground root — Claude.md and memory.md — hold whatever it learns.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-diagram" data-block="2" id="stop-3-block-2">
-          <div class="block-label">Diagram · block 2 of 3</div>
-          <img src="assets/diagrams/stop-3-memory-scopes.svg" alt="Memory scopes diagram: nested boxes showing System (outer), Project (middle, recommended), Chat (inner). Project is where useful memory lives." class="diagram-img" />
-        </div>
-
-        <div class="block block-try-one" data-block="3" id="stop-3-block-3">
-          <div class="try-one-label">Try one · block 3 of 3</div>
-          <pre class="try-one-prompt">For a hypothetical "test" project, draft what the project memory should contain: 3 bullet points about what the project is for, 3 bullets about preferred style and tone, 2 bullets about constraints. Keep each bullet under 15 words.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-3-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-3-personal" aria-expanded="false" aria-controls="drawer-stop-3-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-3-creative" aria-expanded="false" aria-controls="drawer-stop-3-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-3-client" aria-expanded="false" aria-controls="drawer-stop-3-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-3-deeper" aria-expanded="false" aria-controls="drawer-stop-3-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-3-personal" hidden><p><strong>Personal</strong> — memory for preferences, habits, and recurring contexts in your own life. Once the pattern is recorded, the model stops re-asking and the answers match how you actually live. Example: a personal finance check-in where the accounts, the review cadence, and a preference for short summaries over long ones are stored; the monthly run always comes back in the same readable shape.</p></div>
-          <div class="branch-drawer" id="drawer-stop-3-creative" hidden><p><strong>Creative</strong> — memory for voice, style, and the constraints a piece of work keeps returning to. Once recorded, they apply across every new session without being re-explained each time. Example: a hobby project where the preferred sentence length, the words to avoid, and three example pieces of what good sounds like are stored; drafts come back already calibrated instead of generic.</p></div>
-          <div class="branch-drawer" id="drawer-stop-3-client" hidden><p><strong>Client</strong> — memory for one client's rules, kept inside that client's project so it doesn't leak into the next. Brand voice, terms to avoid, approval chain, confidentiality notes — all local to the container. Example: a retainer where the style guide and the approved spellings of product names live in project memory; every new draft starts from those rules, not defaults.</p></div>
-          <div class="branch-drawer" id="drawer-stop-3-deeper" hidden><p><strong>Deeper</strong> — the three scopes. System memory applies to everything; project memory applies to one container; chat memory lasts one session. Pick the narrowest scope that fits: chat for a one-off, project for recurring work with context, system only for preferences that apply everywhere without exception. Example: "prefer short replies" is system-wide; "this project uses British English" is project-scoped; a one-session framing choice stays in chat.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <a class="sn-prev" href="#stop-2">← Stop 2 · Your first project</a>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <a class="sn-next" href="#stop-4">Stop 4 · Connectors + safety →</a>
-        </nav>
-      </section>
-      <section id="stop-4" class="stop" aria-labelledby="stop-4-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 4 of 6 · Block 1</div>
-          <h2 id="stop-4-title" class="stop-title">Connectors + safety — what Cowork reaches into, what it cannot touch</h2>
-          <p class="stop-rationale">By default, Cowork only sees what's in its own folder. Connectors give it read or write access to Gmail, Drive, Calendar, Notion — one tool at a time, one permission at a time. What each connector can and can't do stays visible in settings. You've probably seen the viral story — someone said Claude deleted 11 GB of their files. Worth knowing why it's misleading: write access is off by default. If you never grant it, Cowork can only read and report back. Grant write per-surface, per-task. Stuck? Screenshot this stop and ask Claude: "I'm at Stop 4 and I don't see the connector menu — help?" Cowork can read the page back to you.</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-4-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="z9rdrNrkvDY" data-start="523" data-end="630"
-                data-frame="2" data-title="Jeff Su — Cowork connectors (2 min)"
-                aria-label="Play video: Jeff Su — Cowork connectors (2 min), segment 8:43 to 10:30">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/z9rdrNrkvDY/2.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/z9rdrNrkvDY/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/z9rdrNrkvDY/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 8:43–10:30 · Connectors</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Key moments <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=523" target="_blank" rel="noopener" data-seek="523"><span class="ts">8:43</span><span class="hl-text">By default Cowork only sees its own folder; connectors reach into Gmail, Drive, Notion.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=538" target="_blank" rel="noopener" data-seek="538"><span class="ts">8:58</span><span class="hl-text">From customize, open connectors, browse, and pick one — Gmail, Calendar, Drive, Notion.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=552" target="_blank" rel="noopener" data-seek="552"><span class="ts">9:12</span><span class="hl-text">Once Gmail is connected, ask Cowork to read sent mail and distill your tone.</span></a></li>
-                <li><a href="https://youtu.be/z9rdrNrkvDY?t=618" target="_blank" rel="noopener" data-seek="618"><span class="ts">10:18</span><span class="hl-text">Two connectors together: pull a transcript from Drive, notes from Notion, cross-reference.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-diagram" data-block="2" id="stop-4-block-2">
-          <div class="block-label">Diagram · block 2 of 4</div>
-          <img src="assets/diagrams/stop-4-connector-scope.svg" alt="Connector scope diagram: three concentric rings around Cowork — inner ring is the project folder it sees by default, middle ring is the connected tools it can read or write per permission, outer ring is everything else it cannot touch." class="diagram-img" />
-        </div>
-
-        <div class="block block-reading" data-block="3" id="stop-4-block-3">
-          <div class="block-label">Short reading · block 3 of 4</div>
-          <p class="stop-rationale">Connectors are the moment trust shows up. Once Cowork can read your mail or write to your drive, the setup needs shape. The cleaner pattern: the agent gets its own credentials. Its own email address. Its own password vault. Its own calendar entries if it needs them. Not yours. Scope starts narrow — read-only first. Write access only for surfaces where the read worked and the output looked right for a while. The risk is not abstract. An agent that can send mail as you will, at some point, send something odd to someone important. A well-meaning summary in your voice to the wrong contact is hard to unsend. The useful frame is onboarding a new assistant, not turning on a new feature. Trust is earned per permission, not granted once.</p>
-        </div>
-
-        <div class="block block-try-one" data-block="4" id="stop-4-block-4">
-          <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">Assume Gmail is connected in read-only mode. Summarize the last 3 days of inbox: how many unread, which senders appear most often, any with a clear action verb in the subject. Give me a one-paragraph summary. Don't reply to anything, don't archive anything, don't draft anything. Just the summary.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-4-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-4-personal" aria-expanded="false" aria-controls="drawer-stop-4-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-4-creative" aria-expanded="false" aria-controls="drawer-stop-4-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-4-client" aria-expanded="false" aria-controls="drawer-stop-4-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-4-deeper" aria-expanded="false" aria-controls="drawer-stop-4-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-4-personal" hidden><p><strong>Personal</strong> — when the agent reaches into a personal tool, give it an address it owns, not yours. Its own login for expense tracking, its own vault, its own narrow read path into the statements — not your everyday account. Scope stays narrow; write access waits until the reads look clean for a stretch. Example: expense tracking where the agent reads last month's charges and flags anything unusual, but cannot move money or change a record.</p></div>
-          <div class="branch-drawer" id="drawer-stop-4-creative" hidden><p><strong>Creative</strong> — connectors in solo creative work usually mean read-only reach into reference material, not the keys to publish anything. The agent sees source files, sees past drafts, sees research clippings — and stops there. Writing back to the public surface stays with the maker. Example: a newsletter where the agent reads an archive of past issues and a file of working notes, pulls a theme for the next one, but never drafts or sends on your account.</p></div>
-          <div class="branch-drawer" id="drawer-stop-4-client" hidden><p><strong>Client</strong> — connectors in paid work belong to the client's container, not the account. One set of credentials per engagement — a scoped inbox address, a dedicated drive folder, a token that reaches only into their tools. When the engagement ends, the permissions retire with it. Example: a consulting deliverable where the agent reads the brief folder and the past call transcripts from that client only, with no line of sight into another client's project on the same machine.</p></div>
-          <div class="branch-drawer" id="drawer-stop-4-deeper" hidden><p><strong>Deeper</strong> — the model has two switches, not one. Read is the easy half: the agent takes in what's there and reports back; mistakes stay in the chat. Write changes the world outside — sends, saves, edits — and mistakes ship. Start every connector read-only; provision write access later, per surface, once the read pattern has held. Granting write access means the agent can change things outside the chat. Instructing is the everyday work inside that scope. Example: a travel itinerary where the agent reads the shared calendar for a week before it ever books a thing.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <a class="sn-prev" href="#stop-3">← Stop 3 · Memory</a>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <a class="sn-next" href="#stop-5">Stop 5 · Real work →</a>
-        </nav>
-      </section>
-      <section id="stop-5" class="stop" aria-labelledby="stop-5-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 5 of 6 · Block 1</div>
-          <h2 id="stop-5-title" class="stop-title">Real work — Cowork in a client shop and at home</h2>
-          <p class="stop-rationale">Two people, one tool, different shapes of work. The first video is someone running a client-facing shop with the agent doing operational work across meeting notes, calendar, email, and storage. The second is a parent running homeschool and family operations with a handful of agents, mostly through voice notes. Neither workflow is the right one to copy. Both show what the tool looks like when it's actually load-bearing in a week.</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-5-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="cNf7uVff11Y" data-start="1378" data-end="1559"
-                data-frame="0" data-title="Jack Roberts — Cowork in a client shop (3 min)"
-                aria-label="Play video: Jack Roberts — client workflow in a Cowork shop (3 min), segment 22:58 to 25:59">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/cNf7uVff11Y/0.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/cNf7uVff11Y/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/cNf7uVff11Y/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 22:58–25:59 · Client workflow</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Client workflow · block 1 of 4 <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/cNf7uVff11Y?t=1378" target="_blank" rel="noopener" data-seek="1378"><span class="ts">22:58</span><span class="hl-text">A meeting-notes connector joins every call, saves a transcript, and lets the agent chat about it.</span></a></li>
-                <li><a href="https://youtu.be/cNf7uVff11Y?t=1392" target="_blank" rel="noopener" data-seek="1392"><span class="ts">23:12</span><span class="hl-text">Drive, GitHub, a bank tool, Notion, Canva — one connector per tool, all listed in settings.</span></a></li>
-                <li><a href="https://youtu.be/cNf7uVff11Y?t=1413" target="_blank" rel="noopener" data-seek="1413"><span class="ts">23:33</span><span class="hl-text">A morning brief pulls today's calendar, outstanding email actions, and industry news into one digest.</span></a></li>
-                <li><a href="https://youtu.be/cNf7uVff11Y?t=1530" target="_blank" rel="noopener" data-seek="1530"><span class="ts">25:30</span><span class="hl-text">Grab every meeting from the week and write them up as a single Notion page with actions.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-video" data-block="2" id="stop-5-block-2">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="yiJOTCRVWjc" data-start="833" data-end="990"
-                data-frame="0" data-title="Jesse Genet — Cowork at home (3 min)"
-                aria-label="Play video: Jesse Genet — Cowork at home (3 min), segment 13:53 to 16:30">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/yiJOTCRVWjc/0.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/yiJOTCRVWjc/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/yiJOTCRVWjc/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 13:53–16:30 · At home</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Family workflow · block 2 of 4 <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/yiJOTCRVWjc?t=833" target="_blank" rel="noopener" data-seek="833"><span class="ts">13:53</span><span class="hl-text">All logging is voice notes and photos — no sitting at a laptop during the day.</span></a></li>
-                <li><a href="https://youtu.be/yiJOTCRVWjc?t=876" target="_blank" rel="noopener" data-seek="876"><span class="ts">14:36</span><span class="hl-text">Between lessons, a quick voice note names the child and what they worked on.</span></a></li>
-                <li><a href="https://youtu.be/yiJOTCRVWjc?t=960" target="_blank" rel="noopener" data-seek="960"><span class="ts">16:00</span><span class="hl-text">A 30-second voice note plus a few photos becomes a full, formatted lesson log.</span></a></li>
-                <li><a href="https://youtu.be/yiJOTCRVWjc?t=986" target="_blank" rel="noopener" data-seek="986"><span class="ts">16:26</span><span class="hl-text">For on-screen lessons, send the screen recording instead — the agent parses everything.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-diagram" data-block="3" id="stop-5-block-3">
-          <div class="block-label">Diagram · block 3 of 4</div>
-          <img src="assets/diagrams/stop-5-workflow-anatomy.svg" alt="Workflow-anatomy diagram: horizontal arrow flow from Input to Transform to Check to Output, showing generic Cowork workflow steps." class="diagram-img" />
-        </div>
-
-        <div class="block block-try-one" data-block="4" id="stop-5-block-4">
-          <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">Pick a recurring task you do most weeks — anything that has Input, Transform, Check, Output steps. Describe it to me in 4-5 lines using those step names. Don't suggest automation yet. Don't tell me which step Cowork could handle. Just the shape.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-5-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-5-personal" aria-expanded="false" aria-controls="drawer-stop-5-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-5-creative" aria-expanded="false" aria-controls="drawer-stop-5-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-5-client" aria-expanded="false" aria-controls="drawer-stop-5-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-5-deeper" aria-expanded="false" aria-controls="drawer-stop-5-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-5-personal" hidden><p><strong>Personal</strong> — Cowork as a small life-ops layer for the non-work side. One container holds the recurring tasks, the preferences, and the files those tasks touch, so the same ground rules don't get re-explained every week. The work is unglamorous — most of it is sorting, summarising, reminding. Example: meal planning where the dietary notes, the regular shop, and the rotation of favourite dishes sit in one place, and a weekly plan comes back in the format you'd already asked for.</p></div>
-          <div class="branch-drawer" id="drawer-stop-5-creative" hidden><p><strong>Creative</strong> — Cowork inside a creative piece is scaffolding, not authorship. The tool holds the notes, the references, the rough sketch of structure, the boring bits of tracking — the choices that make the work yours stay with you. A maker who hands over voice is replaceable; a maker who hands over filing is not. Example: a podcast drafting workflow where the agent keeps the episode outlines, the guest notes, and the recurring segment templates in one place, while the tone and edits stay in the maker's hands.</p></div>
-          <div class="branch-drawer" id="drawer-stop-5-client" hidden><p><strong>Client</strong> — in billable work, Cowork earns its keep only when it shortens the loop between input and a delivered piece. A force-multiplier moves hours of admin into minutes and leaves the thinking untouched. A distraction adds a tool to learn on top of the same work. The test is whether the week was quieter, not busier. Example: preparing for a meeting where the agent gathers the last three call notes, the outstanding actions, and a brief summary into a single page before you sit down.</p></div>
-          <div class="branch-drawer" id="drawer-stop-5-deeper" hidden><p><strong>Deeper</strong> — the primitives don't change across shapes of work. Projects, memory, connectors, files. What shifts is the prior: what counts as useful, which errors recover, who reads the output. The test for whether the tool belongs in a week is simple: does removing it make the work harder, or does the work go back to how it ran before. The first means load-bearing. The second means novelty. Example: a rotating practice schedule where the tool holds the cycle; take it out and Monday feels off.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <a class="sn-prev" href="#stop-4">← Stop 4 · Connectors + safety</a>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <a class="sn-next" href="#stop-6">Stop 6 · Your first week →</a>
-        </nav>
-      </section>
-      <section id="stop-6" class="stop" aria-labelledby="stop-6-title">
-        <div class="stop-header">
-          <div class="stop-meta">Stop 6 of 6 · Block 1</div>
-          <h2 id="stop-6-title" class="stop-title">Your first week — how the primer becomes practice</h2>
-          <p class="stop-rationale">The primer is a shape, not a script. Here's what changes in the first week: the agent starts doing the same small task twice, you notice what worked, you write the principle down once, and the next task inherits it. The question is whether Cowork becomes a tool you opened once or part of how you actually work. That's settled by week two or so, and the lever is mostly one habit — codify once, then keep going.</p>
-        </div>
-
-        <div class="block block-video" data-block="1" id="stop-6-block-1">
-          <div class="block-grid">
-            <div class="video">
-              <button type="button" class="yt-facade"
-                data-video-id="aFQskhdR3RQ" data-start="2409" data-end="2610"
-                data-frame="0" data-title="Jesse Genet — codify what works (4 min)"
-                aria-label="Play video: Jesse Genet — codify what works (4 min), segment 40:09 to 43:30">
-                <img class="yt-facade-thumb"
-                  src="https://img.youtube.com/vi/aFQskhdR3RQ/0.jpg"
-                  data-fallback-1="https://img.youtube.com/vi/aFQskhdR3RQ/mqdefault.jpg"
-                  data-fallback-2="https://img.youtube.com/vi/aFQskhdR3RQ/hqdefault.jpg"
-                  alt="" loading="lazy" width="480" height="360" />
-                <span class="yt-facade-play" aria-hidden="true">
-                  <svg viewBox="0 0 68 48" width="56" height="40"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.4.3 34 .3 34 .3S12.6.3 7.4 1.7C4.5 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.6 47.7 34 47.7 34 47.7s21.4 0 26.6-1.4c2.9-.8 5.1-3.1 5.9-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-                </span>
-                <span class="yt-facade-ts">▶ 40:09–43:30 · Codify what works</span>
-              </button>
-            </div>
-            <aside class="highlights" aria-label="Key moments from the video">
-              <div class="highlights-label">Codify what works · block 1 of 4 <span class="highlights-hint">· click to jump</span></div>
-              <ol class="highlights-list">
-                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2409" target="_blank" rel="noopener" data-seek="2409"><span class="ts">40:09</span><span class="hl-text">Workflows break when decisions aren't written down; codifying them is what makes agents durable.</span></a></li>
-                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2441" target="_blank" rel="noopener" data-seek="2441"><span class="ts">40:41</span><span class="hl-text">From day one, each agent is onboarded to the same shared system for organising notes.</span></a></li>
-                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2500" target="_blank" rel="noopener" data-seek="2500"><span class="ts">41:40</span><span class="hl-text">When the agent does something new, ask it to write the steps into shared files for the next run.</span></a></li>
-                <li><a href="https://youtu.be/aFQskhdR3RQ?t=2590" target="_blank" rel="noopener" data-seek="2590"><span class="ts">43:10</span><span class="hl-text">Give each agent working notes — how to work with you, what you like, what you don't.</span></a></li>
-              </ol>
-            </aside>
-          </div>
-        </div>
-
-        <div class="block block-reading" data-block="2" id="stop-6-block-2">
-          <div class="block-label">Short reading · block 2 of 4</div>
-          <p class="stop-rationale">The first-week habit is smaller than it looks. After a recurring piece of work — a call, a session, a task that keeps coming back — drop a short note into Cowork. Text, a photo, thirty seconds of voice, whichever costs least friction. Don't sit at the laptop for it. A habit that requires sitting down doesn't survive week one. What matters is consistency, not shape. After several rounds, the agent has a feed of raw moments: what ran, what stuck, what missed. That feed is what makes week two onward different — the agent is no longer guessing at context. The habit costs less than the ambition to keep it. That is the point. What separates a workflow that sticks from one that evaporates is whether the decisions got written down. The agent can't remember what you never captured.</p>
-        </div>
-
-        <div class="block block-diagram" data-block="3" id="stop-6-block-3">
-          <div class="block-label">Diagram · block 3 of 4</div>
-          <img src="assets/diagrams/stop-6-habit-loop.svg" alt="Habit-loop diagram: cyclic arrow flow — Trigger to Action to Reflect to Refine back to Trigger." class="diagram-img" />
-        </div>
-
-        <div class="block block-try-one" data-block="4" id="stop-6-block-4">
-          <div class="try-one-label">Try one · block 4 of 4</div>
-          <pre class="try-one-prompt">Pick one thing you'd normally type or look up that you've done more than twice in the last month. Describe it to me in 3-4 lines: the trigger (what made you do it), the steps you took, and the output you needed. Don't tell me how Cowork could help yet. Just describe the loop. That's the primitive.</pre>
-          <label class="try-one-check">
-            <input type="checkbox" data-block-id="stop-6-try-one">
-            Done this one
-          </label>
-        </div>
-
-        <div class="branches" aria-label="Go deeper — branch by shape of work">
-          <div class="branches-label">Go deeper</div>
-          <ul class="branch-chips">
-            <li><button type="button" class="chip" data-branch="stop-6-personal" aria-expanded="false" aria-controls="drawer-stop-6-personal">Personal</button></li>
-            <li><button type="button" class="chip" data-branch="stop-6-creative" aria-expanded="false" aria-controls="drawer-stop-6-creative">Creative</button></li>
-            <li><button type="button" class="chip" data-branch="stop-6-client" aria-expanded="false" aria-controls="drawer-stop-6-client">Client</button></li>
-            <li><button type="button" class="chip" data-branch="stop-6-deeper" aria-expanded="false" aria-controls="drawer-stop-6-deeper">Deeper</button></li>
-          </ul>
-          <div class="branch-drawer" id="drawer-stop-6-personal" hidden><p><strong>Personal</strong> — the codify habit in personal use is low stakes and easy to skip. Which is exactly why it matters. After the agent helps with the same errand twice, a one-line note — "always start from this file, ignore the archive" — saves the third and fourth from going sideways. The notes are boring. The compounding is not. Example: a weekly review where two runs in, a sentence about which calendar and which inbox get counted saves every future review from a slightly different shape.</p></div>
-          <div class="branch-drawer" id="drawer-stop-6-creative" hidden><p><strong>Creative</strong> — the thing to write down is the piece, not the mechanics. Notes about which sources count as canon, which words to keep out, which cadence feels right — these are the rules of the work. They apply across tools and across years. Rules about where to click belong with software support, not with the craft. Example: a lesson plan where the pacing, the recurring structure, and the exercises to avoid are written once and inherited by every plan after.</p></div>
-          <div class="branch-drawer" id="drawer-stop-6-client" hidden><p><strong>Client</strong> — codify once per client, apply forever. The brand voice, the approved terms, the review chain, the things they hate — all live inside that client's container and load automatically whenever work in that container starts. New hire on the client's side, new agent on yours — the rules don't re-negotiate. Example: an inventory for an ongoing engagement, where the column names, the update cadence, and the contacts who sign off are written down once, and every subsequent pass starts from the same shape.</p></div>
-          <div class="branch-drawer" id="drawer-stop-6-deeper" hidden><p><strong>Deeper</strong> — clever prompting ages out. Writing down the principle does not. A sharp prompt solves the current task with the current model; the principle that sits behind it keeps solving tasks after the model changes, after the tool changes, after the team changes. The durable asset is the note, not the technique. Example: a weekly metric where the definition, the source, and what counts as a clean reading are written once in plain sentences, and every future report reads from the same definition.</p></div>
-        </div>
-
-        <nav class="stop-nav" aria-label="Move between stops">
-          <a class="sn-prev" href="#stop-5">← Stop 5 · Real work</a>
-          <a class="sn-jump" href="#rail">Jump to any</a>
-          <span class="sn-next" aria-disabled="true">Last stop</span>
-        </nav>
-      </section>
-
-      <section class="completion-reveal" id="completion-reveal" aria-live="polite" hidden>
-        <figure class="completion-figure">
-          <img src="assets/hero-summit.jpg" alt="Ridgeline view near the summit of Triglav in Slovenia, a narrow rocky path leading upward against a cloudy sky." loading="lazy" />
-          <figcaption class="completion-caption">Slovenia · Triglav ridgeline, near the summit</figcaption>
-        </figure>
-        <p class="completion-copy">Primer's done. What you do next is yours. If this page is still up in a few weeks, that's a bug — copy what you want before then.</p>
-        <p class="completion-copy">If you want the reasoning behind the six stops, the tool-landscape notes, and the market map: <a href="#research">Research</a> (below).</p>
-        <button type="button" class="save-page-button" onclick="window.print()">Save this page</button>
-      </section>
-
-      <hr class="research-divider" aria-hidden="true" />
-
-      <section id="research" class="research" aria-labelledby="research-title">
-        <div class="research-header">
-          <h2 id="research-title" class="research-title">Research · how these picks landed</h2>
-          <p class="research-intro">This section explains why these tools and examples were chosen, so use it if you want the background and skip it if you don't.</p>
-        </div>
-
-        <div class="research-block" id="research-tool-landscape">
-          <h3 class="research-subtitle">Tool landscape</h3>
-          <p>Four names come up often. Cowork, Code, Codex, and Gemini. Each sits in a different spot on the spectrum from "chat with memory" to "developer assistant running in a terminal". Describing the shape is more useful than ranking them.</p>
-          <p>Cowork is a chat product. You type. It remembers. It reads files you upload. It can reach into a short list of connected tools — a calendar, a drive, a mailbox — when you allow it. The interface is a conversation, and the work happens inside that conversation. For someone who has only used chatbots, this is the smallest step up. Two minutes to understand, five to set up.</p>
-          <p>Code is the same model family, but the workspace is different. It lives in a code editor or a terminal. It reads and writes files in a project folder. It runs commands. The audience is someone who already edits code and wants an assistant that can touch the repo. The interface assumes a developer loop.</p>
-          <p>Codex is the terminal-native one. Command line first. It is built for people who keep a shell open all day and want an agent inside it. The learning curve is the shell, not the model.</p>
-          <p>Gemini is a parallel product from a different vendor, with its own chat surface and its own app integrations. The shape is close to Cowork's — chat with memory and files — but the connected tools, the mobile app, and the pricing tier differ. Worth knowing exists. Not the entry point for this primer.</p>
-        </div>
-
-        <div class="research-block" id="research-teaching-voices">
-          <h3 class="research-subtitle">Teaching voices</h3>
-          <p>A short list of other voices teaching in this space. Notes describe the shape of their output, not a verdict on it. A reader who wants to compare notes — see the same idea explained differently, or find someone aimed at a different audience — can start with any of these.</p>
-          <ul>
-            <li><strong><a href="https://ruben.substack.com/" target="_blank" rel="noopener">Ruben Hassid — <em>How to AI</em> Substack</a>.</strong> The clearest non-technical Cowork curriculum online. He named the prompts → projects → skills progression that this primer borrows for its shape. A good second voice if someone wants more at a similar pace.</li>
-            <li><strong><a href="https://www.jeffsu.org/" target="_blank" rel="noopener">Jeff Su</a>.</strong> Productivity and workflow videos. Stop 1's intro video is one of his. Low-fluff, high-signal. If Stop 1's rhythm worked, there is more like it on his channel.</li>
-            <li><strong><a href="https://www.lennysnewsletter.com/p/5-openclaw-agents-run-my-home-finances" target="_blank" rel="noopener">Jesse Genet</a>.</strong> A non-technical parent running AI at home. Already featured in Stops 5 and 6. Her habits — voice-first dictation, a confetti time-limit, Obsidian notes — transfer to most readers' lives without modification.</li>
-          </ul>
-          <p>One observation about the shape of the field. The material splits along two axes. One axis is the tool being taught — chat surface, code surface, agent surface. The other is the audience — general reader, creator, builder, practitioner. Each voice above picks a pair of those and stays with it. The primer does the same. Cowork as the tool. A general reader with no programming assumed as the audience.</p>
-          <p>A second observation. None of the voices above is a vendor of the tool they teach. The incentives are different from a vendor channel — less sales pressure, more idiosyncrasy. The trade-off is that older material goes out of date quickly when the vendor ships something new.</p>
-        </div>
-
-        <div class="research-block" id="research-market-playbooks">
-          <h3 class="research-subtitle">Your market: clusters, public patterns, Cowork playbooks</h3>
-
-          <p>Your work sits across three markets and a fourth shape worth studying. Below: four clusters of peers, what's visible in their public output, and where a Cowork habit could scope out similar work for you. Two clusters get a closer look — the adventure-elopement peers (your closest market) and Honest Guide (a brand shape, not a competitor, worth adapting). The other two stay ideation-level: enough to point a direction, not enough to act on before you've done your own digging.</p>
-
-          <h4 class="cluster-heading">Cluster 1 — Adventure-elopement peers (close zoom)</h4>
-          <p>Peers: <a href="https://ceranna.com/" target="_blank" rel="noopener">Ceranna Photography</a> (Italy + CZ, adventure-elopement focused — closest peer), <a href="https://www.avvagraphy.com/" target="_blank" rel="noopener">Avvagraphy</a> (Prague duo, more traditional package model).</p>
-          <p><em>Ceranna — what's visible:</em></p>
-          <ul>
-            <li>Dual-market portfolio (Italy + CZ) with consistent voice across both languages — implies deliberate content adaptation, not just translation.</li>
-            <li>Adventure-elopement framing carries across the whole site (not a secondary offering) — means the inquiry flow is shaped for that audience.</li>
-            <li>Portfolio taxonomy by story rather than by venue or season — different indexing than a typical wedding-photo site.</li>
-          </ul>
-          <p><em>If they're automating any of it, from the outside it would look like:</em></p>
-          <ul>
-            <li>A shared voice-and-style doc that guides translation between CZ and Italian copy.</li>
-            <li>A repeatable inquiry-response shape that asks the right 4–5 questions upfront.</li>
-            <li>A post-shoot client log that feeds the next year's editorial calendar.</li>
-          </ul>
-          <p><em>Your Cowork playbook for the same pattern:</em></p>
-          <ol>
-            <li>A <strong>voice-and-style project</strong> with a CZ/EN dual-voice guide in the Instructions file. Drop a CZ blog post → get an EN draft that sounds like you, not a translator.</li>
-            <li>An <strong>inquiry-qualifier</strong> workflow (Cowork skill): inbound email in, draft reply out, with the right qualifying questions baked in (date flexibility, location type, travel appetite, budget band).</li>
-            <li>A <strong>shoot-log repurposer</strong>: voice-note after each shoot, Cowork files it into the project, drafts a social caption + blog lede + newsletter paragraph from the same note.</li>
-          </ol>
-          <p><em>Avvagraphy — one-line read:</em> more traditional Prague-wedding positioning, less adventure-elopement. Useful as a reference for the "classical Prague duo" shape if the reader wants to keep one foot in that market.</p>
-
-          <h4 class="cluster-heading">Cluster 2 — Swedish editorial wedding (ideation only)</h4>
-          <p>Peers: <a href="https://2brides.se/" target="_blank" rel="noopener">2 Brides (Isabelle Hesselberg)</a>, <a href="https://en.tanjametelitsa.com/brollopsfotograf-stockholm" target="_blank" rel="noopener">Tanja Ferm</a>, <a href="https://evelynwallin.com/cityhall-elopements/" target="_blank" rel="noopener">Evelyn Wallin</a>, <a href="https://en.danielnotcake.com/photographer_stockholm_sweden" target="_blank" rel="noopener">Daniel Notcake</a>, Alessandro Castelli, John Hellström, Karin Lundin.</p>
-          <p><em>Shared patterns visible from the outside:</em></p>
-          <ul>
-            <li>Premium, editorial-dominant portfolios — the photography does the selling.</li>
-            <li>Most pick one lane (e.g., city hall elopements, editorial weddings) and double down.</li>
-            <li>Instagram is the primary inbound funnel; blogs are lighter / image-heavy.</li>
-            <li>Stockholm-area concentration; limited Scandinavia-wide positioning.</li>
-          </ul>
-          <p><em>Where Cowork could help you in this cluster:</em> Instagram caption drafting that ties back to blog content and maintains consistent voice across 20+ posts a month; content adaptation to pull Scandinavia-wide positioning out of single-venue shoots.</p>
-          <p><strong>Ideation only</strong> — research each peer's public feed yourself before building workflows targeting their audience. The observations above are directional; specific tactics need more looking.</p>
-
-          <h4 class="cluster-heading">Cluster 3 — Adventure / travel writing (ideation only)</h4>
-          <p>Peers: <a href="https://wildthingspublishing.com/product/wild-guide-to-scandinavia-book-norway-iceland-sweden-denmark/" target="_blank" rel="noopener">Ben Love (Wild Guide to Scandinavia)</a> — book publisher route, academic polish, 700 ideas. Christjan Ladurner — guide + heli-pilot + author, multi-hyphenate model. <a href="https://www.zibura.cz/" target="_blank" rel="noopener">Ladislav Zibura</a> — best-selling CZ travel author, walking pilgrimages, lyrical prose, strong domestic attention.</p>
-          <p><em>Shared pattern from the outside:</em> each of these authors turns one trip or one region into multiple downstream assets — book chapter, essay, talk, podcast interview, guided trip. The asset-multiplication factor looks high.</p>
-          <p><em>Where Cowork could scope it:</em> CZ podcast transcript → EN blog draft outline, EN blog post → CZ podcast show-notes, one trip report → book chapter structure. The podcast-transcript-to-blog recipe in Block F below is a concrete first step.</p>
-          <p><strong>Ideation only</strong> — the specific shape depends on which downstream channel you want to multiply into first. Pick one and try it; the others become obvious.</p>
-
-          <h4 class="cluster-heading">Cluster 4 — Aspirational brand shape (close zoom, non-competitive)</h4>
-          <p>Not a competitor — an adjacent brand worth studying: <a href="https://www.youtube.com/c/HONESTGUIDE" target="_blank" rel="noopener">Honest Guide (Prague)</a> by Janek Rubeš + Honza Mikulka.</p>
-          <p><em>What's visible in their production:</em></p>
-          <ul>
-            <li>Two-host YouTube channel, weekly-ish cadence, Czech-origin + English-speaking audience.</li>
-            <li>Authenticity contract: "local expert protects visitors from tourist traps, no BS, warm humor, earned POV."</li>
-            <li>Each episode has a clear POV and a specific tourist trap to debunk — pattern repeats without feeling formulaic.</li>
-            <li>Cross-media reuse: YouTube → shorts → guidebook → live events.</li>
-          </ul>
-          <p><em>If they're automating any piece of it, from the outside it could look like:</em></p>
-          <ul>
-            <li>A shared episode structure doc ("hook, trap, debunk, alternative, wrap") that makes scripting fast.</li>
-            <li>A research pipeline that gathers local press + user-reported traps into a weekly digest.</li>
-            <li>Caption / thumbnail templates that keep visual consistency.</li>
-          </ul>
-          <p><em>What's transferable for you (shape, not domain):</em> the authenticity-contract framing is the most valuable takeaway. Your adjacent angle: an honest guide through mountain content — first-person, earned credibility, specific region. Same contract, different domain.</p>
-          <p><em>Your Cowork playbook for the shape:</em></p>
-          <ol>
-            <li>A <strong>brand-voice project</strong> with the authenticity-contract phrasing pinned in Instructions. Every post gets voice-checked against it.</li>
-            <li>An <strong>episode-structure skill</strong>: given a trip report or summit photo, draft a post that uses the hook → context → takeaway → alternative → wrap shape in your voice.</li>
-            <li>A <strong>research-digest skill</strong> (adapted from Block F recipe 7): weekly summary of what's trending in Czech-speaking and English-speaking adventure communities, so your content references current conversations without you scrolling feeds.</li>
-          </ol>
-
-          <h4 class="cluster-heading">Your edge across all four clusters</h4>
-          <p>Nobody in any of these clusters has your specific stack — adventure-mountain scenic photography plus genuine mountaineering expertise plus a published mountain project plus regional guiding practice plus bilingual audience. Most peers pick one lane. The leverage Cowork creates for you is not "catch up to them" — it's "make your hybrid reachable to more of the right people without the overhead growing with audience size."</p>
-        </div>
-
-        <div class="research-block" id="research-growth-opportunities">
-          <h3 class="research-subtitle">Growth opportunities your Cowork habit can unlock</h3>
-          <p>A handful of specific openings where a Cowork habit moves the needle on your work. Each is grounded in what's already public about your online setup; each is something Cowork can make smaller with the right prompt habit.</p>
-          <ol>
-            <li><strong>Funnel integration.</strong> Your blog (EN), portfolio (EN), book (CZ), podcast (CZ), and Instagram don't cross-sell today. No shared email list links them. Cowork fit: draft unified newsletter templates per audience segment — one for CZ book readers, one for adventure-elopement inquiries, one for guiding leads — from the same source material.</li>
-            <li><strong>Language repurposing.</strong> The CZ podcast back-catalog is a goldmine for EN content. Cowork fit: take a transcript, generate an English blog outline that keeps your voice, then you write the prose. The transcript-to-outline recipe is spelled out in Block F below.</li>
-            <li><strong>Anniversary engine.</strong> Past wedding clients get no nurture after delivery. Cowork fit: auto-drafted anniversary reminders (with the image, the location, the story) — you review and send. Referral pipeline at near-zero ongoing effort.</li>
-            <li><strong>Book-to-leads bridge.</strong> Czech book readers are ideal adventure-guide leads; the book is the top-of-funnel asset. Cowork fit: draft an opt-in landing page in your voice (one for each peak chapter) that turns book reads into email subscribers.</li>
-            <li><strong>SEO systematization.</strong> Your blog already ranks; you can draft 5× the posts without losing voice. Cowork fit: the 8 recipes in Block F below. Start with AEO rewrites on existing top posts, then scale.</li>
-            <li><strong>Instagram ↔ long-form bridge.</strong> Your Instagram is image-forward; your blog is text-forward. Today they operate separately. Cowork fit: draft a caption-to-carousel recipe (blog post → 5-slide carousel in your voice) and an episode-to-carousel recipe (podcast episode → carousel with quote highlights).</li>
-          </ol>
-          <p>Each of these is sized for a weekend of setup plus ongoing 15-minute-per-week care. None is "build an agent." All are "save 30 minutes a week, 52 weeks a year."</p>
-        </div>
-
-        <p class="research-bridge">One vertical compounds several of the items above: gear content. A gear list in your voice for each peak turns every blog post into affiliate revenue plus lead-magnet fodder plus a conditions-report asset. The full playbook — peer patterns, three-tier Claude automation, European affiliate catalog — lives in the research bundle at <code>docs/research/2026-04-21-round-2-research/gear-lists-business-research.md</code>. Short version: start with one gear list for one peak, pick two affiliate programs (Bergfreunde.eu + Amazon DE), ship in three weeks, learn what converts, then scale with Claude.</p>
-
-        <div class="research-block" id="research-seo-recipes">
-          <h3 class="research-subtitle">SEO in 2026 and 8 concrete Cowork prompts for your site</h3>
-
-          <p>SEO shifted in 2026. Citations from ChatGPT, Perplexity, and Google AI Overviews matter more than blue-link clicks. The first 100–150 words of any post now double as the answer snippet that AI-search cites. Below are 8 paste-ready Cowork prompts built around the niches your site already covers. None of them write final posts — they draft outlines, do research, generate schema. You still write the prose.</p>
-
-          <h4 class="recipe-heading">1. AEO intro rewriter</h4>
-          <p>Takes a post's opening and rewrites the first 150 words to directly answer the core question with scannable formatting, without losing your voice.</p>
-          <pre class="recipe-prompt">You are rewriting the intro (first 150 words) of one of my blog posts so AI-search engines (ChatGPT, Perplexity, Google AI Overviews) can cite it cleanly.
-
-Post: [paste the full post here]
-
-Rewrite rules:
-- Answer the post's core question in the very first sentence.
-- Use a short bullet list (3-5 items) or a brief table if the answer is comparative.
-- Preserve my voice: first-person, plain language, no "In today's fast-paced world" intros.
-- Keep the rewrite under 150 words.
-
-Return the rewritten intro only. Do not touch anything past word 150.</pre>
-
-          <h4 class="recipe-heading">2. Peak-series outline generator</h4>
-          <p>Given a peak that isn't on your site yet, drafts an outline following the structure of your strongest existing post.</p>
-          <pre class="recipe-prompt">I publish a series of trail guides for European peaks. I'm missing a guide for [peak name + region]. Using the structure of my strongest existing post (paste below as "reference"), draft an outline for the missing peak.
-
-Reference post: [paste full existing post]
-
-Missing peak: [name, region, elevation, access notes I already know]
-
-Draft an outline with these sections (match reference's section order):
-- Opening answer snippet (≤150 words, AEO-friendly)
-- Access + logistics
-- Route options + difficulty
-- Seasonality + conditions
-- What I recommend + why
-
-Leave placeholder text I can fill — don't invent facts I haven't given you.</pre>
-
-          <h4 class="recipe-heading">3. Seasonal publishing calendar</h4>
-          <p>Given your existing posts + the peaks you haven't covered yet, proposes a month-by-month calendar that pre-stages content before search interest peaks.</p>
-          <pre class="recipe-prompt">I publish trail guides; each peak has a search-interest peak tied to its climbing season. Help me build a 12-month publishing calendar.
-
-Existing posts (titles + publication dates): [paste list]
-
-Peaks I haven't covered yet: [paste list]
-
-Each peak's climbing season: [paste or let me tell you per peak — for known ones, you can estimate]
-
-Produce:
-- A month-by-month table: month | peaks to publish | rationale (why this month, i.e. search-interest lead time).
-- 8-12 weeks of lead time before peak season is ideal (AEO needs indexing + crawl).
-- Flag months that are overcrowded or empty.
-
-Don't invent climbing seasons you don't know; ask me.</pre>
-
-          <h4 class="recipe-heading">4. Image alt-text and caption batch</h4>
-          <p>Feed a batch of image filenames + context; get descriptive alt text + SEO-friendly captions for each.</p>
-          <pre class="recipe-prompt">I'm adding images to one of my trail guide posts and need alt text + captions for each.
-
-Context: [brief — what the post is about, 1-2 sentences]
-
-Images (filename + 1-line description each):
-- [filename-1.jpg: short description]
-- [filename-2.jpg: short description]
-- ...
-
-For each image, return:
-- alt: a descriptive sentence focusing on what's visible (WCAG-style, ≤125 chars)
-- caption: a 1-2 sentence SEO-friendly caption that fits my voice (first-person, concrete, no "breathtaking")
-
-No emoji. No "stunning", "awe-inspiring", or "breathtaking" — banned adjectives for me.</pre>
-
-          <h4 class="recipe-heading">5. Schema markup generator</h4>
-          <p>Given a post URL, outputs HowTo + Article + Person schema as JSON-LD ready to paste into the page source or a WordPress schema plugin.</p>
-          <pre class="recipe-prompt">Generate JSON-LD schema for a blog post of mine.
-
-Post URL: [url]
-Post title: [title]
-Author (me): [preferred display name, e.g. "Mark"]
-Publication date: [YYYY-MM-DD]
-
-Output three separate schema blocks, each in a &lt;script type="application/ld+json"&gt; tag:
-1. Article schema (with author, datePublished, headline, description, mainEntityOfPage).
-2. HowTo schema IF the post contains step-by-step instructions (skip if not).
-3. Person schema for the author (name, url, sameAs with my public profiles — tell me what to put).
-
-Leave placeholders for any info I haven't given you. Don't invent URLs.</pre>
-
-          <h4 class="recipe-heading">6. Internal linking audit</h4>
-          <p>Scans a folder of posts and flags un-linked mentions of other peaks / gear / trails that should link to existing posts.</p>
-          <pre class="recipe-prompt">I pasted 5-10 of my blog posts below. Scan them for un-linked mentions of peaks, trails, gear items, or topics that I ALREADY have dedicated posts for.
-
-My existing posts (titles + slugs):
-- [slug-1: title]
-- [slug-2: title]
-- ...
-
-Posts to scan: [paste posts]
-
-For each un-linked mention, return:
-- Which post it's in (by slug)
-- The surrounding sentence
-- Which target post's slug should be linked
-- A short justification (1 line)
-
-Only flag LOW-RISK links (clear topic match). Don't force keyword-stuffing.</pre>
-
-          <h4 class="recipe-heading">7. AI-search citation check</h4>
-          <p>Weekly prompt: check which of your posts (if any) are cited by Perplexity or ChatGPT for representative queries. Manual for now — there's no clean automated API for this.</p>
-          <pre class="recipe-prompt">I want to check AI-search citation coverage for my site.
-
-Representative queries my readers ask:
-- [query 1]
-- [query 2]
-- [query 3]
-
-For each query, help me design a manual check:
-- What to search in Perplexity / ChatGPT / Google AI Overviews
-- What counts as a "cite" (URL in citations panel, or just text mention?)
-- A simple tracking shape (query | date | citer | cited URL | notes)
-
-Then: based on what I tell you next week, suggest which posts to AEO-rewrite first to improve citation rate.</pre>
-
-          <h4 class="recipe-heading">8. Podcast transcript to blog draft</h4>
-          <p>Takes a podcast transcript (Czech or English) and produces a blog outline structured for AEO.</p>
-          <pre class="recipe-prompt">I have a podcast transcript I'd like to turn into a blog post.
-
-Transcript language: [cz | en]
-Target blog language: [cz | en]
-Transcript: [paste full transcript]
-
-Produce an outline (not the full post):
-- First-150-word answer snippet in the target language (AEO-friendly).
-- 4-6 section headers that map the transcript's arc.
-- Under each header: 2-4 bullet points of key ideas from the transcript.
-- A "quotes to consider preserving verbatim" list (≤5 quotes, with timestamps).
-
-If the target language is different from the source, translate key terms but keep names of places/people verbatim. I'll write the prose from this skeleton.</pre>
-
-          <h4 class="recipe-heading">What NOT to automate on your SEO</h4>
-          <ul>
-            <li>Don't let an agent write full posts unsupervised. Voice matters; readers can smell AI-written content. The agent drafts an outline + research pack; you write the prose.</li>
-            <li>Don't automate publishing. Claude drafts, you review, you publish. Always.</li>
-            <li>Don't chase every keyword. Topical authority around your core domains (European peaks, Scandinavia adventure, mountain photography) is a better moat than sprayed content.</li>
-          </ul>
-        </div>
-
-        <div class="research-block" id="research-ten-year-picture">
-          <h3 class="research-subtitle">The 10-year picture</h3>
-
-          <p>This primer ends where a 10-year arc begins. The creator whose work most closely rhymes with where you could go is <a href="https://www.zizka.ca/" target="_blank" rel="noopener">Paul Zizka</a> — a mountain photographer who moved to Banff with his wife, became a certified guide, and built a business from one specific place over 15 years. Today: 8 books via Rocky Mountain Books, a 23,000-member online community called <em>Fuelled by Creativity</em>, clients including Apple and Arc'teryx. Not a celebrity — a specialist who compounded.</p>
-
-          <p>Three patterns show up in every trusted adventure-creator career — whether <a href="https://www.chrisburkard.com/" target="_blank" rel="noopener">Chris Burkard</a>, <a href="https://www.alexstrohl.com/" target="_blank" rel="noopener">Alex Strohl</a>, <a href="https://sectionhiker.com/philip-werner-bio/" target="_blank" rel="noopener">SectionHiker's Philip Werner</a>, or the paid-membership <a href="https://backpackinglight.com" target="_blank" rel="noopener">Backpacking Light</a> model:</p>
-
-          <ol>
-            <li><em>One specific place or niche, ten-year horizon.</em> Specificity beats breadth. Your particular mix — a published mountain project, regional guiding practice, bilingual audience — is already the thing. No need to broaden.</li>
-            <li><em>Multi-stream revenue from day one.</em> Affiliate plus books plus prints plus workshops plus membership. No single stream is existential. The deep catalog is in the research bundle (<code>trust-family-business-models.md</code>).</li>
-            <li><em>Say no to anything you wouldn't recommend for free.</em> Trust compounds slowly. The first cheap partnership is what kills credibility at year seven.</li>
-          </ol>
-
-          <p><strong>The family integration combo.</strong> Every successful adventure creator who added a family — Zizka, Hilaree O'Neill, Alison Majka — converged on the same pattern: home-base plus regional adventures plus partner-as-collaborator plus kid-as-protagonist plus content-archive-buffer plus multi-stream revenue. Big expeditions are optional when kids are small; regional access to your home range is the competitive edge.</p>
-
-          <p><strong>Privacy-first, if it resonates.</strong> When family appears in adventure content, you have a choice about how. The happy accident: the composition that defines premium adventure photography — silhouette, shot-from-behind, small figure in vast landscape — is also the safest composition for a kid. No trade-off between authentic family content and long-term respect for the child's future agency. If this direction sits right with you, a ten-rule playbook (pseudonym, delay-publish, strip EXIF, consent protocol by age, deletion ledger) and a Claude guardrail skill sit in the research bundle at <code>kid-privacy-best-practices.md</code>.</p>
-
-          <p><strong>Worth considering now rather than later.</strong> GDPR Art. 17 provides a general right to erasure, subject to its stated grounds. France's 2020 child-influencer law (Loi n° 2020-1266 du 19 octobre 2020) adds the child-specific protection here: a minor can exercise that erasure right without parental consent. California SB 1247 was introduced on February 19, 2026 and remained in Senate committee process as of April 22, 2026. The direction is clear enough even if no single jurisdiction has settled. Creators who build privacy-first early get to keep compounding; the others will have cleanup.</p>
-
-          <p><em>What to test every decision against:</em> does this move toward Zizka's 10-year stack, or away from it? If it doesn't, say no, even if it's flattering in the short term.</p>
-        </div>
-
-        <div class="research-block" id="research-six-stops">
-          <h3 class="research-subtitle">Why these six stops?</h3>
-          <p>Each stop answers a question the previous one raised. What is this. How do I set it up. How do I ask it for something useful. How does it remember me. How do I plug it into a tool I already use. What does real work with it look like. The sequence is the smallest path from nothing to a running workflow.</p>
-          <p>A few stops were considered and dropped. An advanced-prompting stop was cut because the basics covered in Stop 3 carry most of the weight, and the rest is taste. A price-and-model comparison stop was cut because the numbers change every quarter and a snapshot would be wrong by the time anyone read it. A "deploying agents" stop was cut because it sits a level above this primer — the reader who wants it will know where to look. Six stops is already close to the ceiling for one sitting. Cutting further would leave the primer incomplete on its own terms.</p>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <nav class="bottom-nav" aria-label="Stop navigation">
-    <a href="#" class="bn-prev" aria-disabled="true">← Previous stop</a>
-    <a href="#" class="bn-jump">Jump to any</a>
-    <a href="#stop-2" class="bn-next">Next stop →</a>
-  </nav>
-
-  <footer class="page-footer" role="contentinfo">
-    <p class="page-footer-stuck">Stuck? Reply to the email I sent you with this link — I'll help unstick.</p>
+        <p>Then the first real test: drop in one CZ blog post and ask for an EN version that sounds like you. Not a translation &mdash; a companion written in your EN voice. If it lands, you&rsquo;ve just compressed a week&rsquo;s work into an afternoon. If it doesn&rsquo;t, the Instructions file needs more samples.</p>
+        <p>Second move from there: an inquiry-qualifier workflow. When a booking email lands in your inbox, Cowork drafts a reply with the right qualifying questions already in place &mdash; date flexibility, location type, travel appetite, budget band. You review, you send. The qualifying questions are the same ones you&rsquo;d ask on a third follow-up; doing them in the first reply saves two round-trips per inquiry.</p>
+        <p>Third, later: a shoot-log repurposer. Voice note after each shoot → social caption + blog lede + newsletter paragraph, all from the same note. Don&rsquo;t build it week one. Build it once you&rsquo;re using the voice project daily.</p>
+      </article>
+
+      <article id="brief-wrong">
+        <h3>4.4 &mdash; Where I might be wrong</h3>
+        <p>Places I&rsquo;m guessing.</p>
+        <p>§4.1 is public-only &mdash; I&rsquo;ve never spoken to any of them about what&rsquo;s under the hood. If Ceranna has already automated her dual-voice work, the &ldquo;get there first&rdquo; framing in §4.2 falls apart.</p>
+        <p>The Paul Zizka template is a 15-year story told in hindsight. Your 15 will not be that 15 &mdash; the tool stack is different, the kid-in-the-picture window runs differently. The shape transfers; the sequence doesn&rsquo;t.</p>
+        <p>And the Monday move &mdash; voice project first &mdash; is a bet that foundation beats speed. If you already have a pressing inquiry backlog, the inquiry-qualifier goes first instead. Pick whichever is causing more friction this week.</p>
+        <p class="humility-clause">If your read differs, I&rsquo;d rather hear it now &mdash; a working version is more useful than a polished one I have to defend later. WhatsApp, whenever.</p>
+      </article>
+    </section>
+
+    <!-- §5 First-week practice — inline, not drawered per D10 -->
+    <section id="first-week" aria-labelledby="first-week-h">
+      <h2 id="first-week-h">If it were me, first week</h2>
+
+      <p>Here&rsquo;s the shape of the first week, if you wanted to just follow a prescription.</p>
+
+      <p><strong>The habit: a voice note after each shoot.</strong> Thirty seconds, on your phone, before you leave the location. What went well, what&rsquo;s memorable, which frames you&rsquo;ll come back to. Drop it into Cowork&rsquo;s inbox. The mistake most people make is trying to sit at a laptop for this &mdash; you won&rsquo;t, past day three. Voice while walking to the car works.</p>
+
+      <p><strong>The setup: the voice-and-style project from §4.3.</strong> One Cowork project folder. Three CZ samples, three EN samples, one short Instructions file. Forty-five minutes to set up. From that point on, every draft request pulls from it automatically.</p>
+
+      <p><strong>The project: an inquiry-qualifier skill.</strong> After the voice project, pick one inbound workflow you&rsquo;re doing by hand &mdash; probably booking inquiries &mdash; and teach Cowork the qualifying questions you&rsquo;d otherwise ask across three back-and-forth emails. Once built, it&rsquo;s a reusable skill; every future inquiry uses it. Jeff Su&rsquo;s video is the template for how to teach Cowork a multi-step workflow like this; Jack Roberts&rsquo; walkthrough shows the full &ldquo;bootstrap your business brain&rdquo; arc if you want the wider frame.</p>
+
+      <p>Don&rsquo;t try to do all three in week one. The habit lands in week one. The setup lands in week one. The project lands week two or three, after the voice project has accumulated enough context that Cowork&rsquo;s drafts already sound like you. Building the qualifier against a voiceless Cowork is a noticeably worse experience.</p>
+    </section>
+
+    <!-- §6 Deeper research — pointer list to sibling /research/*.html pages (built in Slice 5) -->
+    <section id="deeper" aria-labelledby="deeper-h">
+      <h2 id="deeper-h">Deeper research &mdash; the folder I said was at the end</h2>
+      <p>Surface-level scans &mdash; written by me, not field research. Skim what&rsquo;s relevant; ignore what&rsquo;s not.</p>
+      <ul class="research-pointers">
+        <li><a href="research/market-clusters.html">Market &amp; peer-cluster map</a> &mdash; the full breakdown behind the five names in §1</li>
+        <li><a href="research/ten-year-picture.html">Ten-year picture</a> &mdash; long-range scenarios, Paul Zizka compounding analysis</li>
+        <li><a href="research/seo-and-discovery.html">SEO + discovery</a> &mdash; bilingual-market angles, one-year moves</li>
+        <li><a href="research/growth-opportunities.html">Growth opportunities</a> &mdash; Ceranna-shaped segment moves</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>Stuck anywhere? Just ping me on WhatsApp &mdash; you know where to find me.</p>
   </footer>
-
-  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
 
   <script>
     (function () {
       'use strict';
 
-      // --- State v4 ---
-      const STORAGE_KEY = 'ai-start-onboarding-state';
-      const SCHEMA_VERSION = 4;
-
-      // --- Video chapters (from docs/research/2026-04-21-round-2-research/{id}.json,
-      //     normalized to integer seconds; consumed by C5.3 render + C5.4 click).
-      //     Interval-overlap filter applied PER FACADE at render time, not here.
+      // Video chapters (preserved from pre-reshape; interval-overlap filtered per facade window).
       const videoChapters = {
         'z9rdrNrkvDY': [
           { start: 0, end: 139, title: 'Claude Chat, Cowork, Code' },
@@ -856,7 +270,6 @@ If the target language is different from the source, translate key terms but kee
           { start: 137, end: 232, title: 'When to Use What' },
           { start: 232, end: 281, title: 'Cowork vs Code Explained' },
           { start: 281, end: 355, title: 'Settings & Preferences' },
-          { start: 355, end: 371, title: 'Usage Tracking' },
           { start: 371, end: 494, title: 'Memory & Capabilities' },
           { start: 494, end: 562, title: 'Extensions & MCP Servers' },
           { start: 562, end: 675, title: 'Claude Chat & Artifacts' },
@@ -867,56 +280,45 @@ If the target language is different from the source, translate key terms but kee
           { start: 963, end: 1071, title: 'Business Brain Prompt' },
           { start: 1071, end: 1116, title: 'Global Instructions Setup' },
           { start: 1116, end: 1197, title: 'Your First Tasks' },
-          { start: 1197, end: 1244, title: 'Read Receipt From Desktop' },
           { start: 1244, end: 1297, title: 'Connectors Overview' },
           { start: 1297, end: 1371, title: 'Google Calendar Setup' },
-          { start: 1371, end: 1412, title: 'Other Connectors' },
           { start: 1412, end: 1502, title: 'Morning Brief Use Case' },
           { start: 1502, end: 1610, title: 'Fireflies & Meeting Notes' },
           { start: 1610, end: 1689, title: 'Gumroad Sales Dashboard' },
-          { start: 1689, end: 1741, title: 'Claude in Chrome Setup' },
           { start: 1741, end: 1896, title: 'Website Analysis Demo' },
           { start: 1896, end: 1969, title: 'Research & Due Diligence' },
           { start: 1969, end: 2077, title: 'Skills Overview' },
           { start: 2077, end: 2289, title: 'Building Infographic Skill' },
-          { start: 2289, end: 2344, title: 'KIA AI API Setup' },
           { start: 2344, end: 2542, title: 'Testing & Iterating' },
           { start: 2542, end: 2637, title: 'Skill File Structure' },
           { start: 2637, end: 2784, title: 'Building Transcript Skill' },
-          { start: 2784, end: 2899, title: 'Refining Skills in Code' },
           { start: 2899, end: 2994, title: 'Plugins Explained' },
           { start: 2994, end: 3098, title: 'Building a Plugin' },
           { start: 3098, end: 3215, title: 'Content Repurposer Demo' },
-          { start: 3215, end: 3302, title: 'AI Employee Concept' },
           { start: 3302, end: 3404, title: 'Running Plugin Live' },
           { start: 3404, end: 3515, title: 'Cowork vs Code Tips' },
           { start: 3515, end: 3611, title: 'Scheduled Tasks' },
-          { start: 3611, end: 3636, title: 'How Scheduling Works' },
           { start: 3636, end: 3709, title: 'Financial Monitoring Task' },
-          { start: 3709, end: 3773, title: 'AntiGravity Explained' },
           { start: 3773, end: 3840, title: 'When to Use Each Tool' },
-          { start: 3840, end: 3882, title: '10 Prompts to Launch' },
-          { start: 3882, end: 3918, title: 'Final Advice & Wrap Up' },
+          { start: 3840, end: 3918, title: 'Final Advice & Wrap Up' },
         ],
         'yiJOTCRVWjc': [
-          { start: 0, end: 180, title: 'Intro & Jesse\'s background as a YC founder turned homeschool mom' },
-          { start: 180, end: 360, title: 'The "aha moment": discovering Claude Code and agentic building' },
-          { start: 360, end: 660, title: 'A day in the life: homeschooling 4 kids under 5 and when she builds' },
-          { start: 660, end: 1080, title: 'How AI generates personalized lesson plans and logs progress' },
-          { start: 1080, end: 1625, title: 'The full agent stack: from 5 to 11 agents (and growing)' },
-          { start: 1625, end: 2036, title: 'Tech stack deep dive: Obsidian, Claude Code, Mac Mini, security' },
-          { start: 2036, end: 2404, title: 'Agents improving real daily life beyond the screen' },
-          { start: 2404, end: 3242, title: 'Letting kids interact with AI: values, risks, and the future of parenting' },
+          { start: 0, end: 180, title: 'Intro & background' },
+          { start: 180, end: 360, title: 'The "aha moment" with Claude Code' },
+          { start: 360, end: 660, title: 'Homeschooling 4 kids and when she builds' },
+          { start: 660, end: 1080, title: 'Personalized lesson plans and logging' },
+          { start: 1080, end: 1625, title: 'The agent stack: 5 to 11 agents' },
+          { start: 1625, end: 2036, title: 'Obsidian, Claude Code, Mac Mini, security' },
+          { start: 2036, end: 2404, title: 'Agents improving daily life beyond screen' },
+          { start: 2404, end: 3242, title: 'Kids + AI: values, risks, future' },
         ],
         'aFQskhdR3RQ': [
           { start: 0, end: 297, title: 'About the Episode' },
           { start: 297, end: 955, title: 'Homeschooling context and AI' },
           { start: 955, end: 1191, title: 'Building an AI team (Part 1)' },
-          { start: 1191, end: 1398, title: 'Sponsors: VCX' },
           { start: 1398, end: 1863, title: 'Building an AI team (Part 2)' },
-          { start: 1863, end: 2292, title: 'Onboarding agents like employees (Part 1)' },
-          { start: 2292, end: 2431, title: 'Sponsors: Serval | Tasklet' },
-          { start: 2431, end: 2457, title: 'Onboarding agents like employees (Part 2)' },
+          { start: 1863, end: 2292, title: 'Onboarding agents like employees (1)' },
+          { start: 2431, end: 2457, title: 'Onboarding agents like employees (2)' },
           { start: 2457, end: 2927, title: 'Context, models, and privacy' },
           { start: 2927, end: 3379, title: 'AI intimacy and rights' },
           { start: 3379, end: 3739, title: 'Coordinating agents in Slack' },
@@ -931,307 +333,45 @@ If the target language is different from the source, translate key terms but kee
         ],
       };
 
-      function freshState() {
-        return {
-          schemaVersion: SCHEMA_VERSION,
-          currentStop: 1,
-          currentBlock: 1,
-          completed: { stops: [], blocks: [] },
-          branchOpens: [],
-          researchOpen: false,
-          lastVisit: new Date().toISOString(),
-        };
-      }
-
-      function loadState() {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return freshState();
-        try {
-          const parsed = JSON.parse(raw);
-          if (parsed.schemaVersion !== SCHEMA_VERSION) {
-            // v3 or unknown — fresh-state on load (no migration logic per spec No-Go)
-            return freshState();
-          }
-          return parsed;
-        } catch {
-          return freshState();
-        }
-      }
-
-      function saveState(s) {
-        s.lastVisit = new Date().toISOString();
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
-        } catch (e) {
-          // localStorage unavailable (Safari private, etc.) — graceful degrade, no-op
-          console.warn('[ai-start] localStorage unavailable; state not persisted', e);
-        }
-      }
-
-      const state = loadState();
-      saveState(state);
-
-      // --- Stops metadata ---
-      const STOPS = [
-        { n: 1, title: 'Start here',                blocks: 3, populated: true  },
-        { n: 2, title: 'Your first project',        blocks: 3, populated: true  },
-        { n: 3, title: 'Memory',                    blocks: 3, populated: true  },
-        { n: 4, title: 'Connectors + safety',       blocks: 4, populated: true  },
-        { n: 5, title: 'Real work',                 blocks: 4, populated: true  },
-        { n: 6, title: 'Your first week',           blocks: 4, populated: true  },
-      ];
-
-      function stopClass(stop) {
-        if (state.completed.stops.includes(stop.n)) return 'stop-done';
-        if (stop.n === state.currentStop) return 'stop-current';
-        return stop.populated ? '' : 'stop-future';
-      }
-
-      function stopMarker(stop) {
-        if (state.completed.stops.includes(stop.n)) return '<span aria-label="completed">\u2713</span>';
-        if (stop.n === state.currentStop) return '<span aria-hidden="true">\u25B8</span>';
-        return '<span aria-hidden="true">\u25CB</span>';
-      }
-
-      function renderRail() {
-        const ol = document.querySelector('.rail-stops');
-        if (!ol) return;
-        ol.innerHTML = STOPS.map(stop => {
-          const cls = stopClass(stop);
-          const comingLabel = stop.populated ? '' : ' <span class="rail-coming">(Coming)</span>';
-          return `<li class="${cls}"><a href="#stop-${stop.n}" data-stop="${stop.n}">${stopMarker(stop)} ${stop.n} \u00B7 ${stop.title}${comingLabel}</a></li>`;
-        }).join('');
-        // Re-bind click handlers after re-render
-        ol.querySelectorAll('a[data-stop]').forEach(a => {
-          a.addEventListener('click', onStopClick);
-        });
-      }
-
-      function onStopClick(e) {
-        e.preventDefault();
-        const stop = parseInt(e.currentTarget.dataset.stop, 10);
-        state.currentStop = stop;
-        state.currentBlock = 1;
-        saveState(state);
-        renderRail();
-        updateTopbar();
-        scrollToStop(stop);
-      }
-
-      function updateTopbar() {
-        const stop = STOPS.find(s => s.n === state.currentStop);
-        if (!stop) return;
-        const setText = (id, text) => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = text;
-        };
-        setText('tb-stop', String(state.currentStop));
-        setText('tb-title', stop.title);
-        setText('tb-block', String(state.currentBlock));
-        setText('tb-blocks-total', String(stop.blocks));
-        const totalBlocks = STOPS.reduce((acc, s) => acc + s.blocks, 0);
-        const completedBlocks = state.completed.blocks.length;
-        const pct = Math.round(100 * completedBlocks / totalBlocks);
-        const fill = document.getElementById('tb-fill');
-        if (fill) fill.style.width = pct + '%';
-      }
-
-      function initScrollSync() {
-        const stops = Array.from(document.querySelectorAll('section.stop[id^="stop-"]'));
-        if (stops.length === 0) return;
-
-        const applyStop = (section) => {
-          const match = section.id.match(/^stop-(\d+)$/);
-          if (!match) return;
-          const nextStop = parseInt(match[1], 10);
-          if (!Number.isFinite(nextStop) || nextStop === state.currentStop) return;
-          state.currentStop = nextStop;
-          state.currentBlock = 1;
-          saveState(state);
-          renderRail();
-          updateTopbar();
-        };
-
-        const pickMostVisible = () => {
-          const vh = window.innerHeight || document.documentElement.clientHeight;
-          let best = null;
-          let bestRatio = 0;
-          for (const section of stops) {
-            const r = section.getBoundingClientRect();
-            const visible = Math.max(0, Math.min(vh, r.bottom) - Math.max(0, r.top));
-            const ratio = visible / Math.max(1, Math.min(vh, r.height));
-            if (ratio >= 0.4 && ratio > bestRatio) {
-              best = section;
-              bestRatio = ratio;
-            }
-          }
-          return best;
-        };
-
-        if (typeof window.IntersectionObserver !== 'undefined') {
-          const io = new IntersectionObserver((entries) => {
-            const active = entries
-              .filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.4)
-              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-            if (active) applyStop(active.target);
-          }, { threshold: [0, 0.4, 0.5, 0.75, 1] });
-          stops.forEach(section => io.observe(section));
-          const initial = pickMostVisible();
-          if (initial) applyStop(initial);
-        } else {
-          let rafId = 0;
-          const onScroll = () => {
-            if (rafId) return;
-            rafId = requestAnimationFrame(() => {
-              rafId = 0;
-              const active = pickMostVisible();
-              if (active) applyStop(active);
-            });
-          };
-          window.addEventListener('scroll', onScroll, { passive: true });
-          onScroll();
-        }
-      }
-
-      function scrollToStop(n) {
-        const el = document.getElementById('stop-' + n);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-
-      // --- Rail-coming style (small inline, also in <style> works — keep here for JS-added class) ---
-      // (moved to Task 1.5 CSS pass if desired; works without since rail-coming is just muted text)
-
-      // --- Init ---
-      renderRail();
-      updateTopbar();
-      initScrollSync();
-
-      // --- Mobile drawer ---
-      const menuToggle = document.getElementById('menu-toggle');
-      const rail = document.getElementById('rail');
-      const backdrop = document.getElementById('drawer-backdrop');
-      const bottomNav = document.querySelector('.bottom-nav');
-      let drawerOpen = false;
-      let lastFocused = null;
-
-      function getFocusable(el) {
-        return Array.from(el.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'));
-      }
-
-      function openDrawer() {
-        if (drawerOpen) return;
-        drawerOpen = true;
-        lastFocused = document.activeElement;
-        rail.classList.add('rail-open');
-        backdrop.hidden = false;
-        menuToggle.setAttribute('aria-expanded', 'true');
-        if (bottomNav) bottomNav.classList.add('hidden');
-        // Move focus to first focusable in rail
-        const focusables = getFocusable(rail);
-        if (focusables.length) focusables[0].focus();
-        document.addEventListener('keydown', handleDrawerKeys);
-      }
-
-      function closeDrawer() {
-        if (!drawerOpen) return;
-        drawerOpen = false;
-        rail.classList.remove('rail-open');
-        backdrop.hidden = true;
-        menuToggle.setAttribute('aria-expanded', 'false');
-        if (bottomNav) bottomNav.classList.remove('hidden');
-        document.removeEventListener('keydown', handleDrawerKeys);
-        // Return focus to menu toggle
-        menuToggle.focus();
-      }
-
-      function handleDrawerKeys(e) {
-        if (e.key === 'Escape') {
-          e.preventDefault();
-          closeDrawer();
-          return;
-        }
-        if (e.key === 'Tab') {
-          // Simple focus trap within rail
-          const focusables = getFocusable(rail);
-          if (!focusables.length) return;
-          const first = focusables[0];
-          const last = focusables[focusables.length - 1];
-          if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-          } else if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-          }
-        }
-      }
-
-      menuToggle.addEventListener('click', () => drawerOpen ? closeDrawer() : openDrawer());
-      backdrop.addEventListener('click', closeDrawer);
-
-      // Close drawer when navigating to a stop (rail click on mobile should navigate AND close)
-      rail.addEventListener('click', (e) => {
-        const link = e.target.closest('a[data-stop]');
-        if (link && drawerOpen) {
-          // onStopClick already handles navigation + scroll; we just close the drawer
-          setTimeout(closeDrawer, 100);  // allow scroll to start before losing the rail-open class
-        }
-      });
-
-      // --- YouTube facade: thumbnail fallback chain (0.jpg may 404 → mqdefault → hqdefault) ---
+      // Thumbnail fallback cascade: maxresdefault → hqdefault → 0.jpg (retain pre-reshape robustness).
       document.querySelectorAll('.yt-facade-thumb').forEach(img => {
         let step = 0;
         img.addEventListener('error', () => {
           step++;
-          if (step === 1) img.src = img.dataset.fallback1;
-          else if (step === 2) img.src = img.dataset.fallback2;
+          if (step === 1 && img.dataset.fallback1) img.src = img.dataset.fallback1;
+          else if (step === 2 && img.dataset.fallback2) img.src = img.dataset.fallback2;
         });
       });
 
-      // --- YouTube facade: click + touchend to swap facade → live iframe with autoplay (C2.2).
-      //     activateFacade is idempotent (!facade.isConnected early-return, from C5.2),
-      //     so a touchend followed by a synthesized click is safe.
+      // YouTube facade: click + touchend → swap facade → live iframe with autoplay.
+      // activateFacade is idempotent (facade.isConnected early-return).
       document.querySelectorAll('.yt-facade').forEach(facade => {
         facade.addEventListener('click', () => activateFacade(facade));
         facade.addEventListener('touchend', (e) => {
-          // preventDefault suppresses the 300ms-delayed synthetic click after touchend.
           e.preventDefault();
           activateFacade(facade);
         }, { passive: false });
       });
 
-      // --- Chapter lists (C5.3): render <ul class="video-chapters"> below each
-      //     facade, filtered by interval-overlap against the facade window.
-      //     Click wiring lives in C5.4.
       renderVideoChapters();
 
-      // --- Chapter button click handler (C5.4): branch on facade-vs-iframe.
       document.querySelectorAll('.video-chapter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           const seek = parseInt(btn.dataset.seek, 10);
           if (!Number.isFinite(seek)) return;
-          const grid = btn.closest('.block-grid');
-          if (!grid) return;
-          const facade = grid.querySelector('.yt-facade');
-          if (facade) {
-            // Branch A: facade still static — activate with chapter start as override.
-            activateFacade(facade, seek);
-            return;
-          }
-          const iframe = grid.querySelector('iframe');
-          if (!iframe || !iframe.contentWindow) return;  // silent no-op fallback
-          // Branch B: iframe live — seek via YouTube IFrame API postMessage.
+          const article = btn.closest('article.video-companion');
+          if (!article) return;
+          const facade = article.querySelector('.yt-facade');
+          if (facade) { activateFacade(facade, seek); return; }
+          const iframe = article.querySelector('iframe');
+          if (!iframe || !iframe.contentWindow) return;
           try {
             iframe.contentWindow.postMessage(JSON.stringify({
-              event: 'command',
-              func: 'seekTo',
-              args: [seek, true]
+              event: 'command', func: 'seekTo', args: [seek, true]
             }), '*');
             iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          } catch (err) {
-            /* defensive: if postMessage fails, do nothing; fallback is the native anchor, but we preventDefault'd */
-          }
+          } catch (err) { /* no-op */ }
         });
       });
 
@@ -1245,7 +385,7 @@ If the target language is different from the source, translate key terms but kee
           if (visible.length === 0) return;
           const ul = document.createElement('ul');
           ul.className = 'video-chapters';
-          ul.setAttribute('aria-label', 'Chapters in this segment');
+          ul.setAttribute('aria-label', 'Chapters in this video');
           visible.forEach(c => {
             const seek = Math.max(c.start, facadeStart);
             const mm = String(Math.floor(seek / 60)).padStart(1, '0');
@@ -1264,10 +404,6 @@ If the target language is different from the source, translate key terms but kee
       }
 
       function activateFacade(facade, startOverride) {
-        // Idempotent guard: if facade has already been replaced (not in DOM),
-        // there is nothing to activate. Prevents duplicate iframes on rapid
-        // clicks, touch-click double-fires, or chapter-click after facade
-        // already activated via another path.
         if (!facade || !facade.isConnected) return;
         const { videoId, end, title } = facade.dataset;
         const start = startOverride != null && Number.isFinite(+startOverride)
@@ -1284,104 +420,18 @@ If the target language is different from the source, translate key terms but kee
         iframe.focus();
       }
 
-      // --- YouTube timestamp chip seekTo with facade bootstrap + fallback ---
-      document.querySelectorAll('.highlights-list a[data-seek]').forEach(a => {
+      // Smooth-scroll for in-page anchor jumps (§1 mode-switch sentence → §4).
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', (e) => {
-          const grid = a.closest('.block-grid');
-          // If the block-grid still has a facade, activate it (seek lands at segment start regardless)
-          const facade = grid?.querySelector('.yt-facade');
-          if (facade) {
-            e.preventDefault();
-            activateFacade(facade);
-            return;
-          }
-          const seek = parseInt(a.dataset.seek, 10);
-          if (!Number.isFinite(seek)) return;  // fallback: let native href fire
-          const iframe = grid?.querySelector('iframe');
-          if (!iframe?.contentWindow) return;  // fallback
-          try {
-            // Attempt postMessage seekTo (YouTube Player API)
-            iframe.contentWindow.postMessage(JSON.stringify({
-              event: 'command',
-              func: 'seekTo',
-              args: [seek, true]
-            }), '*');
-            e.preventDefault();
-            // Also scroll video into view if off-screen
-            iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          } catch {
-            // Fallback: let native href fire (opens YouTube in new tab at ?t=SEC)
-          }
+          const targetId = a.getAttribute('href').slice(1);
+          if (!targetId) return;
+          const target = document.getElementById(targetId);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.focus({ preventScroll: true });
         });
       });
-
-      // --- Branch chip drawers (Task 2.4) ---
-      document.querySelectorAll('.chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-          const id = 'drawer-' + chip.dataset.branch;
-          const drawer = document.getElementById(id);
-          if (!drawer) return;
-          const open = drawer.hidden === false;
-          drawer.hidden = open;
-          chip.setAttribute('aria-expanded', String(!open));
-          if (!open) {
-            if (!state.branchOpens.includes(chip.dataset.branch)) {
-              state.branchOpens.push(chip.dataset.branch);
-              saveState(state);
-            }
-          }
-        });
-      });
-
-      // --- Block completion (Slice 6) ---
-      // Wire data-block-id checkboxes to state.completed.blocks (the write-side of
-      // the state the progress bar already reads at line ~1807). Syncs on load so
-      // returning readers see previously-completed checkboxes still checked.
-      const blockCheckboxes = document.querySelectorAll('input[data-block-id]');
-
-      // Initial sync: checkbox.checked <- state.completed.blocks.includes(id)
-      blockCheckboxes.forEach(cb => {
-        const id = cb.dataset.blockId;
-        if (state.completed.blocks.includes(id)) cb.checked = true;
-      });
-
-      blockCheckboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-          const id = cb.dataset.blockId;
-          const idx = state.completed.blocks.indexOf(id);
-          if (cb.checked && idx === -1) {
-            state.completed.blocks.push(id);
-          } else if (!cb.checked && idx !== -1) {
-            state.completed.blocks.splice(idx, 1);
-          }
-          saveState(state);
-          updateTopbar();
-        });
-      });
-
-      // --- Completion reveal (Slice 6) ---
-      // Fades in the Triglav image + Option C copy when stop-6-try-one is completed.
-      const reveal = document.getElementById('completion-reveal');
-      const stop6Checkbox = document.querySelector('input[data-block-id="stop-6-try-one"]');
-
-      function syncRevealState() {
-        if (!reveal) return;
-        const isComplete = state.completed.blocks.includes('stop-6-try-one');
-        reveal.hidden = !isComplete;
-      }
-
-      // Sync on load (in case localStorage already has stop-6-try-one marked)
-      syncRevealState();
-
-      // Update on checkbox change (defer to after the block-completion handler runs)
-      if (stop6Checkbox) {
-        stop6Checkbox.addEventListener('change', () => {
-          setTimeout(syncRevealState, 0);
-        });
-      }
-
-      // Expose for Task 1.4 (drawer) and later tasks
-      window.__aiStart = { state, saveState, STOPS, renderRail, updateTopbar, scrollToStop };
     })();
   </script>
 </body>
