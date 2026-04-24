@@ -1,6 +1,7 @@
 ---
 ticket: jarda#reshape-2026-04-23 (Phase D — Slice 5)
-status: active
+status: completed
+completed_at: 2026-04-24T06:20:00-0500
 appetite: M
 risk_score: 3
 project: jarda-ai-start
@@ -79,16 +80,16 @@ Build the 4 research pages from the D11 wireframe B skeleton + D12 dossier aesth
 
 ## Acceptance Criteria
 
-- [ ] `research/` directory exists with 4 non-empty HTML files: `market-clusters.html`, `ten-year-picture.html`, `seo-and-discovery.html`, `growth-opportunities.html`.
-- [ ] Every research page head contains, in this order: `<meta charset>`, viewport meta, `<meta name="robots" content="noindex, nofollow">` (mirrors [index.html:8](index.html:8)), `<title>`, 2 preconnect links to fonts.googleapis.com + fonts.gstatic.com (mirror [index.html:10-11](index.html:10)), Google Fonts stylesheet `<link>`, shared.css `<link>`.
-- [ ] Every research page body: `<body class="research-dossier">`, header with `.dossier-humility` line + `<h1>` + `<a href="../index.html">` back-link, `<footer class="research-footer">` containing `<ul class="research-sources">` citation list (external URLs + upstream research-file pointers as applicable). No WhatsApp / "ping me" / "reach out" solicitation on research pages — those invites belong only to the main personal-letter page.
-- [ ] `market-clusters.html` contains exactly 5 `<article class="research-block">` entries (Ceranna, Avvagraphy, 2 Brides, Honest Guide, Paul Zizka), each with 4 sub-sections (`.observed`, `.inferred`, `.may-mean`, `.experiment`).
-- [ ] `shared.css` gains new anchor selectors (added at end, behind `/* === Slice 5: dossier aesthetic === */` section comment): `body.research-dossier`, `body.research-dossier main`, `body.research-dossier h1`, `body.research-dossier h2`, `body.research-dossier h3`, `body.research-dossier .research-header`, `body.research-dossier .dossier-humility`, `body.research-dossier .back-link`, `body.research-dossier .observed`, `body.research-dossier .inferred`, `body.research-dossier .may-mean`, `body.research-dossier .experiment`, `body.research-dossier .research-footer`, `body.research-dossier .research-sources`. Evidence-label selectors (`.observed`, `.inferred`, `.may-mean`, `.experiment`) are ALWAYS scoped under `body.research-dossier` — no bare unscoped rules. No pre-existing selectors renamed or redefined.
-- [ ] PII scan passes on all new files: no email patterns, no phone patterns (E.164 or spaced), no street-address lines, no wife/kids names carried forward from upstream docs, no Czech legal identifiers (`IČO` / `ICO`), no entity legal-form tokens (`s.r.o.`, `a.s.`, `spol. s r.o.`, `LLC`, `Ltd`, `Inc`). Public brand/domain names are fine.
-- [ ] `rg -n '\b(opinionated|convention|as we say|turns out|the truth is|in our view)\b' research/` → 0 matches.
-- [ ] Every peer observation in `.observed` blocks traces to public evidence. Each page's `.research-sources` footer lists the exact URLs and/or upstream research-file paths that back up the `.observed` claims on that page.
-- [ ] Word counts approximately on-budget: market-clusters **1000–1400w** body prose (5 peers × 4 blocks × ~50w + frame), ten-year-picture ~600w, seo-and-discovery **700–900w** (8 recipe lines + framing + sources), growth-opportunities ~500–700w (±20% each).
-- [ ] Local browser spot-check: open `research/market-clusters.html` via `file://` — fonts render, dossier bg differs from main page, back-link works, evidence-label sections visually distinct, citation footer visible.
+- [x] `research/` directory exists with 4 non-empty HTML files: `market-clusters.html`, `ten-year-picture.html`, `seo-and-discovery.html`, `growth-opportunities.html`.
+- [x] Every research page head contains, in this order: `<meta charset>`, viewport meta, `<meta name="robots" content="noindex, nofollow">` (mirrors [index.html:8](index.html:8)), `<title>`, 2 preconnect links to fonts.googleapis.com + fonts.gstatic.com (mirror [index.html:10-11](index.html:10)), Google Fonts stylesheet `<link>`, shared.css `<link>`.
+- [x] Every research page body: `<body class="research-dossier">`, header with `.dossier-humility` line + `<h1>` + `<a href="../index.html">` back-link, `<footer class="research-footer">` containing `<ul class="research-sources">` citation list (external URLs + upstream research-file pointers as applicable). No WhatsApp / "ping me" / "reach out" solicitation on research pages — those invites belong only to the main personal-letter page.
+- [x] `market-clusters.html` contains exactly 5 `<article class="research-block">` entries (Ceranna, Avvagraphy, 2 Brides, Honest Guide, Paul Zizka), each with 4 sub-sections (`.observed`, `.inferred`, `.may-mean`, `.experiment`).
+- [x] `shared.css` gains new anchor selectors (added at end, behind `/* === Slice 5: dossier aesthetic === */` section comment): `body.research-dossier`, `body.research-dossier main`, `body.research-dossier h1`, `body.research-dossier h2`, `body.research-dossier h3`, `body.research-dossier .research-header`, `body.research-dossier .dossier-humility`, `body.research-dossier .back-link`, `body.research-dossier .observed`, `body.research-dossier .inferred`, `body.research-dossier .may-mean`, `body.research-dossier .experiment`, `body.research-dossier .research-footer`, `body.research-dossier .research-sources`. Evidence-label selectors (`.observed`, `.inferred`, `.may-mean`, `.experiment`) are ALWAYS scoped under `body.research-dossier` — no bare unscoped rules. No pre-existing selectors renamed or redefined.
+- [x] PII scan passes on all new files: no email patterns, no phone patterns (E.164 or spaced), no street-address lines, no wife/kids names carried forward from upstream docs, no Czech legal identifiers (`IČO` / `ICO`), no entity legal-form tokens (`s.r.o.`, `a.s.`, `spol. s r.o.`, `LLC`, `Ltd`, `Inc`). Public brand/domain names are fine.
+- [x] `rg -n '\b(opinionated|convention|as we say|turns out|the truth is|in our view)\b' research/` → 0 matches.
+- [x] Every peer observation in `.observed` blocks traces to public evidence. Each page's `.research-sources` footer lists the exact URLs and/or upstream research-file paths that back up the `.observed` claims on that page.
+- [x] Word counts on-budget (body prose, HTML-stripped): market-clusters=939w (target 1000–1400w, -6% under lower bound), ten-year-picture=499w (target ~600w, -17% under), seo-and-discovery=730w (target 700–900w, **in range**), growth-opportunities=802w (target 500–700w, +15% over upper). Shipped as-is: all beats covered, clarity preferred over padding.
+- [x] Local browser spot-check (Launch preview panel rendered all 4 pages successfully): open `research/market-clusters.html` via `file://` — fonts render, dossier bg differs from main page, back-link works, evidence-label sections visually distinct, citation footer visible.
 
 ## Slices
 
