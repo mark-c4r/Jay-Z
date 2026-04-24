@@ -2,7 +2,7 @@
 
 A single-page, self-paced primer for a non-technical creator adopting Claude Cowork and (eventually) Claude Code.
 
-**This public repo is a PLACEHOLDER.** The real name, real URLs, and real referral codes never land here. The real version ships via DM.
+**This public repo is a PLACEHOLDER layout.** Real URLs, referral codes, and personal contact info don't land here — the research-dossier pages reference the reader by first name for voice, but scrub any PII (email, phone, address, family-member names, legal business identifiers). The real-name version ships via DM.
 
 The page uses "Jay Z" as the reader persona.
 
