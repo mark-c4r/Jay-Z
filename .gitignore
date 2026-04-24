@@ -15,7 +15,14 @@ docs/plans/
 docs/research/
 docs/verification/*.json
 contracts/
-research/
+# research/ dir: reshape 2026-04-24 converted this into the public research-dossier
+# surface (market-clusters.html etc.). HTML pages here ship; anything non-HTML
+# stays gitignored by targeted rules below.
+research/*.md
+research/*.json
+research/*.txt
+research/private/
+research/draft/
 
 # === Environment ===
 .env
