@@ -1614,3 +1614,141 @@ body.main-brief #the-brief a:hover { color: var(--accent-dark, #2a4562); }
   body.main-brief main > section { margin-bottom: 56px; }
   body.main-brief h2 { margin-top: 36px; padding-top: 22px; }
 }
+
+/* ============================================================
+   === Slice 5: dossier aesthetic === — research-page body class
+   + scoped evidence labels. Added 2026-04-24. All selectors are
+   scoped under body.research-dossier; no bare evidence rules.
+   ============================================================ */
+
+body.research-dossier {
+  background: #f8f5f0;                  /* warm cream, distinct from main #fbfbfd */
+  color: var(--ink, #222);
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+body.research-dossier main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+body.research-dossier h1,
+body.research-dossier h2,
+body.research-dossier h3 {
+  font-family: var(--serif, "Fraunces", Georgia, serif);
+  color: var(--ink, #1a1a1a);
+  font-weight: 500;
+  line-height: 1.25;
+}
+body.research-dossier h1 {
+  font-size: clamp(28px, 4.5vw, 38px);
+  margin: 0 0 16px;
+}
+body.research-dossier h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin: 48px 0 16px;
+  border-top: 1px solid var(--rule, #d2d2d7);
+  padding-top: 24px;
+}
+body.research-dossier h3 {
+  font-size: 13px;
+  font-family: var(--sans, "Inter", sans-serif);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted, #6e6e73);
+  margin: 0 0 8px;
+}
+
+body.research-dossier .research-header {
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--rule, #d2d2d7);
+}
+
+body.research-dossier .dossier-humility {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted, #6e6e73);
+  margin: 0 0 16px;
+}
+
+body.research-dossier .back-link {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+body.research-dossier .back-link a {
+  color: var(--muted, #6e6e73);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+body.research-dossier .back-link a:hover {
+  color: var(--accent, #4a5c70);
+  border-bottom-color: currentColor;
+}
+
+body.research-dossier .research-block {
+  margin: 40px 0;
+}
+
+body.research-dossier .observed,
+body.research-dossier .inferred,
+body.research-dossier .may-mean,
+body.research-dossier .experiment {
+  margin: 16px 0;
+  padding: 12px 18px;
+  border-left: 3px solid;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0 4px 4px 0;
+}
+
+body.research-dossier .observed   { border-left-color: var(--rule, #d2d2d7); }  /* neutral — public facts */
+body.research-dossier .inferred   { border-left-color: #c79b5a; }               /* amber — speculation */
+body.research-dossier .may-mean   { border-left-color: var(--accent, #4a5c70); } /* slate — application */
+body.research-dossier .experiment { border-left-color: #4a7a53; }               /* green — go, action */
+
+body.research-dossier .observed p:last-child,
+body.research-dossier .inferred p:last-child,
+body.research-dossier .may-mean p:last-child,
+body.research-dossier .experiment p:last-child {
+  margin-bottom: 0;
+}
+
+body.research-dossier .research-footer {
+  margin: 64px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule, #d2d2d7);
+}
+
+body.research-dossier .research-sources {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted, #6e6e73);
+  font-family: var(--sans, "Inter", sans-serif);
+}
+body.research-dossier .research-sources li {
+  margin: 4px 0;
+}
+body.research-dossier .research-sources a {
+  color: var(--muted, #6e6e73);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+body.research-dossier .research-sources a:hover {
+  color: var(--accent, #4a5c70);
+}
+
+@media (max-width: 640px) {
+  body.research-dossier main { padding: 32px 18px 72px; }
+  body.research-dossier h2 { margin-top: 36px; padding-top: 18px; }
+  body.research-dossier .observed,
+  body.research-dossier .inferred,
+  body.research-dossier .may-mean,
+  body.research-dossier .experiment { padding: 10px 14px; }
+}
