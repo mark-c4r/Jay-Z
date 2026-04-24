@@ -1,6 +1,6 @@
 ---
 ticket: jarda#reshape-2026-04-23 (Phase E — Slices 6 + 7)
-status: active
+status: completed
 project: jarda-ai-start
 updated: 2026-04-24
 parent: docs/plans/2026-04-23-jarda-reshape-refresher-primer.md
